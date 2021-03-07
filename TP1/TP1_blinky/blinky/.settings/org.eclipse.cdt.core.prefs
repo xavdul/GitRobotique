@@ -1,0 +1,16 @@
+doxygen/doxygen_new_line_after_brief=true
+doxygen/doxygen_use_brief_tag=false
+doxygen/doxygen_use_javadoc_tags=true
+doxygen/doxygen_use_pre_tag=false
+doxygen/doxygen_use_structural_commands=false
+eclipse.preferences.version=1
+environment/project/0.1001719572/PATH/delimiter=\:
+environment/project/0.1001719572/PATH/operation=replace
+environment/project/0.1001719572/PATH/value=/usr/bin\:/bin\:/usr/sbin\:/sbin\:${PATH}\:/Users/xavierdulex/eclipse/Tools/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/bin\:/Users/xavierdulex/eclipse/Tools/gcc-arm-none-eabi-7-2017-q4-major-win32/bin
+environment/project/0.1001719572/append=true
+environment/project/0.1001719572/appendContributed=true
+environment/project/0.673361139/PATH/delimiter=\:
+environment/project/0.673361139/PATH/operation=replace
+environment/project/0.673361139/PATH/value=/usr/bin\:/bin\:/usr/sbin\:/sbin\:/Users/xavierdulex/eclipse/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/bin\:/Users/xavierdulex/eclipse/Tools/gcc-arm-none-eabi-7-2017-q4-major/bin\:${PATH}
+environment/project/0.673361139/append=true
+environment/project/0.673361139/appendContributed=true
