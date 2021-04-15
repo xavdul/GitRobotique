@@ -6,7 +6,8 @@
 
 #define STANDARD_GRAVITY    9.80665f
 #define DEG2RAD(deg) (deg / 180 * M_PI)
-
+#define ACC_RAW2G 2.0f/32768.0f
+#define GYRO_RAW 250.0f/32768.0f
 extern messagebus_t bus;
 
 static imu_msg_t imu_values;
@@ -22,10 +23,14 @@ static bool imu_configured = false;
  * 			RAW gyroscope to rad/s speed
  */
 void imu_compute_units(void){
-	/*
-    *   TASK 10 : TO COMPLETE
-    */
-}
+	imu_values.acceleration[X_AXIS] = (imu_values.acc_raw[X_AXIS] - imu_values.acc_offset[X_AXIS])*STANDARD_GRAVITY*ACC_RAW2G;
+	imu_values.acceleration[Y_AXIS] = (imu_values.acc_raw[Y_AXIS] - imu_values.acc_offset[Y_AXIS])*STANDARD_GRAVITY*ACC_RAW2G;
+	imu_values.acceleration[Z_AXIS] = (imu_values.acc_raw[Z_AXIS] - imu_values.acc_offset[Z_AXIS])*STANDARD_GRAVITY*ACC_RAW2G;
+	imu_values.gyro_rate[X_AXIS] = DEG2RAD(imu_values.gyro_raw[X_AXIS] - imu_values.gyro_offset[X_AXIS])*GYRO_RAW;
+	imu_values.gyro_rate[Y_AXIS] = DEG2RAD(imu_values.gyro_raw[Y_AXIS] - imu_values.gyro_offset[Y_AXIS])*GYRO_RAW;
+	imu_values.gyro_rate[Z_AXIS] = DEG2RAD(imu_values.gyro_raw[Z_AXIS] - imu_values.gyro_offset[Z_AXIS])*GYRO_RAW;
+	}
+
 
  /**
  * @brief   Thread which updates the measurements and publishes them
@@ -97,9 +102,30 @@ void imu_stop(void) {
 
 void imu_compute_offset(messagebus_topic_t * imu_topic, uint16_t nb_samples){
 
-    /*
-    *   TASK 9 : TO COMPLETE
-    */
+	int32_t tableau_acc[NB_AXIS];
+	int32_t tableau_gyro[NB_AXIS];
+	tableau_acc[X_AXIS] = 0;
+	tableau_acc[Y_AXIS] = 0;
+	tableau_acc[Z_AXIS] = 0;
+	tableau_gyro[X_AXIS] = 0;
+	tableau_gyro[Y_AXIS] = 0;
+	tableau_gyro[Z_AXIS] = 0;
+	for(uint16_t i=0;i< nb_samples; i++)
+	{
+	messagebus_topic_wait(imu_topic, &imu_values, sizeof(imu_values));
+	tableau_acc[X_AXIS] += imu_values.acc_raw[X_AXIS];
+	tableau_acc[Y_AXIS] += imu_values.acc_raw[Y_AXIS];
+	tableau_acc[Z_AXIS] += imu_values.acc_raw[Z_AXIS];
+	tableau_gyro[X_AXIS] += imu_values.gyro_raw[X_AXIS];
+	tableau_gyro[Y_AXIS] += imu_values.gyro_raw[Y_AXIS];
+	tableau_gyro[Z_AXIS] += imu_values.gyro_raw[Z_AXIS];
+	}
+	imu_values.acc_offset[X_AXIS] = tableau_acc[X_AXIS]/nb_samples;
+	imu_values.acc_offset[Y_AXIS] = tableau_acc[Y_AXIS]/nb_samples;
+	imu_values.acc_offset[Z_AXIS] = tableau_acc[Z_AXIS]/nb_samples; //+ 1/ACC_RAW2G;
+	imu_values.gyro_offset[X_AXIS] = tableau_gyro[X_AXIS]/nb_samples;
+	imu_values.gyro_offset[Y_AXIS] = tableau_gyro[Y_AXIS]/nb_samples;
+	imu_values.gyro_offset[Z_AXIS] = tableau_gyro[Z_AXIS]/nb_samples;
 }
 
 int16_t get_acc(uint8_t axis) {

@@ -89,21 +89,21 @@ static THD_FUNCTION(ThdBodyLed, arg) {
         *   2nd case :  make the thread work during the 500ms
         */
 
-//         //about 500ms at 168MHz
-//         for(uint32_t i = 0 ; i < 21000000 ; i++){
-//             __asm__ volatile ("nop");
-//         }
+         //about 500ms at 168MHz
+       // for(uint32_t i = 0 ; i < 21000000 ; i++){
+       //      __asm__ volatile ("nop");
+       // }
 
         /*
         *   3rd case :  make the thread work during the 500ms
         *               and block the preemption
         */
 
-        // chSysLock();
-        // for(uint32_t i = 0 ; i < 21000000 ; i++){
-        //     __asm__ volatile ("nop");
-        // }
-        // chSysUnlock();
+       // chSysLock();
+       //  for(uint32_t i = 0 ; i < 21000000 ; i++){
+      //       __asm__ volatile ("nop");
+      //   }
+       //  chSysUnlock();
     }
 }
 
@@ -130,9 +130,41 @@ void show_gravity(imu_msg_t *imu_values){
     time = GPTD11.tim->CNT;
     chSysUnlock();
 
-    /*
-    *   TASK 11 : TO COMPLETE
-    */
+    if(imu_values->acceleration[Y_AXIS] > 3)
+    {
+       	palSetPad(GPIOD, GPIOD_LED1);
+       	palSetPad(GPIOD, GPIOD_LED3);
+       	palClearPad(GPIOD, GPIOD_LED5);
+       	palSetPad(GPIOD, GPIOD_LED7);
+    }
+    else if(imu_values->acceleration[Y_AXIS] < -3)
+    {
+       	palClearPad(GPIOD, GPIOD_LED1);
+       	palSetPad(GPIOD, GPIOD_LED3);
+       	palSetPad(GPIOD, GPIOD_LED5);
+       	palSetPad(GPIOD, GPIOD_LED7);
+       }
+    else if(imu_values->acceleration[X_AXIS] > 3)
+    {
+       	palSetPad(GPIOD, GPIOD_LED1);
+       	palSetPad(GPIOD, GPIOD_LED3);
+       	palSetPad(GPIOD, GPIOD_LED5);
+       	palClearPad(GPIOD, GPIOD_LED7);
+       }
+    else if(imu_values->acceleration[X_AXIS] < -3)
+    {
+       	palSetPad(GPIOD, GPIOD_LED1);
+       	palClearPad(GPIOD, GPIOD_LED3);
+       	palSetPad(GPIOD, GPIOD_LED5);
+       	palSetPad(GPIOD, GPIOD_LED7);
+      }
+    else
+    {
+       	palSetPad(GPIOD, GPIOD_LED1);
+       	palSetPad(GPIOD, GPIOD_LED3);
+       	palSetPad(GPIOD, GPIOD_LED5);
+       	palSetPad(GPIOD, GPIOD_LED7);
+      }
 
 }
 
@@ -146,10 +178,12 @@ int main(void)
     i2c_start();
     imu_start();
 
+
     /** Inits the Inter Process Communication bus. */
     messagebus_init(&bus, &bus_lock, &bus_condvar);
 
-
+  //  chThdCreateStatic(waThdFrontLed, sizeof(waThdFrontLed), NORMALPRIO, ThdFrontLed, NULL);
+  //  chThdCreateStatic(waThdBodyLed, sizeof(waThdBodyLed), NORMALPRIO, ThdBodyLed, NULL);
     /*
     *   TASKS 3,4,5,6,7 : UNDERSTANDING THREADS ON CHIBIOS
     */
@@ -176,11 +210,12 @@ int main(void)
 
         //prints raw values with offset correction
         chprintf((BaseSequentialStream *)&SD3, "%Ax=%-7d Ay=%-7d Az=%-7d Gx=%-7d Gy=%-7d Gz=%-7d\r\n", 
-                imu_values.acc_raw[X_AXIS]-imu_values.acc_offset[X_AXIS], 
-                imu_values.acc_raw[Y_AXIS]-imu_values.acc_offset[Y_AXIS], 
-                imu_values.acc_raw[Z_AXIS]-imu_values.acc_offset[Z_AXIS], 
-                imu_values.gyro_raw[X_AXIS]-imu_values.gyro_offset[X_AXIS], 
-                imu_values.gyro_raw[Y_AXIS]-imu_values.gyro_offset[Y_AXIS], 
+
+        		 imu_values.acc_raw[X_AXIS]-imu_values.acc_offset[X_AXIS],
+                imu_values.acc_raw[Y_AXIS]-imu_values.acc_offset[Y_AXIS],
+                imu_values.acc_raw[Z_AXIS]-imu_values.acc_offset[Z_AXIS],
+                imu_values.gyro_raw[X_AXIS]-imu_values.gyro_offset[X_AXIS],
+                imu_values.gyro_raw[Y_AXIS]-imu_values.gyro_offset[Y_AXIS],
                 imu_values.gyro_raw[Z_AXIS]-imu_values.gyro_offset[Z_AXIS]);
 
         //prints values in readable units
@@ -188,9 +223,10 @@ int main(void)
                 imu_values.acceleration[X_AXIS], imu_values.acceleration[Y_AXIS], imu_values.acceleration[Z_AXIS], 
                 imu_values.gyro_rate[X_AXIS], imu_values.gyro_rate[Y_AXIS], imu_values.gyro_rate[Z_AXIS], 
                 imu_values.status);
-       
+       //USD1
         show_gravity(&imu_values);
         chThdSleepMilliseconds(100);
+
     }
 
 }

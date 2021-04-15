@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
   55              	.LBE104:
   56              	.LBE103:
   57              		.loc 1 102 0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 2
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 2
 
 
   58 0010 A560     		str	r5, [r4, #8]
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  112 0006 FFF7FEFF 		bl	chDbgCheckClassI
  113              	.LVL8:
  114              		.loc 1 151 0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 3
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 3
 
 
  115 000a E4B1     		cbz	r4, .L12
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  169 0040 8662     		str	r6, [r0, #40]
  170              	.LVL18:
  171              		.loc 1 158 0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 4
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 4
 
 
  172 0042 F5D1     		bne	.L18
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  226              	.LBB121:
  227              	.LBB122:
  228              	.LBB123:
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 5
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 5
 
 
  229              		.file 3 "../../lib/ChibiOS/os/ext/CMSIS/include/core_cmFunc.h"
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  283 003a 0023     		movs	r3, #0
  284              		.syntax unified
  285              	@ 546 "../../lib/ChibiOS/os/ext/CMSIS/include/core_cmFunc.h" 1
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 6
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 6
 
 
  286 003c 83F31188 		MSR basepri, r3
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  340              		.thumb_func
  341              		.fpu fpv4-sp-d16
  342              		.type	chSemWaitS, %function
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 7
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 7
 
 
  343              	chSemWaitS:
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  397 0032 A360     		str	r3, [r4, #8]
  398 0034 F7DA     		bge	.L39
  399              	.L43:
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 8
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 8
 
 
  400              	.LVL39:
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  454              		.size	chSemWaitS, .-chSemWaitS
  455              		.section	.text.chSemWait,"ax",%progbits
  456              		.align	1
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 9
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 9
 
 
  457              		.p2align 4,,15
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  511              	.LBE170:
  512              	.LBE171:
  513              		.loc 1 179 0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 10
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 10
 
 
  514 0012 2046     		mov	r0, r4
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  568              	.LBB178:
  569              	.LBB177:
  570              		.loc 3 546 0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 11
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 11
 
 
  571 0044 0023     		movs	r3, #0
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  625 000a 24B3     		cbz	r4, .L62
  626              	.L53:
  627              		.loc 1 268 0 discriminator 1
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 12
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 12
 
 
  628 000c A368     		ldr	r3, [r4, #8]
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  682              	.LVL65:
  683              	.LBB200:
  684              	.LBB198:
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 13
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 13
 
 
  685              		.loc 2 666 0
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  739              	.LFE225:
  740              		.size	chSemWaitTimeoutS, .-chSemWaitTimeoutS
  741              		.section	.text.chSemWaitTimeout,"ax",%progbits
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 14
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 14
 
 
  742              		.align	1
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  796 001c 0446     		mov	r4, r0
  797              	.LVL76:
  798              	.LBB219:
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 15
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 15
 
 
  799              	.LBB220:
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  853 004a 83F31188 		MSR basepri, r3
  854              	@ 0 "" 2
  855              	.LVL83:
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 16
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 16
 
 
  856              		.thumb
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  910              		.loc 1 297 0 discriminator 7
  911 0014 1A48     		ldr	r0, .L84
  912 0016 FFF7FEFF 		bl	chSysHalt
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 17
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 17
 
 
  913              	.LVL87:
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  967              	.LBB252:
  968              	.LBB253:
  969              	.LBB254:
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 18
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 18
 
 
  970              		.loc 3 546 0
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1024 0068 2068     		ldr	r0, [r4]
  1025              	.LVL100:
  1026              		.loc 2 674 0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 19
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 19
 
 
  1027 006a 0368     		ldr	r3, [r0]
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1081              		.loc 1 319 0
  1082 0002 0446     		mov	r4, r0
  1083              		.loc 1 321 0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 20
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 20
 
 
  1084 0004 FFF7FEFF 		bl	chDbgCheckClassI
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1138              	.LBB267:
  1139              		.loc 2 675 0
  1140 003c 5460     		str	r4, [r2, #4]
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 21
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 21
 
 
  1141              	.LVL112:
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1195              		.cfi_offset 6, -8
  1196              		.cfi_offset 14, -4
  1197              		.loc 1 349 0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 22
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 22
 
 
  1198 0002 0446     		mov	r4, r0
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1252              		.loc 2 675 0
  1253 003e 5C60     		str	r4, [r3, #4]
  1254              	.LVL124:
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 23
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 23
 
 
  1255              	.LBE271:
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1309              	.LVL130:
  1310 0000 70B5     		push	{r4, r5, r6, lr}
  1311              		.cfi_def_cfa_offset 16
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 24
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 24
 
 
  1312              		.cfi_offset 4, -16
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1366              	.LVL134:
  1367              		.thumb
  1368              		.syntax unified
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 25
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 25
 
 
  1369              	.LBE299:
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1423              	.LBB304:
  1424              		.loc 3 546 0
  1425 0074 0023     		movs	r3, #0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 26
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 26
 
 
  1426              		.syntax unified
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1480              	.LVL148:
  1481              	.L116:
  1482              		.loc 1 381 0 discriminator 4
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 27
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 27
 
 
  1483 009a 0D48     		ldr	r0, .L135
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1537              	.LVL158:
  1538              	.LBE316:
  1539              	.LBE315:
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 28
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 28
 
 
  1540              		.loc 1 391 0
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1585              		.set	.LANCHOR4,. + 0
  1586              		.type	__func__.7881, %object
  1587              		.size	__func__.7881, 18
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 29
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 29
 
 
  1588              	__func__.7881:
@@ -1729,8 +1729,8 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1617      61697400 
  1618              		.text
  1619              	.Letext0:
- 1620              		.file 5 "/Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017
- 1621              		.file 6 "/Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017
+ 1620              		.file 5 "c:\\users\\stoma\\desktop\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win3
+ 1621              		.file 6 "c:\\users\\stoma\\desktop\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win3
  1622              		.file 7 "../../lib/ChibiOS/os/rt/ports/ARMCMx/compilers/GCC/chtypes.h"
  1623              		.file 8 "../../lib/ChibiOS/os/rt/include/chsystypes.h"
  1624              		.file 9 "../../lib/ChibiOS/os/ext/CMSIS/include/core_cm4.h"
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1626              		.file 11 "../../lib/ChibiOS/os/rt/ports/ARMCMx/chcore.h"
  1627              		.file 12 "../../lib/ChibiOS/os/rt/ports/ARMCMx/chcore_v7m.h"
  1628              		.file 13 "../../lib/ChibiOS/os/rt/include/chdebug.h"
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 30
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 30
 
 
  1629              		.file 14 "../../lib/ChibiOS/os/rt/include/chtm.h"
@@ -1756,7 +1756,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1641 000c 69030000 		.4byte	.LASF195
  1642 0010 0C       		.byte	0xc
  1643 0011 E7020000 		.4byte	.LASF196
- 1644 0015 A7040000 		.4byte	.LASF197
+ 1644 0015 DA080000 		.4byte	.LASF197
  1645 0019 E8010000 		.4byte	.Ldebug_ranges0+0x1e8
  1646 001d 00000000 		.4byte	0
  1647 0021 00000000 		.4byte	.Ldebug_line0
@@ -1775,7 +1775,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1660 003a 03       		.uleb128 0x3
  1661 003b 08       		.byte	0x8
  1662 003c 04       		.byte	0x4
- 1663 003d 5A060000 		.4byte	.LASF2
+ 1663 003d FB050000 		.4byte	.LASF2
  1664 0041 03       		.uleb128 0x3
  1665 0042 01       		.byte	0x1
  1666 0043 06       		.byte	0x6
@@ -1788,25 +1788,25 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1673 0053 03       		.uleb128 0x3
  1674 0054 01       		.byte	0x1
  1675 0055 08       		.byte	0x8
- 1676 0056 4A070000 		.4byte	.LASF4
+ 1676 0056 EB060000 		.4byte	.LASF4
  1677 005a 03       		.uleb128 0x3
  1678 005b 02       		.byte	0x2
  1679 005c 05       		.byte	0x5
- 1680 005d 68070000 		.4byte	.LASF5
+ 1680 005d 03070000 		.4byte	.LASF5
  1681 0061 04       		.uleb128 0x4
- 1682 0062 A5080000 		.4byte	.LASF7
+ 1682 0062 40080000 		.4byte	.LASF7
  1683 0066 05       		.byte	0x5
  1684 0067 39       		.byte	0x39
  1685 0068 6C000000 		.4byte	0x6c
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 31
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 31
 
 
  1686 006c 03       		.uleb128 0x3
  1687 006d 02       		.byte	0x2
  1688 006e 07       		.byte	0x7
- 1689 006f 0C050000 		.4byte	.LASF8
+ 1689 006f AD040000 		.4byte	.LASF8
  1690 0073 04       		.uleb128 0x4
- 1691 0074 B6050000 		.4byte	.LASF9
+ 1691 0074 57050000 		.4byte	.LASF9
  1692 0078 05       		.byte	0x5
  1693 0079 4D       		.byte	0x4d
  1694 007a 7E000000 		.4byte	0x7e
@@ -1815,16 +1815,16 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1697 0080 05       		.byte	0x5
  1698 0081 20020000 		.4byte	.LASF10
  1699 0085 04       		.uleb128 0x4
- 1700 0086 EE080000 		.4byte	.LASF11
+ 1700 0086 89080000 		.4byte	.LASF11
  1701 008a 05       		.byte	0x5
  1702 008b 4F       		.byte	0x4f
  1703 008c 90000000 		.4byte	0x90
  1704 0090 03       		.uleb128 0x3
  1705 0091 04       		.byte	0x4
  1706 0092 07       		.byte	0x7
- 1707 0093 75080000 		.4byte	.LASF12
+ 1707 0093 10080000 		.4byte	.LASF12
  1708 0097 04       		.uleb128 0x4
- 1709 0098 E1060000 		.4byte	.LASF13
+ 1709 0098 82060000 		.4byte	.LASF13
  1710 009c 05       		.byte	0x5
  1711 009d 69       		.byte	0x69
  1712 009e A2000000 		.4byte	0xa2
@@ -1833,7 +1833,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1715 00a4 07       		.byte	0x7
  1716 00a5 DA010000 		.4byte	.LASF14
  1717 00a9 04       		.uleb128 0x4
- 1718 00aa 7D090000 		.4byte	.LASF15
+ 1718 00aa 49090000 		.4byte	.LASF15
  1719 00ae 06       		.byte	0x6
  1720 00af 18       		.byte	0x18
  1721 00b0 48000000 		.4byte	0x48
@@ -1843,14 +1843,14 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1725 00ba 24       		.byte	0x24
  1726 00bb 61000000 		.4byte	0x61
  1727 00bf 04       		.uleb128 0x4
- 1728 00c0 42070000 		.4byte	.LASF17
+ 1728 00c0 E3060000 		.4byte	.LASF17
  1729 00c4 06       		.byte	0x6
  1730 00c5 2C       		.byte	0x2c
  1731 00c6 73000000 		.4byte	0x73
  1732 00ca 05       		.uleb128 0x5
  1733 00cb BF000000 		.4byte	0xbf
  1734 00cf 04       		.uleb128 0x4
- 1735 00d0 34080000 		.4byte	.LASF18
+ 1735 00d0 CF070000 		.4byte	.LASF18
  1736 00d4 06       		.byte	0x6
  1737 00d5 30       		.byte	0x30
  1738 00d6 85000000 		.4byte	0x85
@@ -1858,12 +1858,12 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1740 00db 51000000 		.4byte	.LASF19
  1741 00df 06       		.byte	0x6
  1742 00e0 3C       		.byte	0x3c
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 32
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 32
 
 
  1743 00e1 97000000 		.4byte	0x97
  1744 00e5 04       		.uleb128 0x4
- 1745 00e6 2B060000 		.4byte	.LASF20
+ 1745 00e6 CC050000 		.4byte	.LASF20
  1746 00ea 07       		.byte	0x7
  1747 00eb 45       		.byte	0x45
  1748 00ec CF000000 		.4byte	0xcf
@@ -1873,7 +1873,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1752 00f6 46       		.byte	0x46
  1753 00f7 DA000000 		.4byte	0xda
  1754 00fb 04       		.uleb128 0x4
- 1755 00fc 99070000 		.4byte	.LASF22
+ 1755 00fc 34070000 		.4byte	.LASF22
  1756 0100 07       		.byte	0x7
  1757 0101 48       		.byte	0x48
  1758 0102 A9000000 		.4byte	0xa9
@@ -1883,7 +1883,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1762 010c 49       		.byte	0x49
  1763 010d A9000000 		.4byte	0xa9
  1764 0111 04       		.uleb128 0x4
- 1765 0112 F7060000 		.4byte	.LASF24
+ 1765 0112 98060000 		.4byte	.LASF24
  1766 0116 07       		.byte	0x7
  1767 0117 4A       		.byte	0x4a
  1768 0118 A9000000 		.4byte	0xa9
@@ -1893,17 +1893,17 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1772 0122 4B       		.byte	0x4b
  1773 0123 A9000000 		.4byte	0xa9
  1774 0127 04       		.uleb128 0x4
- 1775 0128 2B070000 		.4byte	.LASF26
+ 1775 0128 CC060000 		.4byte	.LASF26
  1776 012c 07       		.byte	0x7
  1777 012d 4C       		.byte	0x4c
  1778 012e CF000000 		.4byte	0xcf
  1779 0132 04       		.uleb128 0x4
- 1780 0133 45050000 		.4byte	.LASF27
+ 1780 0133 E6040000 		.4byte	.LASF27
  1781 0137 07       		.byte	0x7
  1782 0138 4D       		.byte	0x4d
  1783 0139 BF000000 		.4byte	0xbf
  1784 013d 04       		.uleb128 0x4
- 1785 013e AA050000 		.4byte	.LASF28
+ 1785 013e 4B050000 		.4byte	.LASF28
  1786 0142 07       		.byte	0x7
  1787 0143 4F       		.byte	0x4f
  1788 0144 CF000000 		.4byte	0xcf
@@ -1913,39 +1913,39 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1792 014e 51       		.byte	0x51
  1793 014f BF000000 		.4byte	0xbf
  1794 0153 04       		.uleb128 0x4
- 1795 0154 50050000 		.4byte	.LASF30
+ 1795 0154 F1040000 		.4byte	.LASF30
  1796 0158 07       		.byte	0x7
  1797 0159 52       		.byte	0x52
  1798 015a CF000000 		.4byte	0xcf
  1799 015e 04       		.uleb128 0x4
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 33
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 33
 
 
- 1800 015f D0080000 		.4byte	.LASF31
+ 1800 015f 6B080000 		.4byte	.LASF31
  1801 0163 08       		.byte	0x8
  1802 0164 33       		.byte	0x33
  1803 0165 CF000000 		.4byte	0xcf
  1804 0169 05       		.uleb128 0x5
  1805 016a 5E010000 		.4byte	0x15e
  1806 016e 04       		.uleb128 0x4
- 1807 016f B0080000 		.4byte	.LASF32
+ 1807 016f 4B080000 		.4byte	.LASF32
  1808 0173 08       		.byte	0x8
  1809 0174 3F       		.byte	0x3f
  1810 0175 79010000 		.4byte	0x179
  1811 0179 06       		.uleb128 0x6
- 1812 017a 2E050000 		.4byte	.LASF56
+ 1812 017a CF040000 		.4byte	.LASF56
  1813 017e 68       		.byte	0x68
  1814 017f 02       		.byte	0x2
  1815 0180 C2       		.byte	0xc2
  1816 0181 97020000 		.4byte	0x297
  1817 0185 07       		.uleb128 0x7
- 1818 0186 92070000 		.4byte	.LASF33
+ 1818 0186 2D070000 		.4byte	.LASF33
  1819 018a 02       		.byte	0x2
  1820 018b C3       		.byte	0xc3
  1821 018c A2020000 		.4byte	0x2a2
  1822 0190 00       		.byte	0
  1823 0191 07       		.uleb128 0x7
- 1824 0192 24070000 		.4byte	.LASF34
+ 1824 0192 C5060000 		.4byte	.LASF34
  1825 0196 02       		.byte	0x2
  1826 0197 C5       		.byte	0xc5
  1827 0198 A2020000 		.4byte	0x2a2
@@ -1957,7 +1957,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1833 01a4 27010000 		.4byte	0x127
  1834 01a8 08       		.byte	0x8
  1835 01a9 07       		.uleb128 0x7
- 1836 01aa AC060000 		.4byte	.LASF36
+ 1836 01aa 4D060000 		.4byte	.LASF36
  1837 01ae 02       		.byte	0x2
  1838 01af C8       		.byte	0xc8
  1839 01b0 20050000 		.4byte	0x520
@@ -1969,16 +1969,16 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1845 01bc A2020000 		.4byte	0x2a2
  1846 01c0 10       		.byte	0x10
  1847 01c1 07       		.uleb128 0x7
- 1848 01c2 9E060000 		.4byte	.LASF38
+ 1848 01c2 3F060000 		.4byte	.LASF38
  1849 01c6 02       		.byte	0x2
  1850 01c7 CB       		.byte	0xcb
  1851 01c8 A2020000 		.4byte	0x2a2
  1852 01cc 14       		.byte	0x14
  1853 01cd 07       		.uleb128 0x7
- 1854 01ce B1090000 		.4byte	.LASF39
+ 1854 01ce 7D090000 		.4byte	.LASF39
  1855 01d2 02       		.byte	0x2
  1856 01d3 D2       		.byte	0xd2
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 34
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 34
 
 
  1857 01d4 96080000 		.4byte	0x896
@@ -1990,25 +1990,25 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1863 01e0 AD080000 		.4byte	0x8ad
  1864 01e4 1C       		.byte	0x1c
  1865 01e5 07       		.uleb128 0x7
- 1866 01e6 72070000 		.4byte	.LASF41
+ 1866 01e6 0D070000 		.4byte	.LASF41
  1867 01ea 02       		.byte	0x2
  1868 01eb DD       		.byte	0xdd
  1869 01ec 06010000 		.4byte	0x106
  1870 01f0 20       		.byte	0x20
  1871 01f1 07       		.uleb128 0x7
- 1872 01f2 B0070000 		.4byte	.LASF42
+ 1872 01f2 4B070000 		.4byte	.LASF42
  1873 01f6 02       		.byte	0x2
  1874 01f7 E1       		.byte	0xe1
  1875 01f8 FB000000 		.4byte	0xfb
  1876 01fc 21       		.byte	0x21
  1877 01fd 07       		.uleb128 0x7
- 1878 01fe 53090000 		.4byte	.LASF43
+ 1878 01fe 1F090000 		.4byte	.LASF43
  1879 0202 02       		.byte	0x2
  1880 0203 E6       		.byte	0xe6
  1881 0204 11010000 		.4byte	0x111
  1882 0208 22       		.byte	0x22
  1883 0209 07       		.uleb128 0x7
- 1884 020a 7A070000 		.4byte	.LASF44
+ 1884 020a 15070000 		.4byte	.LASF44
  1885 020e 02       		.byte	0x2
  1886 020f EC       		.byte	0xec
  1887 0210 1C010000 		.4byte	0x11c
@@ -2026,7 +2026,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1899 0229 C5070000 		.4byte	0x7c5
  1900 022d 28       		.byte	0x28
  1901 022e 09       		.uleb128 0x9
- 1902 022f 04060000 		.4byte	.LASF46
+ 1902 022f A5050000 		.4byte	.LASF46
  1903 0233 02       		.byte	0x2
  1904 0234 3601     		.2byte	0x136
  1905 0236 A8020000 		.4byte	0x2a8
@@ -2038,28 +2038,28 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1911 0243 CC020000 		.4byte	0x2cc
  1912 0247 30       		.byte	0x30
  1913 0248 09       		.uleb128 0x9
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 35
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 35
 
 
- 1914 0249 2A090000 		.4byte	.LASF48
+ 1914 0249 C5080000 		.4byte	.LASF48
  1915 024d 02       		.byte	0x2
  1916 024e 4001     		.2byte	0x140
  1917 0250 32010000 		.4byte	0x132
  1918 0254 38       		.byte	0x38
  1919 0255 09       		.uleb128 0x9
- 1920 0256 29080000 		.4byte	.LASF49
+ 1920 0256 C4070000 		.4byte	.LASF49
  1921 025a 02       		.byte	0x2
  1922 025b 4601     		.2byte	0x146
  1923 025d 3D010000 		.4byte	0x13d
  1924 0261 3C       		.byte	0x3c
  1925 0262 09       		.uleb128 0x9
- 1926 0263 5E070000 		.4byte	.LASF50
+ 1926 0263 F9060000 		.4byte	.LASF50
  1927 0267 02       		.byte	0x2
  1928 0268 4D01     		.2byte	0x14d
  1929 026a 90080000 		.4byte	0x890
  1930 026e 40       		.byte	0x40
  1931 026f 09       		.uleb128 0x9
- 1932 0270 DA080000 		.4byte	.LASF51
+ 1932 0270 75080000 		.4byte	.LASF51
  1933 0274 02       		.byte	0x2
  1934 0275 5101     		.2byte	0x151
  1935 0277 27010000 		.4byte	0x127
@@ -2071,14 +2071,14 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1941 0284 84030000 		.4byte	0x384
  1942 0288 48       		.byte	0x48
  1943 0289 09       		.uleb128 0x9
- 1944 028a C1070000 		.4byte	.LASF53
+ 1944 028a 5C070000 		.4byte	.LASF53
  1945 028e 02       		.byte	0x2
  1946 028f 5E01     		.2byte	0x15e
  1947 0291 76070000 		.4byte	0x776
  1948 0295 50       		.byte	0x50
  1949 0296 00       		.byte	0
  1950 0297 04       		.uleb128 0x4
- 1951 0298 97090000 		.4byte	.LASF54
+ 1951 0298 63090000 		.4byte	.LASF54
  1952 029c 08       		.byte	0x8
  1953 029d 44       		.byte	0x44
  1954 029e A2020000 		.4byte	0x2a2
@@ -2086,19 +2086,19 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1956 02a3 04       		.byte	0x4
  1957 02a4 6E010000 		.4byte	0x16e
  1958 02a8 04       		.uleb128 0x4
- 1959 02a9 E1050000 		.4byte	.LASF55
+ 1959 02a9 82050000 		.4byte	.LASF55
  1960 02ad 08       		.byte	0x8
  1961 02ae 49       		.byte	0x49
  1962 02af B3020000 		.4byte	0x2b3
  1963 02b3 06       		.uleb128 0x6
- 1964 02b4 5D080000 		.4byte	.LASF57
+ 1964 02b4 F8070000 		.4byte	.LASF57
  1965 02b8 04       		.byte	0x4
  1966 02b9 02       		.byte	0x2
  1967 02ba B0       		.byte	0xb0
  1968 02bb CC020000 		.4byte	0x2cc
  1969 02bf 07       		.uleb128 0x7
- 1970 02c0 92070000 		.4byte	.LASF33
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 36
+ 1970 02c0 2D070000 		.4byte	.LASF33
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 36
 
 
  1971 02c4 02       		.byte	0x2
@@ -2107,7 +2107,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1974 02ca 00       		.byte	0
  1975 02cb 00       		.byte	0
  1976 02cc 04       		.uleb128 0x4
- 1977 02cd E0070000 		.4byte	.LASF58
+ 1977 02cd 7B070000 		.4byte	.LASF58
  1978 02d1 08       		.byte	0x8
  1979 02d2 50       		.byte	0x50
  1980 02d3 DC020000 		.4byte	0x2dc
@@ -2120,13 +2120,13 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  1987 02e3 B7       		.byte	0xb7
  1988 02e4 01030000 		.4byte	0x301
  1989 02e8 07       		.uleb128 0x7
- 1990 02e9 92070000 		.4byte	.LASF33
+ 1990 02e9 2D070000 		.4byte	.LASF33
  1991 02ed 02       		.byte	0x2
  1992 02ee B8       		.byte	0xb8
  1993 02ef A2020000 		.4byte	0x2a2
  1994 02f3 00       		.byte	0
  1995 02f4 07       		.uleb128 0x7
- 1996 02f5 24070000 		.4byte	.LASF34
+ 1996 02f5 C5060000 		.4byte	.LASF34
  1997 02f9 02       		.byte	0x2
  1998 02fa B9       		.byte	0xb9
  1999 02fb A2020000 		.4byte	0x2a2
@@ -2138,27 +2138,27 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2005 0307 57       		.byte	0x57
  2006 0308 0C030000 		.4byte	0x30c
  2007 030c 0C       		.uleb128 0xc
- 2008 030d 9C050000 		.4byte	.LASF61
+ 2008 030d 3D050000 		.4byte	.LASF61
  2009 0311 1C       		.byte	0x1c
  2010 0312 02       		.byte	0x2
  2011 0313 9001     		.2byte	0x190
  2012 0315 68030000 		.4byte	0x368
  2013 0319 09       		.uleb128 0x9
- 2014 031a 49080000 		.4byte	.LASF62
+ 2014 031a E4070000 		.4byte	.LASF62
  2015 031e 02       		.byte	0x2
  2016 031f 9101     		.2byte	0x191
  2017 0321 CC020000 		.4byte	0x2cc
  2018 0325 00       		.byte	0
  2019 0326 09       		.uleb128 0x9
- 2020 0327 84070000 		.4byte	.LASF63
+ 2020 0327 1F070000 		.4byte	.LASF63
  2021 032b 02       		.byte	0x2
  2022 032c 9201     		.2byte	0x192
  2023 032e 27010000 		.4byte	0x127
  2024 0332 08       		.byte	0x8
  2025 0333 09       		.uleb128 0x9
- 2026 0334 A6060000 		.4byte	.LASF64
+ 2026 0334 47060000 		.4byte	.LASF64
  2027 0338 02       		.byte	0x2
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 37
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 37
 
 
  2028 0339 9401     		.2byte	0x194
@@ -2171,20 +2171,20 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2035 0348 A2020000 		.4byte	0x2a2
  2036 034c 10       		.byte	0x10
  2037 034d 09       		.uleb128 0x9
- 2038 034e D9060000 		.4byte	.LASF66
+ 2038 034e 7A060000 		.4byte	.LASF66
  2039 0352 02       		.byte	0x2
  2040 0353 9801     		.2byte	0x198
  2041 0355 A2020000 		.4byte	0x2a2
  2042 0359 14       		.byte	0x14
  2043 035a 09       		.uleb128 0x9
- 2044 035b CF060000 		.4byte	.LASF67
+ 2044 035b 70060000 		.4byte	.LASF67
  2045 035f 02       		.byte	0x2
  2046 0360 9B01     		.2byte	0x19b
  2047 0362 A2020000 		.4byte	0x2a2
  2048 0366 18       		.byte	0x18
  2049 0367 00       		.byte	0
  2050 0368 04       		.uleb128 0x4
- 2051 0369 E5080000 		.4byte	.LASF68
+ 2051 0369 80080000 		.4byte	.LASF68
  2052 036d 08       		.byte	0x8
  2053 036e 5C       		.byte	0x5c
  2054 036f 73030000 		.4byte	0x373
@@ -2199,12 +2199,12 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2063 0384 0F       		.uleb128 0xf
  2064 0385 04       		.byte	0x4
  2065 0386 04       		.uleb128 0x4
- 2066 0387 14070000 		.4byte	.LASF69
+ 2066 0387 B5060000 		.4byte	.LASF69
  2067 038b 08       		.byte	0x8
  2068 038c 61       		.byte	0x61
  2069 038d 91030000 		.4byte	0x391
  2070 0391 0C       		.uleb128 0xc
- 2071 0392 F0070000 		.4byte	.LASF70
+ 2071 0392 8B070000 		.4byte	.LASF70
  2072 0396 14       		.byte	0x14
  2073 0397 02       		.byte	0x2
  2074 0398 6B01     		.2byte	0x16b
@@ -2218,38 +2218,38 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2082 03ab 09       		.uleb128 0x9
  2083 03ac 99020000 		.4byte	.LASF72
  2084 03b0 02       		.byte	0x2
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 38
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 38
 
 
  2085 03b1 6D01     		.2byte	0x16d
  2086 03b3 B3080000 		.4byte	0x8b3
  2087 03b7 04       		.byte	0x4
  2088 03b8 09       		.uleb128 0x9
- 2089 03b9 D0090000 		.4byte	.LASF73
+ 2089 03b9 9C090000 		.4byte	.LASF73
  2090 03bd 02       		.byte	0x2
  2091 03be 6E01     		.2byte	0x16e
  2092 03c0 5E010000 		.4byte	0x15e
  2093 03c4 08       		.byte	0x8
  2094 03c5 09       		.uleb128 0x9
- 2095 03c6 1B0A0000 		.4byte	.LASF74
+ 2095 03c6 E7090000 		.4byte	.LASF74
  2096 03ca 02       		.byte	0x2
  2097 03cb 6F01     		.2byte	0x16f
  2098 03cd 68030000 		.4byte	0x368
  2099 03d1 0C       		.byte	0xc
  2100 03d2 09       		.uleb128 0x9
- 2101 03d3 30090000 		.4byte	.LASF75
+ 2101 03d3 CB080000 		.4byte	.LASF75
  2102 03d7 02       		.byte	0x2
  2103 03d8 7101     		.2byte	0x171
  2104 03da 84030000 		.4byte	0x384
  2105 03de 10       		.byte	0x10
  2106 03df 00       		.byte	0
  2107 03e0 04       		.uleb128 0x4
- 2108 03e1 C0050000 		.4byte	.LASF76
+ 2108 03e1 61050000 		.4byte	.LASF76
  2109 03e5 08       		.byte	0x8
  2110 03e6 66       		.byte	0x66
  2111 03e7 EB030000 		.4byte	0x3eb
  2112 03eb 0C       		.uleb128 0xc
- 2113 03ec 43060000 		.4byte	.LASF77
+ 2113 03ec E4050000 		.4byte	.LASF77
  2114 03f0 10       		.byte	0x10
  2115 03f1 02       		.byte	0x2
  2116 03f2 7B01     		.2byte	0x17b
@@ -2267,18 +2267,18 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2128 040d B3080000 		.4byte	0x8b3
  2129 0411 04       		.byte	0x4
  2130 0412 09       		.uleb128 0x9
- 2131 0413 D0090000 		.4byte	.LASF73
+ 2131 0413 9C090000 		.4byte	.LASF73
  2132 0417 02       		.byte	0x2
  2133 0418 8001     		.2byte	0x180
  2134 041a 5E010000 		.4byte	0x15e
  2135 041e 08       		.byte	0x8
  2136 041f 09       		.uleb128 0x9
- 2137 0420 B8090000 		.4byte	.LASF78
+ 2137 0420 84090000 		.4byte	.LASF78
  2138 0424 02       		.byte	0x2
  2139 0425 8201     		.2byte	0x182
  2140 0427 69010000 		.4byte	0x169
  2141 042b 0C       		.byte	0xc
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 39
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 39
 
 
  2142 042c 00       		.byte	0
@@ -2294,13 +2294,13 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2152 0440 A201     		.2byte	0x1a2
  2153 0442 7B040000 		.4byte	0x47b
  2154 0446 09       		.uleb128 0x9
- 2155 0447 11090000 		.4byte	.LASF81
+ 2155 0447 AC080000 		.4byte	.LASF81
  2156 044b 02       		.byte	0x2
  2157 044c AA01     		.2byte	0x1aa
  2158 044e 9C080000 		.4byte	0x89c
  2159 0452 00       		.byte	0
  2160 0453 09       		.uleb128 0x9
- 2161 0454 5A090000 		.4byte	.LASF82
+ 2161 0454 26090000 		.4byte	.LASF82
  2162 0458 02       		.byte	0x2
  2163 0459 AF01     		.2byte	0x1af
  2164 045b 48010000 		.4byte	0x148
@@ -2312,14 +2312,14 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2170 0468 48010000 		.4byte	0x148
  2171 046c 08       		.byte	0x8
  2172 046d 09       		.uleb128 0x9
- 2173 046e C3090000 		.4byte	.LASF84
+ 2173 046e 8F090000 		.4byte	.LASF84
  2174 0472 02       		.byte	0x2
  2175 0473 B901     		.2byte	0x1b9
  2176 0475 08070000 		.4byte	0x708
  2177 0479 0C       		.byte	0xc
  2178 047a 00       		.byte	0
  2179 047b 04       		.uleb128 0x4
- 2180 047c 68050000 		.4byte	.LASF85
+ 2180 047c 09050000 		.4byte	.LASF85
  2181 0480 08       		.byte	0x8
  2182 0481 70       		.byte	0x70
  2183 0482 86040000 		.4byte	0x486
@@ -2330,7 +2330,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2188 048e C201     		.2byte	0x1c2
  2189 0490 F3040000 		.4byte	0x4f3
  2190 0494 09       		.uleb128 0x9
- 2191 0495 77090000 		.4byte	.LASF87
+ 2191 0495 43090000 		.4byte	.LASF87
  2192 0499 02       		.byte	0x2
  2193 049a C601     		.2byte	0x1c6
  2194 049c 01030000 		.4byte	0x301
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2196 04a1 09       		.uleb128 0x9
  2197 04a2 F9010000 		.4byte	.LASF88
  2198 04a6 02       		.byte	0x2
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 40
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 40
 
 
  2199 04a7 CA01     		.2byte	0x1ca
@@ -2391,14 +2391,14 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2246 0510 65       		.byte	0x65
  2247 0511 84030000 		.4byte	0x384
  2248 0515 04       		.uleb128 0x4
- 2249 0516 D6050000 		.4byte	.LASF95
+ 2249 0516 77050000 		.4byte	.LASF95
  2250 051a 0B       		.byte	0xb
  2251 051b 6D       		.byte	0x6d
  2252 051c DA000000 		.4byte	0xda
  2253 0520 06       		.uleb128 0x6
- 2254 0521 22090000 		.4byte	.LASF96
+ 2254 0521 BD080000 		.4byte	.LASF96
  2255 0525 04       		.byte	0x4
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 41
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 41
 
 
  2256 0526 0B       		.byte	0xb
@@ -2458,7 +2458,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2310 0592 0C       		.byte	0xc
  2311 0593 FC       		.byte	0xfc
  2312 0594 0A050000 		.4byte	0x50a
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 42
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 42
 
 
  2313 0598 18       		.byte	0x18
@@ -2518,7 +2518,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2367 060a 3C       		.byte	0x3c
  2368 060b 08       		.uleb128 0x8
  2369 060c 723400   		.ascii	"r4\000"
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 43
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 43
 
 
  2370 060f 0C       		.byte	0xc
@@ -2578,7 +2578,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2424 067b 04       		.byte	0x4
  2425 067c 39050000 		.4byte	0x539
  2426 0680 16       		.uleb128 0x16
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 44
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 44
 
 
  2427 0681 10       		.byte	0x10
@@ -2586,7 +2586,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2429 0683 51       		.byte	0x51
  2430 0684 B9060000 		.4byte	0x6b9
  2431 0688 07       		.uleb128 0x7
- 2432 0689 37090000 		.4byte	.LASF98
+ 2432 0689 D2080000 		.4byte	.LASF98
  2433 068d 0D       		.byte	0xd
  2434 068e 55       		.byte	0x55
  2435 068f 5E010000 		.4byte	0x15e
@@ -2598,20 +2598,20 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2441 069b A2020000 		.4byte	0x2a2
  2442 069f 04       		.byte	0x4
  2443 06a0 07       		.uleb128 0x7
- 2444 06a1 030A0000 		.4byte	.LASF100
+ 2444 06a1 CF090000 		.4byte	.LASF100
  2445 06a5 0D       		.byte	0xd
  2446 06a6 5D       		.byte	0x5d
  2447 06a7 84030000 		.4byte	0x384
  2448 06ab 08       		.byte	0x8
  2449 06ac 07       		.uleb128 0x7
- 2450 06ad 62090000 		.4byte	.LASF101
+ 2450 06ad 2E090000 		.4byte	.LASF101
  2451 06b1 0D       		.byte	0xd
  2452 06b2 61       		.byte	0x61
  2453 06b3 A9000000 		.4byte	0xa9
  2454 06b7 0C       		.byte	0xc
  2455 06b8 00       		.byte	0
  2456 06b9 04       		.uleb128 0x4
- 2457 06ba 79060000 		.4byte	.LASF102
+ 2457 06ba 1A060000 		.4byte	.LASF102
  2458 06be 0D       		.byte	0xd
  2459 06bf 62       		.byte	0x62
  2460 06c0 80060000 		.4byte	0x680
@@ -2627,18 +2627,18 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2470 06d4 2C000000 		.4byte	0x2c
  2471 06d8 00       		.byte	0
  2472 06d9 07       		.uleb128 0x7
- 2473 06da 72060000 		.4byte	.LASF104
+ 2473 06da 13060000 		.4byte	.LASF104
  2474 06de 0D       		.byte	0xd
  2475 06df 6F       		.byte	0x6f
  2476 06e0 F2060000 		.4byte	0x6f2
  2477 06e4 04       		.byte	0x4
  2478 06e5 07       		.uleb128 0x7
- 2479 06e6 FF060000 		.4byte	.LASF105
+ 2479 06e6 A0060000 		.4byte	.LASF105
  2480 06ea 0D       		.byte	0xd
  2481 06eb 73       		.byte	0x73
  2482 06ec F8060000 		.4byte	0x6f8
  2483 06f0 08       		.byte	0x8
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 45
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 45
 
 
  2484 06f1 00       		.byte	0
@@ -2663,14 +2663,14 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2503 0716 38       		.byte	0x38
  2504 0717 28070000 		.4byte	0x728
  2505 071b 07       		.uleb128 0x7
- 2506 071c 1B090000 		.4byte	.LASF107
+ 2506 071c B6080000 		.4byte	.LASF107
  2507 0720 0E       		.byte	0xe
  2508 0721 3C       		.byte	0x3c
  2509 0722 E5000000 		.4byte	0xe5
  2510 0726 00       		.byte	0
  2511 0727 00       		.byte	0
  2512 0728 04       		.uleb128 0x4
- 2513 0729 B2060000 		.4byte	.LASF108
+ 2513 0729 53060000 		.4byte	.LASF108
  2514 072d 0E       		.byte	0xe
  2515 072e 3D       		.byte	0x3d
  2516 072f 13070000 		.4byte	0x713
@@ -2680,7 +2680,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2520 0736 48       		.byte	0x48
  2521 0737 76070000 		.4byte	0x776
  2522 073b 07       		.uleb128 0x7
- 2523 073c B9080000 		.4byte	.LASF109
+ 2523 073c 54080000 		.4byte	.LASF109
  2524 0740 0E       		.byte	0xe
  2525 0741 49       		.byte	0x49
  2526 0742 E5000000 		.4byte	0xe5
@@ -2692,13 +2692,13 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2532 074e E5000000 		.4byte	0xe5
  2533 0752 04       		.byte	0x4
  2534 0753 07       		.uleb128 0x7
- 2535 0754 4B050000 		.4byte	.LASF111
+ 2535 0754 EC040000 		.4byte	.LASF111
  2536 0758 0E       		.byte	0xe
  2537 0759 4B       		.byte	0x4b
  2538 075a E5000000 		.4byte	0xe5
  2539 075e 08       		.byte	0x8
  2540 075f 15       		.uleb128 0x15
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 46
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 46
 
 
  2541 0760 6E00     		.ascii	"n\000"
@@ -2707,7 +2707,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2544 0764 53010000 		.4byte	0x153
  2545 0768 0C       		.byte	0xc
  2546 0769 07       		.uleb128 0x7
- 2547 076a EC060000 		.4byte	.LASF112
+ 2547 076a 8D060000 		.4byte	.LASF112
  2548 076e 0E       		.byte	0xe
  2549 076f 4D       		.byte	0x4d
  2550 0770 F0000000 		.4byte	0xf0
@@ -2730,26 +2730,26 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2567 0790 53010000 		.4byte	0x153
  2568 0794 00       		.byte	0
  2569 0795 07       		.uleb128 0x7
- 2570 0796 33070000 		.4byte	.LASF115
+ 2570 0796 D4060000 		.4byte	.LASF115
  2571 079a 0F       		.byte	0xf
  2572 079b 3A       		.byte	0x3a
  2573 079c 53010000 		.4byte	0x153
  2574 07a0 04       		.byte	0x4
  2575 07a1 07       		.uleb128 0x7
- 2576 07a2 F0090000 		.4byte	.LASF116
+ 2576 07a2 BC090000 		.4byte	.LASF116
  2577 07a6 0F       		.byte	0xf
  2578 07a7 3B       		.byte	0x3b
  2579 07a8 76070000 		.4byte	0x776
  2580 07ac 08       		.byte	0x8
  2581 07ad 07       		.uleb128 0x7
- 2582 07ae 91050000 		.4byte	.LASF117
+ 2582 07ae 32050000 		.4byte	.LASF117
  2583 07b2 0F       		.byte	0xf
  2584 07b3 3D       		.byte	0x3d
  2585 07b4 76070000 		.4byte	0x776
  2586 07b8 20       		.byte	0x20
  2587 07b9 00       		.byte	0
  2588 07ba 04       		.uleb128 0x4
- 2589 07bb 1F050000 		.4byte	.LASF118
+ 2589 07bb C0040000 		.4byte	.LASF118
  2590 07bf 0F       		.byte	0xf
  2591 07c0 3F       		.byte	0x3f
  2592 07c1 81070000 		.4byte	0x781
@@ -2758,7 +2758,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2595 07c7 02       		.byte	0x2
  2596 07c8 FA       		.byte	0xfa
  2597 07c9 22080000 		.4byte	0x822
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 47
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 47
 
 
  2598 07cd 1B       		.uleb128 0x1b
@@ -2772,7 +2772,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2606 07df 0801     		.2byte	0x108
  2607 07e1 32010000 		.4byte	0x132
  2608 07e5 1B       		.uleb128 0x1b
- 2609 07e6 AA090000 		.4byte	.LASF121
+ 2609 07e6 76090000 		.4byte	.LASF121
  2610 07ea 02       		.byte	0x2
  2611 07eb 0F01     		.2byte	0x10f
  2612 07ed 84030000 		.4byte	0x384
@@ -2787,12 +2787,12 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2621 0803 1E01     		.2byte	0x11e
  2622 0805 4D080000 		.4byte	0x84d
  2623 0809 1B       		.uleb128 0x1b
- 2624 080a 8C080000 		.4byte	.LASF124
+ 2624 080a 27080000 		.4byte	.LASF124
  2625 080e 02       		.byte	0x2
  2626 080f 2701     		.2byte	0x127
  2627 0811 90080000 		.4byte	0x890
  2628 0815 1B       		.uleb128 0x1b
- 2629 0816 8B070000 		.4byte	.LASF125
+ 2629 0816 26070000 		.4byte	.LASF125
  2630 081a 02       		.byte	0x2
  2631 081b 2F01     		.2byte	0x12f
  2632 081d 3D010000 		.4byte	0x13d
@@ -2801,7 +2801,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2635 0823 04       		.byte	0x4
  2636 0824 97020000 		.4byte	0x297
  2637 0828 06       		.uleb128 0x6
- 2638 0829 0E080000 		.4byte	.LASF126
+ 2638 0829 A9070000 		.4byte	.LASF126
  2639 082d 0C       		.byte	0xc
  2640 082e 10       		.byte	0x10
  2641 082f 34       		.byte	0x34
@@ -2813,12 +2813,12 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2647 083b CC020000 		.4byte	0x2cc
  2648 083f 00       		.byte	0
  2649 0840 07       		.uleb128 0x7
- 2650 0841 58070000 		.4byte	.LASF128
+ 2650 0841 A7040000 		.4byte	.LASF128
  2651 0845 10       		.byte	0x10
  2652 0846 37       		.byte	0x37
  2653 0847 48010000 		.4byte	0x148
  2654 084b 08       		.byte	0x8
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 48
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 48
 
 
  2655 084c 00       		.byte	0
@@ -2826,7 +2826,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2657 084e 04       		.byte	0x4
  2658 084f 28080000 		.4byte	0x828
  2659 0853 06       		.uleb128 0x6
- 2660 0854 4A090000 		.4byte	.LASF129
+ 2660 0854 16090000 		.4byte	.LASF129
  2661 0858 14       		.byte	0x14
  2662 0859 11       		.byte	0x11
  2663 085a 39       		.byte	0x39
@@ -2838,13 +2838,13 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2669 0866 CC020000 		.4byte	0x2cc
  2670 086a 00       		.byte	0
  2671 086b 07       		.uleb128 0x7
- 2672 086c FB090000 		.4byte	.LASF131
+ 2672 086c C7090000 		.4byte	.LASF131
  2673 0870 11       		.byte	0x11
  2674 0871 3C       		.byte	0x3c
  2675 0872 A2020000 		.4byte	0x2a2
  2676 0876 08       		.byte	0x8
  2677 0877 07       		.uleb128 0x7
- 2678 0878 C3060000 		.4byte	.LASF132
+ 2678 0878 64060000 		.4byte	.LASF132
  2679 087c 11       		.byte	0x11
  2680 087d 3E       		.byte	0x3e
  2681 087e F6090000 		.4byte	0x9f6
@@ -2867,7 +2867,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2698 08a1 03       		.uleb128 0x3
  2699 08a2 01       		.byte	0x1
  2700 08a3 08       		.byte	0x8
- 2701 08a4 87080000 		.4byte	.LASF134
+ 2701 08a4 22080000 		.4byte	.LASF134
  2702 08a8 0B       		.uleb128 0xb
  2703 08a9 A1080000 		.4byte	0x8a1
  2704 08ad 0A       		.uleb128 0xa
@@ -2878,7 +2878,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2709 08b5 86030000 		.4byte	0x386
  2710 08b9 18       		.uleb128 0x18
  2711 08ba 15050000 		.4byte	0x515
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 49
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 49
 
 
  2712 08be C9080000 		.4byte	0x8c9
@@ -2897,37 +2897,37 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2725 08d7 34       		.byte	0x34
  2726 08d8 B5090000 		.4byte	0x9b5
  2727 08dc 07       		.uleb128 0x7
- 2728 08dd 0D0A0000 		.4byte	.LASF135
+ 2728 08dd D9090000 		.4byte	.LASF135
  2729 08e1 12       		.byte	0x12
  2730 08e2 35       		.byte	0x35
  2731 08e3 B5090000 		.4byte	0x9b5
  2732 08e7 00       		.byte	0
  2733 08e8 07       		.uleb128 0x7
- 2734 08e9 F0050000 		.4byte	.LASF136
+ 2734 08e9 91050000 		.4byte	.LASF136
  2735 08ed 12       		.byte	0x12
  2736 08ee 36       		.byte	0x36
  2737 08ef A9000000 		.4byte	0xa9
  2738 08f3 04       		.byte	0x4
  2739 08f4 07       		.uleb128 0x7
- 2740 08f5 6D080000 		.4byte	.LASF137
+ 2740 08f5 08080000 		.4byte	.LASF137
  2741 08f9 12       		.byte	0x12
  2742 08fa 37       		.byte	0x37
  2743 08fb A9000000 		.4byte	0xa9
  2744 08ff 05       		.byte	0x5
  2745 0900 07       		.uleb128 0x7
- 2746 0901 E5090000 		.4byte	.LASF138
+ 2746 0901 B1090000 		.4byte	.LASF138
  2747 0905 12       		.byte	0x12
  2748 0906 38       		.byte	0x38
  2749 0907 B4000000 		.4byte	0xb4
  2750 090b 06       		.byte	0x6
  2751 090c 07       		.uleb128 0x7
- 2752 090d 09070000 		.4byte	.LASF139
+ 2752 090d AA060000 		.4byte	.LASF139
  2753 0911 12       		.byte	0x12
  2754 0912 39       		.byte	0x39
  2755 0913 A9000000 		.4byte	0xa9
  2756 0917 08       		.byte	0x8
  2757 0918 07       		.uleb128 0x7
- 2758 0919 66060000 		.4byte	.LASF140
+ 2758 0919 07060000 		.4byte	.LASF140
  2759 091d 12       		.byte	0x12
  2760 091e 3A       		.byte	0x3a
  2761 091f A9000000 		.4byte	0xa9
@@ -2938,23 +2938,23 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2766 092a 3B       		.byte	0x3b
  2767 092b A9000000 		.4byte	0xa9
  2768 092f 0A       		.byte	0xa
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 50
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 50
 
 
  2769 0930 07       		.uleb128 0x7
- 2770 0931 3D080000 		.4byte	.LASF142
+ 2770 0931 D8070000 		.4byte	.LASF142
  2771 0935 12       		.byte	0x12
  2772 0936 3C       		.byte	0x3c
  2773 0937 A9000000 		.4byte	0xa9
  2774 093b 0B       		.byte	0xb
  2775 093c 07       		.uleb128 0x7
- 2776 093d 3F090000 		.4byte	.LASF143
+ 2776 093d 0B090000 		.4byte	.LASF143
  2777 0941 12       		.byte	0x12
  2778 0942 3D       		.byte	0x3d
  2779 0943 A9000000 		.4byte	0xa9
  2780 0947 0C       		.byte	0xc
  2781 0948 07       		.uleb128 0x7
- 2782 0949 01080000 		.4byte	.LASF144
+ 2782 0949 9C070000 		.4byte	.LASF144
  2783 094d 12       		.byte	0x12
  2784 094e 3E       		.byte	0x3e
  2785 094f A9000000 		.4byte	0xa9
@@ -2966,7 +2966,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2791 095b A9000000 		.4byte	0xa9
  2792 095f 0E       		.byte	0xe
  2793 0960 07       		.uleb128 0x7
- 2794 0961 88060000 		.4byte	.LASF146
+ 2794 0961 29060000 		.4byte	.LASF146
  2795 0965 12       		.byte	0x12
  2796 0966 40       		.byte	0x40
  2797 0967 A9000000 		.4byte	0xa9
@@ -2990,22 +2990,22 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2815 098b A9000000 		.4byte	0xa9
  2816 098f 12       		.byte	0x12
  2817 0990 07       		.uleb128 0x7
- 2818 0991 F8050000 		.4byte	.LASF150
+ 2818 0991 99050000 		.4byte	.LASF150
  2819 0995 12       		.byte	0x12
  2820 0996 45       		.byte	0x45
  2821 0997 A9000000 		.4byte	0xa9
  2822 099b 13       		.byte	0x13
  2823 099c 07       		.uleb128 0x7
- 2824 099d A1070000 		.4byte	.LASF151
+ 2824 099d 3C070000 		.4byte	.LASF151
  2825 09a1 12       		.byte	0x12
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 51
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 51
 
 
  2826 09a2 46       		.byte	0x46
  2827 09a3 A9000000 		.4byte	0xa9
  2828 09a7 14       		.byte	0x14
  2829 09a8 07       		.uleb128 0x7
- 2830 09a9 74050000 		.4byte	.LASF152
+ 2830 09a9 15050000 		.4byte	.LASF152
  2831 09ad 12       		.byte	0x12
  2832 09ae 48       		.byte	0x48
  2833 09af A9000000 		.4byte	0xa9
@@ -3031,7 +3031,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2853 09db 6E       		.byte	0x6e
  2854 09dc D0090000 		.4byte	0x9d0
  2855 09e0 04       		.uleb128 0x4
- 2856 09e1 D4070000 		.4byte	.LASF155
+ 2856 09e1 6F070000 		.4byte	.LASF155
  2857 09e5 10       		.byte	0x10
  2858 09e6 38       		.byte	0x38
  2859 09e7 28080000 		.4byte	0x828
@@ -3058,7 +3058,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2880 0a1b 01       		.byte	0x1
  2881 0a1c 7A01     		.2byte	0x17a
  2882 0a1e FC0B0000 		.4byte	0xbfc
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 52
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 52
 
 
  2883 0a22 00000000 		.4byte	.LLST43
@@ -3075,7 +3075,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2894 0a3e 32010000 		.4byte	0x132
  2895 0a42 CC000000 		.4byte	.LLST45
  2896 0a46 20       		.uleb128 0x20
- 2897 0a47 B8070000 		.4byte	.LASF157
+ 2897 0a47 53070000 		.4byte	.LASF157
  2898 0a4b 120C0000 		.4byte	0xc12
  2899 0a4f 05       		.uleb128 0x5
  2900 0a50 03       		.byte	0x3
@@ -3118,7 +3118,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2937 0aaa 3F140000 		.4byte	0x143f
  2938 0aae 32000000 		.4byte	.LBB295
  2939 0ab2 0E000000 		.4byte	.LBE295-.LBB295
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 53
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 53
 
 
  2940 0ab6 01       		.byte	0x1
@@ -3178,7 +3178,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  2994 0b46 44010000 		.4byte	.LLST47
  2995 0b4a 00       		.byte	0
  2996 0b4b 00       		.byte	0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 54
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 54
 
 
  2997 0b4c 28       		.uleb128 0x28
@@ -3238,7 +3238,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3051 0bcb 05       		.uleb128 0x5
  3052 0bcc 03       		.byte	0x3
  3053 0bcd 00000000 		.4byte	.LANCHOR8
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 55
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 55
 
 
  3054 0bd1 00       		.byte	0
@@ -3294,11 +3294,11 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3104 0c42 48010000 		.4byte	0x148
  3105 0c46 A8010000 		.4byte	.LLST40
  3106 0c4a 20       		.uleb128 0x20
- 3107 0c4b B8070000 		.4byte	.LASF157
+ 3107 0c4b 53070000 		.4byte	.LASF157
  3108 0c4f D70C0000 		.4byte	0xcd7
  3109 0c53 05       		.uleb128 0x5
  3110 0c54 03       		.byte	0x3
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 56
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 56
 
 
  3111 0c55 00000000 		.4byte	__func__.7895
@@ -3358,7 +3358,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3165 0cd7 0B       		.uleb128 0xb
  3166 0cd8 C70C0000 		.4byte	0xcc7
  3167 0cdc 2F       		.uleb128 0x2f
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 57
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 57
 
 
  3168 0cdd 27000000 		.4byte	.LASF159
@@ -3376,7 +3376,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3180 0cf9 FC0B0000 		.4byte	0xbfc
  3181 0cfd 1C020000 		.4byte	.LLST36
  3182 0d01 20       		.uleb128 0x20
- 3183 0d02 B8070000 		.4byte	.LASF157
+ 3183 0d02 53070000 		.4byte	.LASF157
  3184 0d06 9F0D0000 		.4byte	0xd9f
  3185 0d0a 05       		.uleb128 0x5
  3186 0d0b 03       		.byte	0x3
@@ -3418,7 +3418,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3222 0d69 06170000 		.4byte	0x1706
  3223 0d6d 7B0D0000 		.4byte	0xd7b
  3224 0d71 25       		.uleb128 0x25
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 58
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 58
 
 
  3225 0d72 01       		.uleb128 0x1
@@ -3463,7 +3463,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3264 0dc1 FC0B0000 		.4byte	0xbfc
  3265 0dc5 85020000 		.4byte	.LLST31
  3266 0dc9 20       		.uleb128 0x20
- 3267 0dca B8070000 		.4byte	.LASF157
+ 3267 0dca 53070000 		.4byte	.LASF157
  3268 0dce 1D0F0000 		.4byte	0xf1d
  3269 0dd2 05       		.uleb128 0x5
  3270 0dd3 03       		.byte	0x3
@@ -3478,7 +3478,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3279 0dec 26       		.uleb128 0x26
  3280 0ded 31150000 		.4byte	0x1531
  3281 0df1 1A000000 		.4byte	.LBB247
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 59
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 59
 
 
  3282 0df5 06000000 		.4byte	.LBE247-.LBB247
@@ -3538,7 +3538,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3336 0e84 28       		.uleb128 0x28
  3337 0e85 3A000000 		.4byte	.LVL92
  3338 0e89 FB160000 		.4byte	0x16fb
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 60
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 60
 
 
  3339 0e8d 24       		.uleb128 0x24
@@ -3598,7 +3598,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3393 0f03 01       		.uleb128 0x1
  3394 0f04 50       		.byte	0x50
  3395 0f05 05       		.uleb128 0x5
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 61
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 61
 
 
  3396 0f06 03       		.byte	0x3
@@ -3615,7 +3615,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3407 0f1d 0B       		.uleb128 0xb
  3408 0f1e 0D0F0000 		.4byte	0xf0d
  3409 0f22 33       		.uleb128 0x33
- 3410 0f23 93080000 		.4byte	.LASF164
+ 3410 0f23 2E080000 		.4byte	.LASF164
  3411 0f27 01       		.byte	0x1
  3412 0f28 0801     		.2byte	0x108
  3413 0f2a 32010000 		.4byte	0x132
@@ -3627,14 +3627,14 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3419 0f38 0801     		.2byte	0x108
  3420 0f3a FC0B0000 		.4byte	0xbfc
  3421 0f3e 35       		.uleb128 0x35
- 3422 0f3f CA060000 		.4byte	.LASF161
+ 3422 0f3f 6B060000 		.4byte	.LASF161
  3423 0f43 01       		.byte	0x1
  3424 0f44 0801     		.2byte	0x108
  3425 0f46 5E010000 		.4byte	0x15e
  3426 0f4a 36       		.uleb128 0x36
- 3427 0f4b B8070000 		.4byte	.LASF157
+ 3427 0f4b 53070000 		.4byte	.LASF157
  3428 0f4f 680F0000 		.4byte	0xf68
- 3429 0f53 93080000 		.4byte	.LASF164
+ 3429 0f53 2E080000 		.4byte	.LASF164
  3430 0f57 00       		.byte	0
  3431 0f58 18       		.uleb128 0x18
  3432 0f59 A8080000 		.4byte	0x8a8
@@ -3658,14 +3658,14 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3450 0f86 38       		.uleb128 0x38
  3451 0f87 737000   		.ascii	"sp\000"
  3452 0f8a 01       		.byte	0x1
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 62
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 62
 
 
  3453 0f8b EB       		.byte	0xeb
  3454 0f8c FC0B0000 		.4byte	0xbfc
  3455 0f90 14030000 		.4byte	.LLST26
  3456 0f94 39       		.uleb128 0x39
- 3457 0f95 CA060000 		.4byte	.LASF161
+ 3457 0f95 6B060000 		.4byte	.LASF161
  3458 0f99 01       		.byte	0x1
  3459 0f9a EB       		.byte	0xeb
  3460 0f9b 5E010000 		.4byte	0x15e
@@ -3718,7 +3718,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3507 101a 29       		.uleb128 0x29
  3508 101b F8000000 		.4byte	.Ldebug_ranges0+0xf8
  3509 101f 2A       		.uleb128 0x2a
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 63
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 63
 
 
  3510 1020 31140000 		.4byte	0x1431
@@ -3776,9 +3776,9 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3562 108f 00       		.byte	0
  3563 1090 00       		.byte	0
  3564 1091 3D       		.uleb128 0x3d
- 3565 1092 C9070000 		.4byte	.LASF165
+ 3565 1092 64070000 		.4byte	.LASF165
  3566 1096 01       		.byte	0x1
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 64
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 64
 
 
  3567 1097 C5       		.byte	0xc5
@@ -3791,9 +3791,9 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3574 10a6 C5       		.byte	0xc5
  3575 10a7 FC0B0000 		.4byte	0xbfc
  3576 10ab 36       		.uleb128 0x36
- 3577 10ac B8070000 		.4byte	.LASF157
+ 3577 10ac 53070000 		.4byte	.LASF157
  3578 10b0 C9100000 		.4byte	0x10c9
- 3579 10b4 C9070000 		.4byte	.LASF165
+ 3579 10b4 64070000 		.4byte	.LASF165
  3580 10b8 00       		.byte	0
  3581 10b9 18       		.uleb128 0x18
  3582 10ba A8080000 		.4byte	0x8a8
@@ -3805,7 +3805,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3588 10c9 0B       		.uleb128 0xb
  3589 10ca B9100000 		.4byte	0x10b9
  3590 10ce 37       		.uleb128 0x37
- 3591 10cf 07090000 		.4byte	.LASF166
+ 3591 10cf A2080000 		.4byte	.LASF166
  3592 10d3 01       		.byte	0x1
  3593 10d4 AF       		.byte	0xaf
  3594 10d5 32010000 		.4byte	0x132
@@ -3838,7 +3838,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3621 111c 02000000 		.4byte	.LBB164
  3622 1120 78000000 		.4byte	.Ldebug_ranges0+0x78
  3623 1124 04       		.byte	0x4
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 65
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 65
 
 
  3624 1125 5C01     		.2byte	0x15c
@@ -3898,7 +3898,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3678 11b3 FB160000 		.4byte	0x16fb
  3679 11b7 24       		.uleb128 0x24
  3680 11b8 44000000 		.4byte	.LVL57
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 66
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 66
 
 
  3681 11bc 06170000 		.4byte	0x1706
@@ -3923,7 +3923,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3700 11db 00       		.byte	0
  3701 11dc 00       		.byte	0
  3702 11dd 3F       		.uleb128 0x3f
- 3703 11de 6B090000 		.4byte	.LASF167
+ 3703 11de 37090000 		.4byte	.LASF167
  3704 11e2 01       		.byte	0x1
  3705 11e3 93       		.byte	0x93
  3706 11e4 00000000 		.4byte	.LFB221
@@ -3950,7 +3950,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3727 1214 48010000 		.4byte	0x148
  3728 1218 A9040000 		.4byte	.LLST5
  3729 121c 20       		.uleb128 0x20
- 3730 121d B8070000 		.4byte	.LASF157
+ 3730 121d 53070000 		.4byte	.LASF157
  3731 1221 1D0F0000 		.4byte	0xf1d
  3732 1225 05       		.uleb128 0x5
  3733 1226 03       		.byte	0x3
@@ -3958,7 +3958,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3735 122b 3B       		.uleb128 0x3b
  3736 122c 48140000 		.4byte	0x1448
  3737 1230 30000000 		.4byte	.LBB107
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 67
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 67
 
 
  3738 1234 08000000 		.4byte	.LBE107-.LBB107
@@ -4018,7 +4018,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3792 12b1 01       		.byte	0x1
  3793 12b2 78       		.byte	0x78
  3794 12b3 FC0B0000 		.4byte	0xbfc
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 68
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 68
 
 
  3795 12b7 06050000 		.4byte	.LLST8
@@ -4078,7 +4078,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3849 1347 04       		.byte	0x4
  3850 1348 7301     		.2byte	0x173
  3851 134a 69130000 		.4byte	0x1369
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 69
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 69
 
 
  3852 134e 2B       		.uleb128 0x2b
@@ -4138,7 +4138,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3906 13bb 00000000 		.4byte	.LFB219
  3907 13bf 28000000 		.4byte	.LFE219-.LFB219
  3908 13c3 01       		.uleb128 0x1
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 70
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 70
 
 
  3909 13c4 9C       		.byte	0x9c
@@ -4156,7 +4156,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3921 13dc 48010000 		.4byte	0x148
  3922 13e0 BF050000 		.4byte	.LLST1
  3923 13e4 20       		.uleb128 0x20
- 3924 13e5 B8070000 		.4byte	.LASF157
+ 3924 13e5 53070000 		.4byte	.LASF157
  3925 13e9 120C0000 		.4byte	0xc12
  3926 13ed 05       		.uleb128 0x5
  3927 13ee 03       		.byte	0x3
@@ -4184,21 +4184,21 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3949 1422 00       		.byte	0
  3950 1423 00       		.byte	0
  3951 1424 40       		.uleb128 0x40
- 3952 1425 D9090000 		.4byte	.LASF170
+ 3952 1425 A5090000 		.4byte	.LASF170
  3953 1429 04       		.byte	0x4
  3954 142a 6601     		.2byte	0x166
  3955 142c 03       		.byte	0x3
  3956 142d 3F140000 		.4byte	0x143f
  3957 1431 36       		.uleb128 0x36
- 3958 1432 B8070000 		.4byte	.LASF157
+ 3958 1432 53070000 		.4byte	.LASF157
  3959 1436 1D0F0000 		.4byte	0xf1d
- 3960 143a D9090000 		.4byte	.LASF170
+ 3960 143a A5090000 		.4byte	.LASF170
  3961 143e 00       		.byte	0
  3962 143f 41       		.uleb128 0x41
- 3963 1440 94060000 		.4byte	.LASF178
+ 3963 1440 35060000 		.4byte	.LASF178
  3964 1444 04       		.byte	0x4
  3965 1445 5A01     		.2byte	0x15a
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 71
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 71
 
 
  3966 1447 03       		.byte	0x3
@@ -4224,7 +4224,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  3986 1472 04       		.byte	0x4
  3987 1473 CC020000 		.4byte	0x2cc
  3988 1477 42       		.uleb128 0x42
- 3989 1478 BE080000 		.4byte	.LASF172
+ 3989 1478 59080000 		.4byte	.LASF172
  3990 147c 02       		.byte	0x2
  3991 147d 9F02     		.2byte	0x29f
  3992 147f A2020000 		.4byte	0x2a2
@@ -4258,7 +4258,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4020 14be 9702     		.2byte	0x297
  4021 14c0 71140000 		.4byte	0x1471
  4022 14c4 00       		.byte	0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 72
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 72
 
 
  4023 14c5 42       		.uleb128 0x42
@@ -4277,7 +4277,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4036 14e3 03       		.uleb128 0x3
  4037 14e4 01       		.byte	0x1
  4038 14e5 02       		.byte	0x2
- 4039 14e6 3C070000 		.4byte	.LASF175
+ 4039 14e6 DD060000 		.4byte	.LASF175
  4040 14ea 0A       		.uleb128 0xa
  4041 14eb 04       		.byte	0x4
  4042 14ec D7020000 		.4byte	0x2d7
@@ -4317,8 +4317,8 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4076 1537 BC01     		.2byte	0x1bc
  4077 1539 03       		.byte	0x3
  4078 153a 40       		.uleb128 0x40
- 4079 153b F9080000 		.4byte	.LASF181
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 73
+ 4079 153b 94080000 		.4byte	.LASF181
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 73
 
 
  4080 153f 03       		.byte	0x3
@@ -4378,7 +4378,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4134 15ce 50       		.byte	0x50
  4135 15cf 01       		.uleb128 0x1
  4136 15d0 35       		.byte	0x35
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 74
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 74
 
 
  4137 15d1 00       		.byte	0
@@ -4438,7 +4438,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4191 1652 C0000000 		.4byte	.Ldebug_ranges0+0xc0
  4192 1656 2A       		.uleb128 0x2a
  4193 1657 2D160000 		.4byte	0x162d
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 75
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 75
 
 
  4194 165b 22       		.uleb128 0x22
@@ -4498,12 +4498,12 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4248 16c8 00000000 		.4byte	.LANCHOR4
  4249 16cc 00       		.byte	0
  4250 16cd 00       		.byte	0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 76
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 76
 
 
  4251 16ce 47       		.uleb128 0x47
- 4252 16cf 1B080000 		.4byte	.LASF183
- 4253 16d3 1B080000 		.4byte	.LASF183
+ 4252 16cf B6070000 		.4byte	.LASF183
+ 4253 16d3 B6070000 		.4byte	.LASF183
  4254 16d7 02       		.byte	0x2
  4255 16d8 1402     		.2byte	0x214
  4256 16da 48       		.uleb128 0x48
@@ -4512,18 +4512,18 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4259 16e3 0F       		.byte	0xf
  4260 16e4 4F       		.byte	0x4f
  4261 16e5 48       		.uleb128 0x48
- 4262 16e6 33060000 		.4byte	.LASF185
- 4263 16ea 33060000 		.4byte	.LASF185
+ 4262 16e6 D4050000 		.4byte	.LASF185
+ 4263 16ea D4050000 		.4byte	.LASF185
  4264 16ee 0D       		.byte	0xd
  4265 16ef D8       		.byte	0xd8
  4266 16f0 48       		.uleb128 0x48
- 4267 16f1 85090000 		.4byte	.LASF186
- 4268 16f5 85090000 		.4byte	.LASF186
+ 4267 16f1 51090000 		.4byte	.LASF186
+ 4268 16f5 51090000 		.4byte	.LASF186
  4269 16f9 0D       		.byte	0xd
  4270 16fa D9       		.byte	0xd9
  4271 16fb 48       		.uleb128 0x48
- 4272 16fc 0E060000 		.4byte	.LASF187
- 4273 1700 0E060000 		.4byte	.LASF187
+ 4272 16fc AF050000 		.4byte	.LASF187
+ 4273 1700 AF050000 		.4byte	.LASF187
  4274 1704 0F       		.byte	0xf
  4275 1705 50       		.byte	0x50
  4276 1706 47       		.uleb128 0x47
@@ -4537,28 +4537,28 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4284 171b 02       		.byte	0x2
  4285 171c 1702     		.2byte	0x217
  4286 171e 47       		.uleb128 0x47
- 4287 171f 51080000 		.4byte	.LASF190
- 4288 1723 51080000 		.4byte	.LASF190
+ 4287 171f EC070000 		.4byte	.LASF190
+ 4288 1723 EC070000 		.4byte	.LASF190
  4289 1727 02       		.byte	0x2
  4290 1728 1302     		.2byte	0x213
  4291 172a 48       		.uleb128 0x48
- 4292 172b 57050000 		.4byte	.LASF191
- 4293 172f 57050000 		.4byte	.LASF191
+ 4292 172b F8040000 		.4byte	.LASF191
+ 4293 172f F8040000 		.4byte	.LASF191
  4294 1733 0D       		.byte	0xd
  4295 1734 DE       		.byte	0xde
  4296 1735 47       		.uleb128 0x47
- 4297 1736 38050000 		.4byte	.LASF192
- 4298 173a 38050000 		.4byte	.LASF192
+ 4297 1736 D9040000 		.4byte	.LASF192
+ 4298 173a D9040000 		.4byte	.LASF192
  4299 173e 02       		.byte	0x2
  4300 173f 1602     		.2byte	0x216
  4301 1741 48       		.uleb128 0x48
- 4302 1742 80050000 		.4byte	.LASF193
- 4303 1746 80050000 		.4byte	.LASF193
+ 4302 1742 21050000 		.4byte	.LASF193
+ 4303 1746 21050000 		.4byte	.LASF193
  4304 174a 0D       		.byte	0xd
  4305 174b DF       		.byte	0xdf
  4306 174c 47       		.uleb128 0x47
  4307 174d A8000000 		.4byte	.LASF194
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 77
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 77
 
 
  4308 1751 A8000000 		.4byte	.LASF194
@@ -4618,7 +4618,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4362 0030 3B       		.uleb128 0x3b
  4363 0031 0B       		.uleb128 0xb
  4364 0032 49       		.uleb128 0x49
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 78
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 78
 
 
  4365 0033 13       		.uleb128 0x13
@@ -4678,7 +4678,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4419 0069 00       		.byte	0
  4420 006a 09       		.uleb128 0x9
  4421 006b 0D       		.uleb128 0xd
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 79
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 79
 
 
  4422 006c 00       		.byte	0
@@ -4738,7 +4738,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4476 00a2 05       		.uleb128 0x5
  4477 00a3 00       		.byte	0
  4478 00a4 49       		.uleb128 0x49
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 80
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 80
 
 
  4479 00a5 13       		.uleb128 0x13
@@ -4798,7 +4798,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4533 00db 00       		.byte	0
  4534 00dc 13       		.uleb128 0x13
  4535 00dd 34       		.uleb128 0x34
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 81
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 81
 
 
  4536 00de 00       		.byte	0
@@ -4858,7 +4858,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4590 0114 3B       		.uleb128 0x3b
  4591 0115 0B       		.uleb128 0xb
  4592 0116 01       		.uleb128 0x1
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 82
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 82
 
 
  4593 0117 13       		.uleb128 0x13
@@ -4918,7 +4918,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4647 014d 3B       		.uleb128 0x3b
  4648 014e 05       		.uleb128 0x5
  4649 014f 49       		.uleb128 0x49
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 83
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 83
 
 
  4650 0150 13       		.uleb128 0x13
@@ -4978,7 +4978,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4704 0187 3B       		.uleb128 0x3b
  4705 0188 05       		.uleb128 0x5
  4706 0189 49       		.uleb128 0x49
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 84
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 84
 
 
  4707 018a 13       		.uleb128 0x13
@@ -5038,7 +5038,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4761 01c0 0B       		.uleb128 0xb
  4762 01c1 59       		.uleb128 0x59
  4763 01c2 05       		.uleb128 0x5
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 85
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 85
 
 
  4764 01c3 01       		.uleb128 0x1
@@ -5098,7 +5098,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4818 01fe 01       		.uleb128 0x1
  4819 01ff 12       		.uleb128 0x12
  4820 0200 06       		.uleb128 0x6
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 86
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 86
 
 
  4821 0201 58       		.uleb128 0x58
@@ -5158,7 +5158,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4875 0239 34       		.uleb128 0x34
  4876 023a 00       		.byte	0
  4877 023b 31       		.uleb128 0x31
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 87
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 87
 
 
  4878 023c 13       		.uleb128 0x13
@@ -5218,7 +5218,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4932 0275 08       		.uleb128 0x8
  4933 0276 3A       		.uleb128 0x3a
  4934 0277 0B       		.uleb128 0xb
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 88
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 88
 
 
  4935 0278 3B       		.uleb128 0x3b
@@ -5278,7 +5278,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  4989 02b1 03       		.uleb128 0x3
  4990 02b2 0E       		.uleb128 0xe
  4991 02b3 3A       		.uleb128 0x3a
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 89
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 89
 
 
  4992 02b4 0B       		.uleb128 0xb
@@ -5338,7 +5338,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5046 02eb 3B       		.uleb128 0x3b
  5047 02ec 0B       		.uleb128 0xb
  5048 02ed 49       		.uleb128 0x49
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 90
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 90
 
 
  5049 02ee 13       		.uleb128 0x13
@@ -5398,7 +5398,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5103 0324 01       		.byte	0x1
  5104 0325 31       		.uleb128 0x31
  5105 0326 13       		.uleb128 0x13
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 91
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 91
 
 
  5106 0327 52       		.uleb128 0x52
@@ -5458,7 +5458,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5160 035d 0B       		.uleb128 0xb
  5161 035e 3B       		.uleb128 0x3b
  5162 035f 0B       		.uleb128 0xb
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 92
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 92
 
 
  5163 0360 27       		.uleb128 0x27
@@ -5518,7 +5518,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5217 0397 05       		.uleb128 0x5
  5218 0398 27       		.uleb128 0x27
  5219 0399 19       		.uleb128 0x19
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 93
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 93
 
 
  5220 039a 49       		.uleb128 0x49
@@ -5578,7 +5578,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5274 03d3 9542     		.uleb128 0x2115
  5275 03d5 19       		.uleb128 0x19
  5276 03d6 31       		.uleb128 0x31
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 94
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 94
 
 
  5277 03d7 13       		.uleb128 0x13
@@ -5638,7 +5638,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5331 0022 50       		.byte	0x50
  5332 0023 9F       		.byte	0x9f
  5333 0024 8E000000 		.4byte	.LVL147
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 95
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 95
 
 
  5334 0028 9A000000 		.4byte	.LVL148
@@ -5698,7 +5698,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5388 00b3 0400     		.2byte	0x4
  5389 00b5 F3       		.byte	0xf3
  5390 00b6 01       		.uleb128 0x1
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 96
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 96
 
 
  5391 00b7 51       		.byte	0x51
@@ -5758,7 +5758,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5445              	.LLST47:
  5446 0144 74000000 		.4byte	.LVL142
  5447 0148 7A000000 		.4byte	.LVL143
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 97
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 97
 
 
  5448 014c 0200     		.2byte	0x2
@@ -5818,7 +5818,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5502 01d6 46000000 		.4byte	.LVL126
  5503 01da 48000000 		.4byte	.LVL127
  5504 01de 0300     		.2byte	0x3
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 98
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 98
 
 
  5505 01e0 75       		.byte	0x75
@@ -5878,7 +5878,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5559 0269 54       		.byte	0x54
  5560 026a 00000000 		.4byte	0
  5561 026e 00000000 		.4byte	0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 99
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 99
 
 
  5562              	.LLST38:
@@ -5938,7 +5938,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5616 02fd 00000000 		.4byte	0
  5617              	.LLST35:
  5618 0301 6A000000 		.4byte	.LVL100
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 100
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 100
 
 
  5619 0305 72000000 		.4byte	.LVL101
@@ -5998,7 +5998,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5673 038d 00000000 		.4byte	0
  5674 0391 00000000 		.4byte	0
  5675              	.LLST29:
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 101
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 101
 
 
  5676 0395 00000000 		.4byte	.LVL71
@@ -6058,7 +6058,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5730              	.LLST18:
  5731 041f 00000000 		.4byte	.LVL46
  5732 0423 0A000000 		.4byte	.LVL47
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 102
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 102
 
 
  5733 0427 0300     		.2byte	0x3
@@ -6118,7 +6118,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5787 04ad 26000000 		.4byte	.LVL11
  5788 04b1 0200     		.2byte	0x2
  5789 04b3 74       		.byte	0x74
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 103
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 103
 
 
  5790 04b4 08       		.sleb128 8
@@ -6178,7 +6178,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5844 053d 0F000000 		.4byte	.LVL23-1
  5845 0541 50000000 		.4byte	.LVL34
  5846 0545 0100     		.2byte	0x1
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 104
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 104
 
 
  5847 0547 55       		.byte	0x55
@@ -6238,7 +6238,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5901 05c9 51       		.byte	0x51
  5902 05ca 19000000 		.4byte	.LVL4-1
  5903 05ce 22000000 		.4byte	.LVL6
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 105
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 105
 
 
  5904 05d2 0100     		.2byte	0x1
@@ -6298,7 +6298,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  5958 065d 00000000 		.4byte	0
  5959              	.LLST20:
  5960 0661 00000000 		.4byte	.LVL60
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 106
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 106
 
 
  5961 0665 09000000 		.4byte	.LVL61-1
@@ -6358,7 +6358,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  6015 06e3 9F       		.byte	0x9f
  6016 06e4 56000000 		.4byte	.LVL68
  6017 06e8 66000000 		.4byte	.LVL70
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 107
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 107
 
 
  6018 06ec 0100     		.2byte	0x1
@@ -6418,7 +6418,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  6072 0769 0100     		.2byte	0x1
  6073 076b 54       		.byte	0x54
  6074 076c 00000000 		.4byte	0
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 108
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 108
 
 
  6075 0770 00000000 		.4byte	0
@@ -6478,7 +6478,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  6129 0030 3A000000 		.4byte	.LBB126
  6130 0034 40000000 		.4byte	.LBE126
  6131 0038 48000000 		.4byte	.LBB131
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 109
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 109
 
 
  6132 003c 4E000000 		.4byte	.LBE131
@@ -6538,7 +6538,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  6186 0114 3E000000 		.4byte	.LBE221
  6187 0118 48000000 		.4byte	.LBB226
  6188 011c 4E000000 		.4byte	.LBE226
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 110
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 110
 
 
  6189 0120 00000000 		.4byte	0
@@ -6598,7 +6598,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  6243 01f8 00000000 		.4byte	.LFB220
  6244 01fc 58000000 		.4byte	.LFE220
  6245 0200 00000000 		.4byte	.LFB223
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 111
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 111
 
 
  6246 0204 64000000 		.4byte	.LFE223
@@ -6620,8 +6620,8 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  6262 0244 00000000 		.4byte	0
  6263              		.section	.debug_line,"",%progbits
  6264              	.Ldebug_line0:
- 6265 0000 01070000 		.section	.debug_str,"MS",%progbits,1
- 6265      0200E902 
+ 6265 0000 E5060000 		.section	.debug_str,"MS",%progbits,1
+ 6265      0200CD02 
  6265      00000201 
  6265      FB0E0D00 
  6265      01010101 
@@ -6658,7 +6658,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  6279      6D697400 
  6280              	.LASF19:
  6281 0051 75696E74 		.ascii	"uint64_t\000"
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 112
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 112
 
 
  6281      36345F74 
@@ -6718,7 +6718,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  6303      5F7400
  6304              	.LASF160:
  6305 00f2 63685365 		.ascii	"chSemSignal\000"
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 113
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 113
 
 
  6305      6D536967 
@@ -6778,7 +6778,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  6327      6E697400 
  6328              	.LASF1:
  6329 019b 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 114
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 114
 
 
  6329      206C6F6E 
@@ -6838,7 +6838,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  6355      655F6E6F 
  6355      74656D70 
  6355      747900
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 115
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 115
 
 
  6356              	.LASF99:
@@ -6898,7 +6898,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  6385      6500
  6386              	.LASF83:
  6387 02cf 6C6F636B 		.ascii	"lock_cnt\000"
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 116
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 116
 
 
  6387      5F636E74 
@@ -6958,7 +6958,7 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  6411      31373039 
  6412 039c 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
  6412      20726576 
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 117
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 117
 
 
  6412      6973696F 
@@ -6999,586 +6999,582 @@ ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 1
  6423              	.LASF114:
  6424 04a1 6E5F6972 		.ascii	"n_irq\000"
  6424      7100
- 6425              	.LASF197:
- 6426 04a7 2F557365 		.ascii	"/Users/xavierdulex/Documents/EPFL/MT6/robotique_et_"
- 6426      72732F78 
- 6426      61766965 
- 6426      7264756C 
- 6426      65782F44 
- 6427 04da 73797374 		.ascii	"systemes_ embarques/GitRobotique/TP3_Chibi/Chibi/\000"
- 6427      656D6573 
- 6427      5F20656D 
- 6427      62617271 
- 6427      7565732F 
- 6428              	.LASF8:
- 6429 050c 73686F72 		.ascii	"short unsigned int\000"
- 6429      7420756E 
- 6429      7369676E 
- 6429      65642069 
- 6429      6E7400
- 6430              	.LASF118:
- 6431 051f 6B65726E 		.ascii	"kernel_stats_t\000"
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 118
+ 6425              	.LASF128:
+ 6426 04a7 735F636E 		.ascii	"s_cnt\000"
+ 6426      7400
+ 6427              	.LASF8:
+ 6428 04ad 73686F72 		.ascii	"short unsigned int\000"
+ 6428      7420756E 
+ 6428      7369676E 
+ 6428      65642069 
+ 6428      6E7400
+ 6429              	.LASF118:
+ 6430 04c0 6B65726E 		.ascii	"kernel_stats_t\000"
+ 6430      656C5F73 
+ 6430      74617473 
+ 6430      5F7400
+ 6431              	.LASF56:
+ 6432 04cf 63685F74 		.ascii	"ch_thread\000"
+ 6432      68726561 
+ 6432      6400
+ 6433              	.LASF192:
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 118
 
 
- 6431      656C5F73 
- 6431      74617473 
- 6431      5F7400
- 6432              	.LASF56:
- 6433 052e 63685F74 		.ascii	"ch_thread\000"
- 6433      68726561 
- 6433      6400
- 6434              	.LASF192:
- 6435 0538 63685363 		.ascii	"chSchWakeupS\000"
- 6435      6857616B 
- 6435      65757053 
- 6435      00
- 6436              	.LASF27:
- 6437 0545 6D73675F 		.ascii	"msg_t\000"
- 6437      7400
- 6438              	.LASF111:
- 6439 054b 6C617374 		.ascii	"last\000"
- 6439      00
- 6440              	.LASF30:
- 6441 0550 75636E74 		.ascii	"ucnt_t\000"
- 6441      5F7400
- 6442              	.LASF191:
- 6443 0557 63684462 		.ascii	"chDbgCheckClassI\000"
- 6443      67436865 
- 6443      636B436C 
- 6443      61737349 
- 6443      00
- 6444              	.LASF85:
- 6445 0568 63685F73 		.ascii	"ch_system_t\000"
- 6445      79737465 
- 6445      6D5F7400 
- 6446              	.LASF152:
- 6447 0574 63665F6F 		.ascii	"cf_off_time\000"
- 6447      66665F74 
- 6447      696D6500 
- 6448              	.LASF193:
- 6449 0580 63684462 		.ascii	"chDbgCheckClassS\000"
- 6449      67436865 
- 6449      636B436C 
- 6449      61737353 
- 6449      00
- 6450              	.LASF117:
- 6451 0591 6D5F6372 		.ascii	"m_crit_isr\000"
- 6451      69745F69 
- 6451      737200
- 6452              	.LASF61:
- 6453 059c 63685F72 		.ascii	"ch_ready_list\000"
- 6453      65616479 
- 6453      5F6C6973 
- 6453      7400
- 6454              	.LASF28:
- 6455 05aa 6576656E 		.ascii	"eventmask_t\000"
- 6455      746D6173 
- 6455      6B5F7400 
- 6456              	.LASF9:
- 6457 05b6 5F5F696E 		.ascii	"__int32_t\000"
- 6457      7433325F 
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 119
+ 6434 04d9 63685363 		.ascii	"chSchWakeupS\000"
+ 6434      6857616B 
+ 6434      65757053 
+ 6434      00
+ 6435              	.LASF27:
+ 6436 04e6 6D73675F 		.ascii	"msg_t\000"
+ 6436      7400
+ 6437              	.LASF111:
+ 6438 04ec 6C617374 		.ascii	"last\000"
+ 6438      00
+ 6439              	.LASF30:
+ 6440 04f1 75636E74 		.ascii	"ucnt_t\000"
+ 6440      5F7400
+ 6441              	.LASF191:
+ 6442 04f8 63684462 		.ascii	"chDbgCheckClassI\000"
+ 6442      67436865 
+ 6442      636B436C 
+ 6442      61737349 
+ 6442      00
+ 6443              	.LASF85:
+ 6444 0509 63685F73 		.ascii	"ch_system_t\000"
+ 6444      79737465 
+ 6444      6D5F7400 
+ 6445              	.LASF152:
+ 6446 0515 63665F6F 		.ascii	"cf_off_time\000"
+ 6446      66665F74 
+ 6446      696D6500 
+ 6447              	.LASF193:
+ 6448 0521 63684462 		.ascii	"chDbgCheckClassS\000"
+ 6448      67436865 
+ 6448      636B436C 
+ 6448      61737353 
+ 6448      00
+ 6449              	.LASF117:
+ 6450 0532 6D5F6372 		.ascii	"m_crit_isr\000"
+ 6450      69745F69 
+ 6450      737200
+ 6451              	.LASF61:
+ 6452 053d 63685F72 		.ascii	"ch_ready_list\000"
+ 6452      65616479 
+ 6452      5F6C6973 
+ 6452      7400
+ 6453              	.LASF28:
+ 6454 054b 6576656E 		.ascii	"eventmask_t\000"
+ 6454      746D6173 
+ 6454      6B5F7400 
+ 6455              	.LASF9:
+ 6456 0557 5F5F696E 		.ascii	"__int32_t\000"
+ 6456      7433325F 
+ 6456      7400
+ 6457              	.LASF76:
+ 6458 0561 76697274 		.ascii	"virtual_timers_list_t\000"
+ 6458      75616C5F 
+ 6458      74696D65 
+ 6458      72735F6C 
+ 6458      6973745F 
+ 6459              	.LASF95:
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 119
 
 
- 6457      7400
- 6458              	.LASF76:
- 6459 05c0 76697274 		.ascii	"virtual_timers_list_t\000"
- 6459      75616C5F 
- 6459      74696D65 
- 6459      72735F6C 
- 6459      6973745F 
- 6460              	.LASF95:
- 6461 05d6 73746B61 		.ascii	"stkalign_t\000"
- 6461      6C69676E 
- 6461      5F7400
- 6462              	.LASF55:
- 6463 05e1 74687265 		.ascii	"threads_list_t\000"
- 6463      6164735F 
- 6463      6C697374 
- 6463      5F7400
- 6464              	.LASF136:
- 6465 05f0 63685F7A 		.ascii	"ch_zero\000"
- 6465      65726F00 
- 6466              	.LASF150:
- 6467 05f8 63665F6F 		.ascii	"cf_off_refs\000"
- 6467      66665F72 
- 6467      65667300 
- 6468              	.LASF46:
- 6469 0604 705F7761 		.ascii	"p_waiting\000"
- 6469      6974696E 
- 6469      6700
- 6470              	.LASF187:
- 6471 060e 5F737461 		.ascii	"_stats_stop_measure_crit_thd\000"
- 6471      74735F73 
- 6471      746F705F 
- 6471      6D656173 
- 6471      7572655F 
- 6472              	.LASF20:
- 6473 062b 7274636E 		.ascii	"rtcnt_t\000"
- 6473      745F7400 
- 6474              	.LASF185:
- 6475 0633 5F646267 		.ascii	"_dbg_check_lock\000"
- 6475      5F636865 
- 6475      636B5F6C 
- 6475      6F636B00 
- 6476              	.LASF77:
- 6477 0643 63685F76 		.ascii	"ch_virtual_timers_list\000"
- 6477      69727475 
- 6477      616C5F74 
- 6477      696D6572 
- 6477      735F6C69 
- 6478              	.LASF2:
- 6479 065a 6C6F6E67 		.ascii	"long double\000"
- 6479      20646F75 
- 6479      626C6500 
- 6480              	.LASF140:
- 6481 0666 63685F74 		.ascii	"ch_timesize\000"
- 6481      696D6573 
- 6481      697A6500 
- 6482              	.LASF104:
- 6483 0672 74625F70 		.ascii	"tb_ptr\000"
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 120
+ 6460 0577 73746B61 		.ascii	"stkalign_t\000"
+ 6460      6C69676E 
+ 6460      5F7400
+ 6461              	.LASF55:
+ 6462 0582 74687265 		.ascii	"threads_list_t\000"
+ 6462      6164735F 
+ 6462      6C697374 
+ 6462      5F7400
+ 6463              	.LASF136:
+ 6464 0591 63685F7A 		.ascii	"ch_zero\000"
+ 6464      65726F00 
+ 6465              	.LASF150:
+ 6466 0599 63665F6F 		.ascii	"cf_off_refs\000"
+ 6466      66665F72 
+ 6466      65667300 
+ 6467              	.LASF46:
+ 6468 05a5 705F7761 		.ascii	"p_waiting\000"
+ 6468      6974696E 
+ 6468      6700
+ 6469              	.LASF187:
+ 6470 05af 5F737461 		.ascii	"_stats_stop_measure_crit_thd\000"
+ 6470      74735F73 
+ 6470      746F705F 
+ 6470      6D656173 
+ 6470      7572655F 
+ 6471              	.LASF20:
+ 6472 05cc 7274636E 		.ascii	"rtcnt_t\000"
+ 6472      745F7400 
+ 6473              	.LASF185:
+ 6474 05d4 5F646267 		.ascii	"_dbg_check_lock\000"
+ 6474      5F636865 
+ 6474      636B5F6C 
+ 6474      6F636B00 
+ 6475              	.LASF77:
+ 6476 05e4 63685F76 		.ascii	"ch_virtual_timers_list\000"
+ 6476      69727475 
+ 6476      616C5F74 
+ 6476      696D6572 
+ 6476      735F6C69 
+ 6477              	.LASF2:
+ 6478 05fb 6C6F6E67 		.ascii	"long double\000"
+ 6478      20646F75 
+ 6478      626C6500 
+ 6479              	.LASF140:
+ 6480 0607 63685F74 		.ascii	"ch_timesize\000"
+ 6480      696D6573 
+ 6480      697A6500 
+ 6481              	.LASF104:
+ 6482 0613 74625F70 		.ascii	"tb_ptr\000"
+ 6482      747200
+ 6483              	.LASF102:
+ 6484 061a 63685F73 		.ascii	"ch_swc_event_t\000"
+ 6484      77635F65 
+ 6484      76656E74 
+ 6484      5F7400
+ 6485              	.LASF146:
+ 6486 0629 63665F6F 		.ascii	"cf_off_name\000"
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 120
 
 
- 6483      747200
- 6484              	.LASF102:
- 6485 0679 63685F73 		.ascii	"ch_swc_event_t\000"
- 6485      77635F65 
- 6485      76656E74 
- 6485      5F7400
- 6486              	.LASF146:
- 6487 0688 63665F6F 		.ascii	"cf_off_name\000"
- 6487      66665F6E 
- 6487      616D6500 
- 6488              	.LASF178:
- 6489 0694 63685379 		.ascii	"chSysLock\000"
- 6489      734C6F63 
- 6489      6B00
- 6490              	.LASF38:
- 6491 069e 705F6F6C 		.ascii	"p_older\000"
- 6491      64657200 
- 6492              	.LASF64:
- 6493 06a6 725F6374 		.ascii	"r_ctx\000"
- 6493      7800
- 6494              	.LASF36:
- 6495 06ac 705F6374 		.ascii	"p_ctx\000"
- 6495      7800
- 6496              	.LASF108:
- 6497 06b2 746D5F63 		.ascii	"tm_calibration_t\000"
- 6497      616C6962 
- 6497      72617469 
- 6497      6F6E5F74 
- 6497      00
- 6498              	.LASF132:
- 6499 06c3 6D5F6E65 		.ascii	"m_next\000"
- 6499      787400
- 6500              	.LASF161:
- 6501 06ca 74696D65 		.ascii	"time\000"
- 6501      00
- 6502              	.LASF67:
- 6503 06cf 725F6375 		.ascii	"r_current\000"
- 6503      7272656E 
- 6503      7400
- 6504              	.LASF66:
- 6505 06d9 725F6F6C 		.ascii	"r_older\000"
- 6505      64657200 
- 6506              	.LASF13:
- 6507 06e1 5F5F7569 		.ascii	"__uint64_t\000"
- 6507      6E743634 
- 6507      5F7400
- 6508              	.LASF112:
- 6509 06ec 63756D75 		.ascii	"cumulative\000"
- 6509      6C617469 
- 6509      766500
- 6510              	.LASF24:
- 6511 06f7 74726566 		.ascii	"trefs_t\000"
- 6511      735F7400 
- 6512              	.LASF105:
- 6513 06ff 74625F62 		.ascii	"tb_buffer\000"
- 6513      75666665 
- 6513      7200
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 121
+ 6486      66665F6E 
+ 6486      616D6500 
+ 6487              	.LASF178:
+ 6488 0635 63685379 		.ascii	"chSysLock\000"
+ 6488      734C6F63 
+ 6488      6B00
+ 6489              	.LASF38:
+ 6490 063f 705F6F6C 		.ascii	"p_older\000"
+ 6490      64657200 
+ 6491              	.LASF64:
+ 6492 0647 725F6374 		.ascii	"r_ctx\000"
+ 6492      7800
+ 6493              	.LASF36:
+ 6494 064d 705F6374 		.ascii	"p_ctx\000"
+ 6494      7800
+ 6495              	.LASF108:
+ 6496 0653 746D5F63 		.ascii	"tm_calibration_t\000"
+ 6496      616C6962 
+ 6496      72617469 
+ 6496      6F6E5F74 
+ 6496      00
+ 6497              	.LASF132:
+ 6498 0664 6D5F6E65 		.ascii	"m_next\000"
+ 6498      787400
+ 6499              	.LASF161:
+ 6500 066b 74696D65 		.ascii	"time\000"
+ 6500      00
+ 6501              	.LASF67:
+ 6502 0670 725F6375 		.ascii	"r_current\000"
+ 6502      7272656E 
+ 6502      7400
+ 6503              	.LASF66:
+ 6504 067a 725F6F6C 		.ascii	"r_older\000"
+ 6504      64657200 
+ 6505              	.LASF13:
+ 6506 0682 5F5F7569 		.ascii	"__uint64_t\000"
+ 6506      6E743634 
+ 6506      5F7400
+ 6507              	.LASF112:
+ 6508 068d 63756D75 		.ascii	"cumulative\000"
+ 6508      6C617469 
+ 6508      766500
+ 6509              	.LASF24:
+ 6510 0698 74726566 		.ascii	"trefs_t\000"
+ 6510      735F7400 
+ 6511              	.LASF105:
+ 6512 06a0 74625F62 		.ascii	"tb_buffer\000"
+ 6512      75666665 
+ 6512      7200
+ 6513              	.LASF139:
+ 6514 06aa 63685F70 		.ascii	"ch_ptrsize\000"
+ 6514      74727369 
+ 6514      7A6500
+ 6515              	.LASF69:
+ 6516 06b5 76697274 		.ascii	"virtual_timer_t\000"
+ 6516      75616C5F 
+ 6516      74696D65 
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 121
 
 
- 6514              	.LASF139:
- 6515 0709 63685F70 		.ascii	"ch_ptrsize\000"
- 6515      74727369 
- 6515      7A6500
- 6516              	.LASF69:
- 6517 0714 76697274 		.ascii	"virtual_timer_t\000"
- 6517      75616C5F 
- 6517      74696D65 
- 6517      725F7400 
- 6518              	.LASF34:
- 6519 0724 705F7072 		.ascii	"p_prev\000"
- 6519      657600
- 6520              	.LASF26:
- 6521 072b 74707269 		.ascii	"tprio_t\000"
- 6521      6F5F7400 
- 6522              	.LASF115:
- 6523 0733 6E5F6374 		.ascii	"n_ctxswc\000"
- 6523      78737763 
- 6523      00
- 6524              	.LASF175:
- 6525 073c 5F426F6F 		.ascii	"_Bool\000"
- 6525      6C00
- 6526              	.LASF17:
- 6527 0742 696E7433 		.ascii	"int32_t\000"
- 6527      325F7400 
- 6528              	.LASF4:
- 6529 074a 756E7369 		.ascii	"unsigned char\000"
- 6529      676E6564 
- 6529      20636861 
- 6529      7200
- 6530              	.LASF128:
- 6531 0758 735F636E 		.ascii	"s_cnt\000"
- 6531      7400
- 6532              	.LASF50:
- 6533 075e 705F6D74 		.ascii	"p_mtxlist\000"
- 6533      786C6973 
- 6533      7400
- 6534              	.LASF5:
- 6535 0768 73686F72 		.ascii	"short int\000"
- 6535      7420696E 
- 6535      7400
- 6536              	.LASF41:
- 6537 0772 705F7374 		.ascii	"p_state\000"
- 6537      61746500 
- 6538              	.LASF44:
- 6539 077a 705F7072 		.ascii	"p_preempt\000"
- 6539      65656D70 
- 6539      7400
- 6540              	.LASF63:
- 6541 0784 725F7072 		.ascii	"r_prio\000"
- 6541      696F00
- 6542              	.LASF125:
- 6543 078b 65776D61 		.ascii	"ewmask\000"
- 6543      736B00
- 6544              	.LASF33:
- 6545 0792 705F6E65 		.ascii	"p_next\000"
- 6545      787400
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 122
+ 6516      725F7400 
+ 6517              	.LASF34:
+ 6518 06c5 705F7072 		.ascii	"p_prev\000"
+ 6518      657600
+ 6519              	.LASF26:
+ 6520 06cc 74707269 		.ascii	"tprio_t\000"
+ 6520      6F5F7400 
+ 6521              	.LASF115:
+ 6522 06d4 6E5F6374 		.ascii	"n_ctxswc\000"
+ 6522      78737763 
+ 6522      00
+ 6523              	.LASF175:
+ 6524 06dd 5F426F6F 		.ascii	"_Bool\000"
+ 6524      6C00
+ 6525              	.LASF17:
+ 6526 06e3 696E7433 		.ascii	"int32_t\000"
+ 6526      325F7400 
+ 6527              	.LASF4:
+ 6528 06eb 756E7369 		.ascii	"unsigned char\000"
+ 6528      676E6564 
+ 6528      20636861 
+ 6528      7200
+ 6529              	.LASF50:
+ 6530 06f9 705F6D74 		.ascii	"p_mtxlist\000"
+ 6530      786C6973 
+ 6530      7400
+ 6531              	.LASF5:
+ 6532 0703 73686F72 		.ascii	"short int\000"
+ 6532      7420696E 
+ 6532      7400
+ 6533              	.LASF41:
+ 6534 070d 705F7374 		.ascii	"p_state\000"
+ 6534      61746500 
+ 6535              	.LASF44:
+ 6536 0715 705F7072 		.ascii	"p_preempt\000"
+ 6536      65656D70 
+ 6536      7400
+ 6537              	.LASF63:
+ 6538 071f 725F7072 		.ascii	"r_prio\000"
+ 6538      696F00
+ 6539              	.LASF125:
+ 6540 0726 65776D61 		.ascii	"ewmask\000"
+ 6540      736B00
+ 6541              	.LASF33:
+ 6542 072d 705F6E65 		.ascii	"p_next\000"
+ 6542      787400
+ 6543              	.LASF22:
+ 6544 0734 746D6F64 		.ascii	"tmode_t\000"
+ 6544      655F7400 
+ 6545              	.LASF151:
+ 6546 073c 63665F6F 		.ascii	"cf_off_preempt\000"
+ 6546      66665F70 
+ 6546      7265656D 
+ 6546      707400
+ 6547              	.LASF42:
+ 6548 074b 705F666C 		.ascii	"p_flags\000"
+ 6548      61677300 
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 122
 
 
- 6546              	.LASF22:
- 6547 0799 746D6F64 		.ascii	"tmode_t\000"
- 6547      655F7400 
- 6548              	.LASF151:
- 6549 07a1 63665F6F 		.ascii	"cf_off_preempt\000"
- 6549      66665F70 
- 6549      7265656D 
- 6549      707400
- 6550              	.LASF42:
- 6551 07b0 705F666C 		.ascii	"p_flags\000"
- 6551      61677300 
- 6552              	.LASF157:
- 6553 07b8 5F5F6675 		.ascii	"__func__\000"
- 6553      6E635F5F 
- 6553      00
- 6554              	.LASF53:
- 6555 07c1 705F7374 		.ascii	"p_stats\000"
- 6555      61747300 
- 6556              	.LASF165:
- 6557 07c9 63685365 		.ascii	"chSemWaitS\000"
- 6557      6D576169 
- 6557      745300
- 6558              	.LASF155:
- 6559 07d4 73656D61 		.ascii	"semaphore_t\000"
- 6559      70686F72 
- 6559      655F7400 
- 6560              	.LASF58:
- 6561 07e0 74687265 		.ascii	"threads_queue_t\000"
- 6561      6164735F 
- 6561      71756575 
- 6561      655F7400 
- 6562              	.LASF70:
- 6563 07f0 63685F76 		.ascii	"ch_virtual_timer\000"
- 6563      69727475 
- 6563      616C5F74 
- 6563      696D6572 
- 6563      00
- 6564              	.LASF144:
- 6565 0801 63665F6F 		.ascii	"cf_off_newer\000"
- 6565      66665F6E 
- 6565      65776572 
- 6565      00
- 6566              	.LASF126:
- 6567 080e 63685F73 		.ascii	"ch_semaphore\000"
- 6567      656D6170 
- 6567      686F7265 
- 6567      00
- 6568              	.LASF183:
- 6569 081b 63685363 		.ascii	"chSchGoSleepS\000"
- 6569      68476F53 
- 6569      6C656570 
- 6569      5300
- 6570              	.LASF49:
- 6571 0829 705F6570 		.ascii	"p_epending\000"
- 6571      656E6469 
- 6571      6E6700
- 6572              	.LASF18:
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 123
+ 6549              	.LASF157:
+ 6550 0753 5F5F6675 		.ascii	"__func__\000"
+ 6550      6E635F5F 
+ 6550      00
+ 6551              	.LASF53:
+ 6552 075c 705F7374 		.ascii	"p_stats\000"
+ 6552      61747300 
+ 6553              	.LASF165:
+ 6554 0764 63685365 		.ascii	"chSemWaitS\000"
+ 6554      6D576169 
+ 6554      745300
+ 6555              	.LASF155:
+ 6556 076f 73656D61 		.ascii	"semaphore_t\000"
+ 6556      70686F72 
+ 6556      655F7400 
+ 6557              	.LASF58:
+ 6558 077b 74687265 		.ascii	"threads_queue_t\000"
+ 6558      6164735F 
+ 6558      71756575 
+ 6558      655F7400 
+ 6559              	.LASF70:
+ 6560 078b 63685F76 		.ascii	"ch_virtual_timer\000"
+ 6560      69727475 
+ 6560      616C5F74 
+ 6560      696D6572 
+ 6560      00
+ 6561              	.LASF144:
+ 6562 079c 63665F6F 		.ascii	"cf_off_newer\000"
+ 6562      66665F6E 
+ 6562      65776572 
+ 6562      00
+ 6563              	.LASF126:
+ 6564 07a9 63685F73 		.ascii	"ch_semaphore\000"
+ 6564      656D6170 
+ 6564      686F7265 
+ 6564      00
+ 6565              	.LASF183:
+ 6566 07b6 63685363 		.ascii	"chSchGoSleepS\000"
+ 6566      68476F53 
+ 6566      6C656570 
+ 6566      5300
+ 6567              	.LASF49:
+ 6568 07c4 705F6570 		.ascii	"p_epending\000"
+ 6568      656E6469 
+ 6568      6E6700
+ 6569              	.LASF18:
+ 6570 07cf 75696E74 		.ascii	"uint32_t\000"
+ 6570      33325F74 
+ 6570      00
+ 6571              	.LASF142:
+ 6572 07d8 63665F6F 		.ascii	"cf_off_prio\000"
+ 6572      66665F70 
+ 6572      72696F00 
+ 6573              	.LASF62:
+ 6574 07e4 725F7175 		.ascii	"r_queue\000"
+ 6574      65756500 
+ 6575              	.LASF190:
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 123
 
 
- 6573 0834 75696E74 		.ascii	"uint32_t\000"
- 6573      33325F74 
- 6573      00
- 6574              	.LASF142:
- 6575 083d 63665F6F 		.ascii	"cf_off_prio\000"
- 6575      66665F70 
- 6575      72696F00 
- 6576              	.LASF62:
- 6577 0849 725F7175 		.ascii	"r_queue\000"
- 6577      65756500 
- 6578              	.LASF190:
- 6579 0851 63685363 		.ascii	"chSchReadyI\000"
- 6579      68526561 
- 6579      64794900 
- 6580              	.LASF57:
- 6581 085d 63685F74 		.ascii	"ch_threads_list\000"
- 6581      68726561 
- 6581      64735F6C 
- 6581      69737400 
- 6582              	.LASF137:
- 6583 086d 63685F73 		.ascii	"ch_size\000"
- 6583      697A6500 
- 6584              	.LASF12:
- 6585 0875 6C6F6E67 		.ascii	"long unsigned int\000"
- 6585      20756E73 
- 6585      69676E65 
- 6585      6420696E 
- 6585      7400
- 6586              	.LASF134:
- 6587 0887 63686172 		.ascii	"char\000"
- 6587      00
- 6588              	.LASF124:
- 6589 088c 77746D74 		.ascii	"wtmtxp\000"
- 6589      787000
- 6590              	.LASF164:
- 6591 0893 63685365 		.ascii	"chSemWaitTimeoutS\000"
- 6591      6D576169 
- 6591      7454696D 
- 6591      656F7574 
- 6591      5300
- 6592              	.LASF7:
- 6593 08a5 5F5F7569 		.ascii	"__uint16_t\000"
- 6593      6E743136 
- 6593      5F7400
- 6594              	.LASF32:
- 6595 08b0 74687265 		.ascii	"thread_t\000"
- 6595      61645F74 
- 6595      00
- 6596              	.LASF109:
- 6597 08b9 62657374 		.ascii	"best\000"
- 6597      00
- 6598              	.LASF172:
- 6599 08be 71756575 		.ascii	"queue_fifo_remove\000"
- 6599      655F6669 
- 6599      666F5F72 
- 6599      656D6F76 
- 6599      6500
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 124
+ 6576 07ec 63685363 		.ascii	"chSchReadyI\000"
+ 6576      68526561 
+ 6576      64794900 
+ 6577              	.LASF57:
+ 6578 07f8 63685F74 		.ascii	"ch_threads_list\000"
+ 6578      68726561 
+ 6578      64735F6C 
+ 6578      69737400 
+ 6579              	.LASF137:
+ 6580 0808 63685F73 		.ascii	"ch_size\000"
+ 6580      697A6500 
+ 6581              	.LASF12:
+ 6582 0810 6C6F6E67 		.ascii	"long unsigned int\000"
+ 6582      20756E73 
+ 6582      69676E65 
+ 6582      6420696E 
+ 6582      7400
+ 6583              	.LASF134:
+ 6584 0822 63686172 		.ascii	"char\000"
+ 6584      00
+ 6585              	.LASF124:
+ 6586 0827 77746D74 		.ascii	"wtmtxp\000"
+ 6586      787000
+ 6587              	.LASF164:
+ 6588 082e 63685365 		.ascii	"chSemWaitTimeoutS\000"
+ 6588      6D576169 
+ 6588      7454696D 
+ 6588      656F7574 
+ 6588      5300
+ 6589              	.LASF7:
+ 6590 0840 5F5F7569 		.ascii	"__uint16_t\000"
+ 6590      6E743136 
+ 6590      5F7400
+ 6591              	.LASF32:
+ 6592 084b 74687265 		.ascii	"thread_t\000"
+ 6592      61645F74 
+ 6592      00
+ 6593              	.LASF109:
+ 6594 0854 62657374 		.ascii	"best\000"
+ 6594      00
+ 6595              	.LASF172:
+ 6596 0859 71756575 		.ascii	"queue_fifo_remove\000"
+ 6596      655F6669 
+ 6596      666F5F72 
+ 6596      656D6F76 
+ 6596      6500
+ 6597              	.LASF31:
+ 6598 086b 73797374 		.ascii	"systime_t\000"
+ 6598      696D655F 
+ 6598      7400
+ 6599              	.LASF51:
+ 6600 0875 705F7265 		.ascii	"p_realprio\000"
+ 6600      616C7072 
+ 6600      696F00
+ 6601              	.LASF68:
+ 6602 0880 76746675 		.ascii	"vtfunc_t\000"
+ 6602      6E635F74 
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 124
 
 
- 6600              	.LASF31:
- 6601 08d0 73797374 		.ascii	"systime_t\000"
- 6601      696D655F 
- 6601      7400
- 6602              	.LASF51:
- 6603 08da 705F7265 		.ascii	"p_realprio\000"
- 6603      616C7072 
- 6603      696F00
- 6604              	.LASF68:
- 6605 08e5 76746675 		.ascii	"vtfunc_t\000"
- 6605      6E635F74 
- 6605      00
- 6606              	.LASF11:
- 6607 08ee 5F5F7569 		.ascii	"__uint32_t\000"
- 6607      6E743332 
- 6607      5F7400
- 6608              	.LASF181:
- 6609 08f9 5F5F7365 		.ascii	"__set_BASEPRI\000"
- 6609      745F4241 
- 6609      53455052 
- 6609      4900
- 6610              	.LASF166:
- 6611 0907 63685365 		.ascii	"chSemWait\000"
- 6611      6D576169 
- 6611      7400
- 6612              	.LASF81:
- 6613 0911 70616E69 		.ascii	"panic_msg\000"
- 6613      635F6D73 
- 6613      6700
- 6614              	.LASF107:
- 6615 091b 6F666673 		.ascii	"offset\000"
- 6615      657400
- 6616              	.LASF96:
- 6617 0922 636F6E74 		.ascii	"context\000"
- 6617      65787400 
- 6618              	.LASF48:
- 6619 092a 705F6D73 		.ascii	"p_msg\000"
- 6619      6700
- 6620              	.LASF75:
- 6621 0930 76745F70 		.ascii	"vt_par\000"
- 6621      617200
- 6622              	.LASF98:
- 6623 0937 73655F74 		.ascii	"se_time\000"
- 6623      696D6500 
+ 6602      00
+ 6603              	.LASF11:
+ 6604 0889 5F5F7569 		.ascii	"__uint32_t\000"
+ 6604      6E743332 
+ 6604      5F7400
+ 6605              	.LASF181:
+ 6606 0894 5F5F7365 		.ascii	"__set_BASEPRI\000"
+ 6606      745F4241 
+ 6606      53455052 
+ 6606      4900
+ 6607              	.LASF166:
+ 6608 08a2 63685365 		.ascii	"chSemWait\000"
+ 6608      6D576169 
+ 6608      7400
+ 6609              	.LASF81:
+ 6610 08ac 70616E69 		.ascii	"panic_msg\000"
+ 6610      635F6D73 
+ 6610      6700
+ 6611              	.LASF107:
+ 6612 08b6 6F666673 		.ascii	"offset\000"
+ 6612      657400
+ 6613              	.LASF96:
+ 6614 08bd 636F6E74 		.ascii	"context\000"
+ 6614      65787400 
+ 6615              	.LASF48:
+ 6616 08c5 705F6D73 		.ascii	"p_msg\000"
+ 6616      6700
+ 6617              	.LASF75:
+ 6618 08cb 76745F70 		.ascii	"vt_par\000"
+ 6618      617200
+ 6619              	.LASF98:
+ 6620 08d2 73655F74 		.ascii	"se_time\000"
+ 6620      696D6500 
+ 6621              	.LASF197:
+ 6622 08da 433A5C55 		.ascii	"C:\\Users\\stoma\\Desktop\\Robotique\\TP3_Chibi\\Ch"
+ 6622      73657273 
+ 6622      5C73746F 
+ 6622      6D615C44 
+ 6622      65736B74 
+ 6623 0907 69626900 		.ascii	"ibi\000"
  6624              	.LASF143:
- 6625 093f 63665F6F 		.ascii	"cf_off_ctx\000"
+ 6625 090b 63665F6F 		.ascii	"cf_off_ctx\000"
  6625      66665F63 
  6625      747800
  6626              	.LASF129:
- 6627 094a 63685F6D 		.ascii	"ch_mutex\000"
+ 6627 0916 63685F6D 		.ascii	"ch_mutex\000"
  6627      75746578 
  6627      00
  6628              	.LASF43:
- 6629 0953 705F7265 		.ascii	"p_refs\000"
+ 6629 091f 705F7265 		.ascii	"p_refs\000"
  6629      667300
  6630              	.LASF82:
- 6631 095a 6973725F 		.ascii	"isr_cnt\000"
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 125
-
-
+ 6631 0926 6973725F 		.ascii	"isr_cnt\000"
  6631      636E7400 
  6632              	.LASF101:
- 6633 0962 73655F73 		.ascii	"se_state\000"
+ 6633 092e 73655F73 		.ascii	"se_state\000"
  6633      74617465 
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 125
+
+
  6633      00
  6634              	.LASF167:
- 6635 096b 63685365 		.ascii	"chSemResetI\000"
+ 6635 0937 63685365 		.ascii	"chSemResetI\000"
  6635      6D526573 
  6635      65744900 
  6636              	.LASF87:
- 6637 0977 726C6973 		.ascii	"rlist\000"
+ 6637 0943 726C6973 		.ascii	"rlist\000"
  6637      7400
  6638              	.LASF15:
- 6639 097d 75696E74 		.ascii	"uint8_t\000"
+ 6639 0949 75696E74 		.ascii	"uint8_t\000"
  6639      385F7400 
  6640              	.LASF186:
- 6641 0985 5F646267 		.ascii	"_dbg_check_unlock\000"
+ 6641 0951 5F646267 		.ascii	"_dbg_check_unlock\000"
  6641      5F636865 
  6641      636B5F75 
  6641      6E6C6F63 
  6641      6B00
  6642              	.LASF54:
- 6643 0997 74687265 		.ascii	"thread_reference_t\000"
+ 6643 0963 74687265 		.ascii	"thread_reference_t\000"
  6643      61645F72 
  6643      65666572 
  6643      656E6365 
  6643      5F7400
  6644              	.LASF121:
- 6645 09aa 77746F62 		.ascii	"wtobjp\000"
+ 6645 0976 77746F62 		.ascii	"wtobjp\000"
  6645      6A7000
  6646              	.LASF39:
- 6647 09b1 705F6E61 		.ascii	"p_name\000"
+ 6647 097d 705F6E61 		.ascii	"p_name\000"
  6647      6D6500
  6648              	.LASF78:
- 6649 09b8 76745F73 		.ascii	"vt_systime\000"
+ 6649 0984 76745F73 		.ascii	"vt_systime\000"
  6649      79737469 
  6649      6D6500
  6650              	.LASF84:
- 6651 09c3 74726163 		.ascii	"trace_buffer\000"
+ 6651 098f 74726163 		.ascii	"trace_buffer\000"
  6651      655F6275 
  6651      66666572 
  6651      00
  6652              	.LASF73:
- 6653 09d0 76745F64 		.ascii	"vt_delta\000"
+ 6653 099c 76745F64 		.ascii	"vt_delta\000"
  6653      656C7461 
  6653      00
  6654              	.LASF170:
- 6655 09d9 63685379 		.ascii	"chSysUnlock\000"
+ 6655 09a5 63685379 		.ascii	"chSysUnlock\000"
  6655      73556E6C 
  6655      6F636B00 
  6656              	.LASF138:
- 6657 09e5 63685F76 		.ascii	"ch_version\000"
+ 6657 09b1 63685F76 		.ascii	"ch_version\000"
  6657      65727369 
  6657      6F6E00
  6658              	.LASF116:
- 6659 09f0 6D5F6372 		.ascii	"m_crit_thd\000"
+ 6659 09bc 6D5F6372 		.ascii	"m_crit_thd\000"
  6659      69745F74 
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 126
-
-
  6659      686400
  6660              	.LASF131:
- 6661 09fb 6D5F6F77 		.ascii	"m_owner\000"
+ 6661 09c7 6D5F6F77 		.ascii	"m_owner\000"
  6661      6E657200 
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 126
+
+
  6662              	.LASF100:
- 6663 0a03 73655F77 		.ascii	"se_wtobjp\000"
+ 6663 09cf 73655F77 		.ascii	"se_wtobjp\000"
  6663      746F626A 
  6663      7000
  6664              	.LASF135:
- 6665 0a0d 63685F69 		.ascii	"ch_identifier\000"
+ 6665 09d9 63685F69 		.ascii	"ch_identifier\000"
  6665      64656E74 
  6665      69666965 
  6665      7200
  6666              	.LASF74:
- 6667 0a1b 76745F66 		.ascii	"vt_func\000"
+ 6667 09e7 76745F66 		.ascii	"vt_func\000"
  6667      756E6300 
  6668              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 127
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 127
 
 
 DEFINED SYMBOLS
-                            *ABS*:0000000000000000 chsem.c
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:18     .text.chSemObjectInit:0000000000000000 $t
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:26     .text.chSemObjectInit:0000000000000000 chSemObjectInit
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:82     .text.chSemObjectInit:0000000000000024 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:87     .text.chSemResetI:0000000000000000 $t
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:95     .text.chSemResetI:0000000000000000 chSemResetI
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:195    .text.chSemResetI:000000000000005c $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:200    .text.chSemReset:0000000000000000 $t
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:208    .text.chSemReset:0000000000000000 chSemReset
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:329    .text.chSemReset:0000000000000050 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:335    .text.chSemWaitS:0000000000000000 $t
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:343    .text.chSemWaitS:0000000000000000 chSemWaitS
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:450    .text.chSemWaitS:000000000000005c $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:456    .text.chSemWait:0000000000000000 $t
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:464    .text.chSemWait:0000000000000000 chSemWait
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:591    .text.chSemWait:0000000000000050 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:597    .text.chSemWaitTimeoutS:0000000000000000 $t
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:605    .text.chSemWaitTimeoutS:0000000000000000 chSemWaitTimeoutS
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:736    .text.chSemWaitTimeoutS:0000000000000068 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:742    .text.chSemWaitTimeout:0000000000000000 $t
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:750    .text.chSemWaitTimeout:0000000000000000 chSemWaitTimeout
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:870    .text.chSemWaitTimeout:0000000000000054 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:876    .text.chSemSignal:0000000000000000 $t
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:884    .text.chSemSignal:0000000000000000 chSemSignal
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1055   .text.chSemSignal:0000000000000080 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1062   .text.chSemSignalI:0000000000000000 $t
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1070   .text.chSemSignalI:0000000000000000 chSemSignalI
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1171   .text.chSemSignalI:0000000000000054 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1176   .text.chSemAddCounterI:0000000000000000 $t
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1184   .text.chSemAddCounterI:0000000000000000 chSemAddCounterI
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1290   .text.chSemAddCounterI:0000000000000060 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1295   .text.chSemSignalWait:0000000000000000 $t
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1303   .text.chSemSignalWait:0000000000000000 chSemSignalWait
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1549   .text.chSemSignalWait:00000000000000d0 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1556   .rodata.__func__.7153:0000000000000000 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1560   .rodata.__func__.7153:0000000000000000 __func__.7153
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1563   .rodata.__func__.7850:0000000000000000 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1567   .rodata.__func__.7850:0000000000000000 __func__.7850
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1570   .rodata.__func__.7860:0000000000000000 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1574   .rodata.__func__.7860:0000000000000000 __func__.7860
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1577   .rodata.__func__.7871:0000000000000000 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1581   .rodata.__func__.7871:0000000000000000 __func__.7871
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1584   .rodata.__func__.7881:0000000000000000 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1588   .rodata.__func__.7881:0000000000000000 __func__.7881
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1591   .rodata.__func__.7885:0000000000000000 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1595   .rodata.__func__.7885:0000000000000000 __func__.7885
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1598   .rodata.__func__.7889:0000000000000000 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1602   .rodata.__func__.7889:0000000000000000 __func__.7889
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1605   .rodata.__func__.7895:0000000000000000 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1609   .rodata.__func__.7895:0000000000000000 __func__.7895
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1612   .rodata.__func__.7904:0000000000000000 $d
-/var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s:1616   .rodata.__func__.7904:0000000000000000 __func__.7904
+                            *ABS*:00000000 chsem.c
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:18     .text.chSemObjectInit:00000000 $t
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:26     .text.chSemObjectInit:00000000 chSemObjectInit
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:82     .text.chSemObjectInit:00000024 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:87     .text.chSemResetI:00000000 $t
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:95     .text.chSemResetI:00000000 chSemResetI
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:195    .text.chSemResetI:0000005c $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:200    .text.chSemReset:00000000 $t
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:208    .text.chSemReset:00000000 chSemReset
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:329    .text.chSemReset:00000050 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:335    .text.chSemWaitS:00000000 $t
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:343    .text.chSemWaitS:00000000 chSemWaitS
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:450    .text.chSemWaitS:0000005c $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:456    .text.chSemWait:00000000 $t
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:464    .text.chSemWait:00000000 chSemWait
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:591    .text.chSemWait:00000050 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:597    .text.chSemWaitTimeoutS:00000000 $t
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:605    .text.chSemWaitTimeoutS:00000000 chSemWaitTimeoutS
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:736    .text.chSemWaitTimeoutS:00000068 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:742    .text.chSemWaitTimeout:00000000 $t
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:750    .text.chSemWaitTimeout:00000000 chSemWaitTimeout
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:870    .text.chSemWaitTimeout:00000054 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:876    .text.chSemSignal:00000000 $t
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:884    .text.chSemSignal:00000000 chSemSignal
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1055   .text.chSemSignal:00000080 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1062   .text.chSemSignalI:00000000 $t
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1070   .text.chSemSignalI:00000000 chSemSignalI
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1171   .text.chSemSignalI:00000054 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1176   .text.chSemAddCounterI:00000000 $t
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1184   .text.chSemAddCounterI:00000000 chSemAddCounterI
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1290   .text.chSemAddCounterI:00000060 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1295   .text.chSemSignalWait:00000000 $t
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1303   .text.chSemSignalWait:00000000 chSemSignalWait
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1549   .text.chSemSignalWait:000000d0 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1556   .rodata.__func__.7153:00000000 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1560   .rodata.__func__.7153:00000000 __func__.7153
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1563   .rodata.__func__.7850:00000000 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1567   .rodata.__func__.7850:00000000 __func__.7850
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1570   .rodata.__func__.7860:00000000 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1574   .rodata.__func__.7860:00000000 __func__.7860
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1577   .rodata.__func__.7871:00000000 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1581   .rodata.__func__.7871:00000000 __func__.7871
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1584   .rodata.__func__.7881:00000000 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1588   .rodata.__func__.7881:00000000 __func__.7881
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1591   .rodata.__func__.7885:00000000 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1595   .rodata.__func__.7885:00000000 __func__.7885
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1598   .rodata.__func__.7889:00000000 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1602   .rodata.__func__.7889:00000000 __func__.7889
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1605   .rodata.__func__.7895:00000000 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1609   .rodata.__func__.7895:00000000 __func__.7895
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1612   .rodata.__func__.7904:00000000 $d
+C:\Users\stoma\AppData\Local\Temp\cche7vLb.s:1616   .rodata.__func__.7904:00000000 __func__.7904
 
 UNDEFINED SYMBOLS
 chSysHalt
 chDbgCheckClassI
-ARM GAS  /var/folders/km/q6jdms0143g2bddz5bhvdfd00000gn/T//ccUPNepZ.s 			page 128
+ARM GAS  C:\Users\stoma\AppData\Local\Temp\cche7vLb.s 			page 128
 
 
 chSchReadyI
