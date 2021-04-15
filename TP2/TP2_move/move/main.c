@@ -26,31 +26,35 @@ void delay(unsigned int n)
 int main(void)
 {
     SystemClock_Config();
-    // Enable GPIOD and GPIOE peripheral clock
-    RCC->AHB1ENR    |= RCC_AHB1ENR_GPIOBEN;
-    RCC-> AHB1ENR	|= RCC_AHB1ENR_GPIODEN;
-
-    gpio_config_output_pushpull(FRONT_LED);
-
-    timer4_start();
+    // Enable GPIOD and GPIOB peripheral clock
+//    RCC->AHB1ENR    |= RCC_AHB1ENR_GPIOBEN;
+//    RCC-> AHB1ENR	|= RCC_AHB1ENR_GPIODEN;
+    RCC-> AHB1ENR	|= RCC_AHB1ENR_GPIOEEN;
 
 
+    //gpio_config_output_pushpull(FRONT_LED);
+   // init_selector();
 
+  //  timer4_start();
 
-    GPIOD->AFR[1] = (GPIOD->AFR[1] & (15 << 24)) | (2 << 24);
+    //gpio_set(FRONT_LED);
 
-    TIM4->CCMR2		|= (6 << 12);
-    //Enable OC4 output
-    TIM4->CCER 		|= (1 << 12);
+  //  GPIOD->MODER = 2 << 28;
+
+  //  GPIOD->AFR[1] = (GPIOD->AFR[1] & (15 << 24)) | (2 << 24);
+
+   // TIM4->CCMR2		|= (6 << 4);
+    //Enable OC3 output
+  //  TIM4->CCER 		|= (1 << 8);
     // Output active high
-    TIM4->CCER		|= (0 << 3);
+  //  TIM4->CCER		|= (0 << 9);
 
-    TIM4->CCR3 		|= 50;
+    motor_init();
 
 
 
     while (1) {
-        
+    	//TIM4->CCR3 = get_selector()*6;
     }
 }
 
