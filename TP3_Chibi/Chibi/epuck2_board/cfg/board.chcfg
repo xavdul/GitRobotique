@@ -469,7 +469,7 @@
         Speed="Maximum"
         Resistor="Floating"
         Mode="Output"
-        Alternate="0" ></pin6>
+        Alternate="0" />
       <pin7
         ID="AUDIO_PWR"
         Type="PushPull"

@@ -28,12 +28,12 @@
 		<link>
 			<name>ChibiOS</name>
 			<type>2</type>
-			<location>/Users/xavierdulex/Documents/EPFL/MT6/robotique_et_systemes_ embarques/GitRobotique/lib/ChibiOS</location>
+			<locationURI>PARENT-2-PROJECT_LOC/lib/ChibiOS</locationURI>
 		</link>
 		<link>
 			<name>msgbus</name>
 			<type>2</type>
-			<location>/Users/xavierdulex/Documents/EPFL/MT6/robotique_et_systemes_ embarques/GitRobotique/lib/msgbus</location>
+			<locationURI>PARENT-2-PROJECT_LOC/lib/msgbus</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
