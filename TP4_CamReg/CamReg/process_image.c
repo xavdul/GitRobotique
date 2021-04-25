@@ -76,17 +76,17 @@ static THD_FUNCTION(ProcessImage, arg) {
 			image[i/2] = (img_buff_ptr[i+1] & 0x1F);
 		}
 
-//		SendUint8ToComputer(image, IMAGE_BUFFER_SIZE);
+		SendUint8ToComputer(image, IMAGE_BUFFER_SIZE);
 
-		int line_width = line_detection(image);
-		if (line_width =0)
-			distance_cm = 10;
-		else
-			distance_cm = (PXTOCM / line_width);
+//		//int line_width = line_detection(image);
+//		if (line_width =0)
+//			distance_cm = 10;
+//		else
+//			distance_cm = (PXTOCM / line_width);
 
 
-		chprintf((BaseSequentialStream *)&SD3, "Largeur = %7d\r\n", line_width);
-		chprintf((BaseSequentialStream *)&SD3, "Distance = %f\r\n", distance_cm);
+//		chprintf((BaseSequentialStream *)&SD3, "Largeur = %7d\r\n", line_width);
+//		chprintf((BaseSequentialStream *)&SD3, "Distance = %f\r\n", distance_cm);
 
     }
 }
