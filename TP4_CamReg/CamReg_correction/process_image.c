@@ -38,6 +38,7 @@ line_info extract_line_width(uint8_t *buffer){
 
 	do{
 		wrong_line = 0;
+		line_not_found = 0;
 		//search for a begin
 		while(stop == 0 && i < (IMAGE_BUFFER_SIZE - WIDTH_SLOPE))
 		{ 
@@ -76,28 +77,29 @@ line_info extract_line_width(uint8_t *buffer){
 		}
 
 		//if a line too small has been detected, continues the search
-		if(!line_not_found && (end-begin) < MIN_LINE_WIDTH){
-			i = end;
-			begin = 0;
-			end = 0;
-			stop = 0;
-			wrong_line = 1;
-		}
-	}while(wrong_line);
+//		if(!line_not_found && (end-begin) < MIN_LINE_WIDTH){
+//			i = end;
+//			begin = 0;
+//			end = 0;
+//			stop = 0;
+//			wrong_line = 1;
+//		}
+	}while(line_not_found);
 
-	if(line_not_found){
-		begin = 0;
-		end = 0;
-		width = last_width;
-	}else{
-		last_width = width = (end - begin);
+//	if(line_not_found){
+//		begin = 0;
+//		end = 0;
+//		//width = last_width;
+//	}else{
+		//last_width =
+		width = (end - begin);
 		line_position = (begin + end)/2; //gives the line position.
-	}
+//	}
 
 	//sets a maximum width or returns the measured width
-	if((PXTOCM/width) > MAX_DISTANCE){
-		width = PXTOCM/MAX_DISTANCE;
-	}
+//	if((PXTOCM/width) > MAX_DISTANCE){
+//		width = PXTOCM/MAX_DISTANCE;
+//	}
 
 	line.width = width;
 	line.begin = begin;
@@ -130,7 +132,7 @@ static THD_FUNCTION(CaptureImage, arg) {
 }
 
 
-static THD_WORKING_AREA(waProcessImage, 1024);
+static THD_WORKING_AREA(waProcessImage, 3072);
 static THD_FUNCTION(ProcessImage, arg) {
 
     chRegSetThreadName(__FUNCTION__);
@@ -142,6 +144,10 @@ static THD_FUNCTION(ProcessImage, arg) {
 	uint8_t image_b[IMAGE_BUFFER_SIZE] = {0};
 	uint16_t lineWidth = 0;
 
+	uint32_t mean_r = 0;
+	uint32_t mean_g = 0;
+	uint32_t mean_b = 0;
+
 	bool send_to_computer = false ;
 
     while(1){
@@ -150,7 +156,7 @@ static THD_FUNCTION(ProcessImage, arg) {
         chBSemWait(&image_ready_sem);
 		//gets the pointer to the array filled with the last image in RGB565    
 		img_buff_ptr = dcmi_get_last_image_ptr();
-		chprintf((BaseSequentialStream *)&SD3, "wesh bien j'ai pris une photo \n");
+
 		//Extracts the pixels of each color in array
 		for(uint16_t i = 0 ; i < (2 * IMAGE_BUFFER_SIZE) ; i+=2){
 			//extracts first 5bits of the first byte
@@ -163,42 +169,44 @@ static THD_FUNCTION(ProcessImage, arg) {
 
 
 		//search for a line in the image and gets its width in pixels
-		//line_info line_r = extract_line_width(image_r);
-		//line_info line_g = extract_line_width(image_g);
-		//line_info line_b = extract_line_width(image_b);
+		line_info line_r = extract_line_width(image_r);
+		line_info line_g = extract_line_width(image_g);
+		line_info line_b = extract_line_width(image_b);
 
-		//uint32_t mean_r = 0;
-		//uint32_t mean_g = 0;
-		//uint32_t mean_b = 0;
+		//chprintf((BaseSequentialStream *)&SD3, "line info  %d, %d, %d \n \n", line_r.begin, line_r.end, line_r.width);
+
+
+
+		for(int i = line_r.begin; i < line_r.end; i++){
+			mean_r += image_r[i];
+		}
 //
-//		for(int i = line_r.begin; i < line_r.end; i++){
-//			mean_r += image_r[i];
-//		}
-//
-//		for(int i = line_g.begin; i < line_g.end; i++){
-//					mean_g += image_g[i];
-//				}
-//
-//		for(int i = line_b.begin; i < line_b.end; i++){
-//							mean_b += image_b[i];
-//						}
-//
-//		mean_r = mean_r / line_r.width;
-//		mean_g = mean_g / line_g.width;
-//		mean_b = mean_b / line_b.width;
-//
-//		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée \n");
-//
-//		//detection couleur bleue (avec le rouge)
-//
-//		if(mean_r < 20)
+		for(int i = line_g.begin; i < line_g.end; i++){
+					mean_g += image_g[i];
+				}
+
+		for(int i = line_b.begin; i < line_b.end; i++){
+							mean_b += image_b[i];
+		}
+
+		mean_r = mean_r / line_r.width;
+     	mean_g = mean_g / line_g.width;
+		mean_b = mean_b / line_b.width;
+
+		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée green :%d \n\n", mean_g);
+//		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée blue:%d \n\n", mean_b);
+		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée red:%d \n\n", mean_r);
+
+		//detection couleur bleue (avec le rouge)
+
+//		if(mean_r < 18 && mean_r)
 //			chprintf((BaseSequentialStream *)&SD3, "C'est du bleu \n");
 //
 //		//detection couleur verte et rouge (avec le vert)
 //
-//		else if(mean_g < 40)
+//		else if(mean_g < 50 && mean_g)
 //			chprintf((BaseSequentialStream *)&SD3, "C'est du rouge \n");
-//		else
+//		else if(mean_b)
 //			chprintf((BaseSequentialStream *)&SD3, "C'est du vert \n");
 
 
