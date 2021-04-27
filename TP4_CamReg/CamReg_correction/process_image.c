@@ -99,11 +99,12 @@ line_info extract_line_width(uint8_t *buffer){
 		width = PXTOCM/MAX_DISTANCE;
 	}
 
-		line.width = width;
-		line.begin = begin;
-		line.end = end;
+	line.width = width;
+	line.begin = begin;
+	line.end = end;
 
-		return line;
+	return line;
+
 }
 
 static THD_WORKING_AREA(waCaptureImage, 256);
@@ -141,7 +142,7 @@ static THD_FUNCTION(ProcessImage, arg) {
 	uint8_t image_b[IMAGE_BUFFER_SIZE] = {0};
 	uint16_t lineWidth = 0;
 
-	bool send_to_computer = true;
+	bool send_to_computer = false ;
 
     while(1){
     	//waits until an image has been captured
@@ -150,7 +151,7 @@ static THD_FUNCTION(ProcessImage, arg) {
 		//gets the pointer to the array filled with the last image in RGB565    
 		img_buff_ptr = dcmi_get_last_image_ptr();
 		chprintf((BaseSequentialStream *)&SD3, "wesh bien j'ai pris une photo \n");
-		//Extracts only the red pixels
+		//Extracts the pixels of each color in array
 		for(uint16_t i = 0 ; i < (2 * IMAGE_BUFFER_SIZE) ; i+=2){
 			//extracts first 5bits of the first byte
 			//takes nothing from the second byte
@@ -162,13 +163,13 @@ static THD_FUNCTION(ProcessImage, arg) {
 
 
 		//search for a line in the image and gets its width in pixels
-		line_info line_r = extract_line_width(image_r);
-		line_info line_g = extract_line_width(image_g);
-		line_info line_b = extract_line_width(image_b);
+		//line_info line_r = extract_line_width(image_r);
+		//line_info line_g = extract_line_width(image_g);
+		//line_info line_b = extract_line_width(image_b);
 
-		uint32_t mean_r = 0;
-		uint32_t mean_g = 0;
-		uint32_t mean_b = 0;
+		//uint32_t mean_r = 0;
+		//uint32_t mean_g = 0;
+		//uint32_t mean_b = 0;
 //
 //		for(int i = line_r.begin; i < line_r.end; i++){
 //			mean_r += image_r[i];
@@ -227,6 +228,6 @@ uint16_t get_line_position(void){
 }
 
 void process_image_start(void){
-	chThdCreateStatic(waProcessImage, sizeof(waProcessImage), NORMALPRIO, ProcessImage, NULL);
+	chThdCreateStatic(waProcessImage, sizeof(waProcessImage), NORMALPRIO+1, ProcessImage, NULL);
 	chThdCreateStatic(waCaptureImage, sizeof(waCaptureImage), NORMALPRIO, CaptureImage, NULL);
 }
