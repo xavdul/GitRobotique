@@ -27,23 +27,23 @@ line_info extract_line_width(uint8_t *buffer){
 
 	line_info line;
 
-
-	static uint16_t last_width = PXTOCM/GOAL_DISTANCE;
-
 	//performs an average
 	for(uint16_t i = 0 ; i < IMAGE_BUFFER_SIZE ; i++){
 		mean += buffer[i];
 	}
 	mean /= IMAGE_BUFFER_SIZE;
 
-	do{
-		wrong_line = 0;
+//	chprintf((BaseSequentialStream *)&SD3, "mean :%d \n\n", mean);
+
 		line_not_found = 0;
+		i = 0;
 		//search for a begin
 		while(stop == 0 && i < (IMAGE_BUFFER_SIZE - WIDTH_SLOPE))
 		{ 
 			//the slope must at least be WIDTH_SLOPE wide and is compared
 		    //to the mean of the image
+//			chprintf((BaseSequentialStream *)&SD3, "valeur if :%d \n\n", buffer[i]);
+
 		    if(buffer[i] < mean && buffer[i+WIDTH_SLOPE] > mean)
 		    {
 		        begin = i;
@@ -76,37 +76,17 @@ line_info extract_line_width(uint8_t *buffer){
 		    line_not_found = 1;
 		}
 
-		//if a line too small has been detected, continues the search
-//		if(!line_not_found && (end-begin) < MIN_LINE_WIDTH){
-//			i = end;
-//			begin = 0;
-//			end = 0;
-//			stop = 0;
-//			wrong_line = 1;
-//		}
-	}while(line_not_found);
 
-//	if(line_not_found){
-//		begin = 0;
-//		end = 0;
-//		//width = last_width;
-//	}else{
-		//last_width =
-		width = (end - begin);
-		line_position = (begin + end)/2; //gives the line position.
-//	}
+	width = (end - begin);
+	line_position = (begin + end)/2; //gives the line position.
 
-	//sets a maximum width or returns the measured width
-//	if((PXTOCM/width) > MAX_DISTANCE){
-//		width = PXTOCM/MAX_DISTANCE;
-//	}
 
 	line.width = width;
 	line.begin = begin;
 	line.end = end;
+	line.line_not_found = line_not_found;
 
 	return line;
-
 }
 
 static THD_WORKING_AREA(waCaptureImage, 256);
@@ -148,10 +128,18 @@ static THD_FUNCTION(ProcessImage, arg) {
 	uint32_t mean_g = 0;
 	uint32_t mean_b = 0;
 
+	line_info line_r = {0};
+	line_info line_g = {0};
+	line_info line_b = {0};
+
 	bool send_to_computer = false ;
 
     while(1){
     	//waits until an image has been captured
+
+    	mean_r = 0;
+    	mean_g = 0;
+    	mean_b = 0;
 
         chBSemWait(&image_ready_sem);
 		//gets the pointer to the array filled with the last image in RGB565    
@@ -164,59 +152,57 @@ static THD_FUNCTION(ProcessImage, arg) {
 			image_b[i/2] = (uint8_t)img_buff_ptr[i+1]&0x1F;
 			image_r[i/2] = (((uint8_t)img_buff_ptr[i]&0xF8) >> 3);
 			image_g[i/2] = ((((uint8_t)img_buff_ptr[i+1]&0xE0) >> 5) | (((uint8_t)img_buff_ptr[i]&0x07 ) << 3));
+//
+//			chprintf((BaseSequentialStream *)&SD3, "image_r :%d \n\n", image_b[i/2]);
+//			chprintf((BaseSequentialStream *)&SD3, "image_g :%d \n\n", image_r[i/2]);
+//			chprintf((BaseSequentialStream *)&SD3, "image_b :%d \n\n", image_g[i/2]);
+
+
 		}
 
+//			//search for a line in the image and gets its width in pixels
+		line_r = extract_line_width(image_r);
+		line_g = extract_line_width(image_g);
+		line_b = extract_line_width(image_b);
 
+		if(line_r.line_not_found == 0 && line_g.line_not_found == 0 && line_b.line_not_found == 0){
+			for(int i = line_r.begin; i < line_r.end; i++){
+				mean_r += image_r[i];
+			}
 
-		//search for a line in the image and gets its width in pixels
-		line_info line_r = extract_line_width(image_r);
-		line_info line_g = extract_line_width(image_g);
-		line_info line_b = extract_line_width(image_b);
+			for(int i = line_g.begin; i < line_g.end; i++){
+				mean_g += image_g[i];
+							}
 
-		//chprintf((BaseSequentialStream *)&SD3, "line info  %d, %d, %d \n \n", line_r.begin, line_r.end, line_r.width);
+			for(int i = line_b.begin; i < line_b.end; i++){
+				mean_b += image_b[i];
+			}
 
+			mean_r = mean_r / line_r.width;
+	     	mean_g = mean_g / line_g.width;
+	     	mean_b = mean_b / line_b.width;
 
+//	     	chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée green :%d \n\n", mean_g);
+//	     	chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée blue:%d \n\n", mean_b);
+//	     	chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée red:%d \n\n", mean_r);
 
-		for(int i = line_r.begin; i < line_r.end; i++){
-			mean_r += image_r[i];
+			//detection couleur bleue (avec le rouge)
+
+			if(mean_r < 20 && mean_b < 22){
+				chprintf((BaseSequentialStream *)&SD3, "C'est du vert \n");
+			}
+			if(mean_g < 40 && mean_r > 20){
+				chprintf((BaseSequentialStream *)&SD3, "C'est du rouge \n");
+			}
+			else
+				chprintf((BaseSequentialStream *)&SD3, "C'est du bleu \n");
 		}
-//
-		for(int i = line_g.begin; i < line_g.end; i++){
-					mean_g += image_g[i];
-				}
+		else
+			chprintf((BaseSequentialStream *)&SD3, "Pas de nouvelle image \n");
 
-		for(int i = line_b.begin; i < line_b.end; i++){
-							mean_b += image_b[i];
-		}
-
-		mean_r = mean_r / line_r.width;
-     	mean_g = mean_g / line_g.width;
-		mean_b = mean_b / line_b.width;
-
-		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée green :%d \n\n", mean_g);
-//		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée blue:%d \n\n", mean_b);
-		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée red:%d \n\n", mean_r);
-
-		//detection couleur bleue (avec le rouge)
-
-//		if(mean_r < 18 && mean_r)
-//			chprintf((BaseSequentialStream *)&SD3, "C'est du bleu \n");
-//
-//		//detection couleur verte et rouge (avec le vert)
-//
-//		else if(mean_g < 50 && mean_g)
-//			chprintf((BaseSequentialStream *)&SD3, "C'est du rouge \n");
-//		else if(mean_b)
-//			chprintf((BaseSequentialStream *)&SD3, "C'est du vert \n");
-
-
-
-		//chprintf((BaseSequentialStream *)&SD3, "Largeur = %7d\r\n", lineWidth);
 
 		//converts the width into a distance between the robot and the camera
-		if(lineWidth){
-			distance_cm = PXTOCM/lineWidth;
-		}
+
 //
 //		if(send_to_computer){
 //			//sends to the computer the image

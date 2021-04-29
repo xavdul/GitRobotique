@@ -9,6 +9,7 @@ typedef struct line_info{
 	uint16_t begin;
 	uint16_t end;
 	uint16_t width;
+	uint8_t line_not_found;
 }line_info;
 
 #endif /* PROCESS_IMAGE_H */
