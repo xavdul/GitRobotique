@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <arm_math.h>
 
 #include "ch.h"
 #include "hal.h"
@@ -11,9 +12,18 @@
 #include <motors.h>
 #include <camera/po8030.h>
 #include <chprintf.h>
+#include <sensors/proximity.h>
+#include <sensors/VL53L0X/VL53L0X.h>
+#include <spi_comm.h>
+#include <i2c_bus.h>
 
 #include <pi_regulator.h>
 #include <process_image.h>
+#include <movement.h>
+
+messagebus_t bus;
+MUTEX_DECL(bus_lock);
+CONDVAR_DECL(bus_condvar);
 
 void SendUint8ToComputer(uint8_t* data, uint16_t size) 
 {
@@ -45,11 +55,21 @@ int main(void)
     serial_start();
     //start the USB communication
     usb_start();
+    // inits the inter process communication bus
+    messagebus_init(&bus, &bus_lock, &bus_condvar);
     //starts the camera
     dcmi_start();
 	po8030_start();
 	//inits the motors
 	motors_init();
+	//intits the movement thread
+	movement_start();
+	//initis the proximity sensors
+	proximity_start();
+
+    // starts the time of flight sensor
+    VL53L0X_start();
+
 
 	//stars the threads for the pi regulator and the processing of the image
 	//pi_regulator_start();
