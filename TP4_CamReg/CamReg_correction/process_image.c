@@ -10,7 +10,9 @@
 
 
 static float distance_cm = 0;
+static float test = 0;
 static uint16_t line_position = IMAGE_BUFFER_SIZE/2;	//middle
+static uint8_t line_not_found = 0;
 
 //semaphore
 static BSEMAPHORE_DECL(image_ready_sem, TRUE);
@@ -22,7 +24,7 @@ static BSEMAPHORE_DECL(image_ready_sem, TRUE);
 line_info extract_line_width(uint8_t *buffer){
 
 	uint16_t i = 0, begin = 0, end = 0, width = 0;
-	uint8_t stop = 0, wrong_line = 0, line_not_found = 0;
+	uint8_t stop = 0, wrong_line = 0;
 	uint32_t mean = 0;
 
 	line_info line;
@@ -69,22 +71,49 @@ line_info extract_line_width(uint8_t *buffer){
 		    if (i > IMAGE_BUFFER_SIZE || !end)
 		    {
 		        line_not_found = 1;
+//		        chprintf((BaseSequentialStream *)&SD3, "jai pas de ligne \n\n");
 		    }
 		}
 		else//if no begin was found
 		{
 		    line_not_found = 1;
+//		    chprintf((BaseSequentialStream *)&SD3, "jai pas de ligne \n\n");
 		}
 
+		if(end - begin < MIN_LINE_WIDTH)
+			line_not_found = 1;
 
-	width = (end - begin);
-	line_position = (begin + end)/2; //gives the line position.
+
+	 //gives the line position.
+
+		if(!line_not_found){
+			width = (end - begin);
+			line_position = (begin + end)/2;
+			line.width = width;
+			if(PXTOCM/line.width > MAX_DISTANCE)
+				line.width_pi = MAX_DISTANCE;
+			else
+				line.width_pi = line.width;
+//			chprintf((BaseSequentialStream *)&SD3, "jai une ligne \n\n");
+
+		}
+		else {
+			width = 0;
+			begin = 0;
+			end = 0;
+			line_position = IMAGE_BUFFER_SIZE/2;
+		}
+
+		line.begin = begin;
+		line.end = end;
+		line.position = line_position;
+		line.line_not_found = line_not_found;
+//		chprintf((BaseSequentialStream *)&SD3, "position : %d \n\n", line_position);
 
 
-	line.width = width;
-	line.begin = begin;
-	line.end = end;
-	line.line_not_found = line_not_found;
+
+
+
 
 	return line;
 }
@@ -165,6 +194,42 @@ static THD_FUNCTION(ProcessImage, arg) {
 		line_g = extract_line_width(image_g);
 		line_b = extract_line_width(image_b);
 
+		if(line_b.line_not_found == 0)
+			line_position = line_b.position;
+		if(line_b.width_pi && line_b.line_not_found == 0)
+			distance_cm = PXTOCM / line_b.width_pi;
+
+
+		for(int i = 0; i < IMAGE_BUFFER_SIZE; i++){
+			mean_r += image_r[i];
+		}
+
+		for(int i = 0; i < IMAGE_BUFFER_SIZE; i++){
+			mean_g += image_g[i];
+						}
+
+		for(int i = 0; i < IMAGE_BUFFER_SIZE; i++){
+			mean_b += image_b[i];
+		}
+
+
+
+		mean_r = mean_r / line_r.width;
+     	mean_g = mean_g / line_g.width;
+     	mean_b = mean_b / line_b.width;
+     	if(mean_r > 3)
+     		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée red:%d \n\n", mean_r);
+     	if(mean_g > 3)
+     		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée green :%d \n\n", mean_g);
+     	if(mean_b > 3)
+     		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée blue:%d \n\n", mean_b);
+
+
+//		chprintf((BaseSequentialStream *)&SD3, "line_position :%d \n\n", line_position);
+//		chprintf((BaseSequentialStream *)&SD3, "distance_cm :%f \n\n", distance_cm);
+//		chprintf((BaseSequentialStream *)&SD3, "line_b width :%d \n\n", line_b.width_pi);
+
+
 		if(line_r.line_not_found == 0 && line_g.line_not_found == 0 && line_b.line_not_found == 0){
 			for(int i = line_r.begin; i < line_r.end; i++){
 				mean_r += image_r[i];
@@ -188,28 +253,25 @@ static THD_FUNCTION(ProcessImage, arg) {
 
 			//detection couleur bleue (avec le rouge)
 
-			if(mean_r < 20 && mean_b < 22){
-				chprintf((BaseSequentialStream *)&SD3, "C'est du vert \n");
-			}
-			if(mean_g < 40 && mean_r > 20){
-				chprintf((BaseSequentialStream *)&SD3, "C'est du rouge \n");
-			}
-			else
-				chprintf((BaseSequentialStream *)&SD3, "C'est du bleu \n");
+//			if(mean_r < 20 && mean_b < 22){
+//				chprintf((BaseSequentialStream *)&SD3, "C'est du vert \n");
+//			}
+//			if(mean_g < 40 && mean_r > 20){
+//				chprintf((BaseSequentialStream *)&SD3, "C'est du rouge \n");
+//			}
+//			else
+//				chprintf((BaseSequentialStream *)&SD3, "C'est du bleu \n");
 		}
-		else
-			chprintf((BaseSequentialStream *)&SD3, "Pas de nouvelle image \n");
+//		else
+//			chprintf((BaseSequentialStream *)&SD3, "Pas de nouvelle image \n");
 
 
 		//converts the width into a distance between the robot and the camera
 
 //
-//		if(send_to_computer){
-//			//sends to the computer the image
-//			SendUint8ToComputer(image_r, IMAGE_BUFFER_SIZE);
-//		}
-//		//invert the bool
-//		send_to_computer = !send_to_computer;
+		//sends to the computer the image
+		//SendUint8ToComputer(image_r, IMAGE_BUFFER_SIZE);
+
     }
 }
 
@@ -222,6 +284,14 @@ uint16_t get_line_position(void){
 }
 
 void process_image_start(void){
-	chThdCreateStatic(waProcessImage, sizeof(waProcessImage), NORMALPRIO+1, ProcessImage, NULL);
+	chThdCreateStatic(waProcessImage, sizeof(waProcessImage), NORMALPRIO, ProcessImage, NULL);
 	chThdCreateStatic(waCaptureImage, sizeof(waCaptureImage), NORMALPRIO, CaptureImage, NULL);
 }
+
+
+uint16_t get_line_not_found(void){
+	return line_not_found;
+}
+
+
+

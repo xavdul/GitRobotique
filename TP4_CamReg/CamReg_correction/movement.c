@@ -35,8 +35,8 @@
 #define FRONT_LEFT_IR 7
 #define FRONT_RIGHT_IR 0
 
-#define TH_PROX 200
-#define MIN_DIST_FRONT 100
+#define TH_PROX 350
+#define MIN_DIST_FRONT 45
 
 //---------------------//
 
@@ -52,7 +52,7 @@
 //---------------------//
 
 #define SPEED_MOVE 600
-#define SPEED_CORR 150
+#define SPEED_CORR 250
 #define STOP 0
 
 
@@ -72,16 +72,43 @@ static THD_FUNCTION(movement, arg) {
 
     	uint16_t distance = VL53L0X_get_dist_mm();
 
-    	uint8_t selector = get_selector();
-
-
-
+//    	chprintf((BaseSequentialStream *)&SD3, "distance %d \n\n", distance);
 //    	chprintf((BaseSequentialStream *)&SD3, "DIAG_LEFT_IR :%d \n\n", get_prox(DIAG_LEFT_IR));
 //    	chprintf((BaseSequentialStream *)&SD3, "DIAG_RIGHT_IR :%d \n\n", get_prox(DIAG_RIGHT_IR));
 //    	chprintf((BaseSequentialStream *)&SD3, "FRONT_LEFT_IR :%d \n\n", get_prox(FRONT_LEFT_IR));
 //    	chprintf((BaseSequentialStream *)&SD3, "FRONT_RIGHT_IR :%d \n\n", get_prox(FRONT_RIGHT_IR));
 
-    	if(!selector){
+//    	if(get_selector()){
+//    		if(distance > MIN_DIST_FRONT){
+//    			if(get_prox(DIAG_LEFT_IR) > TH_PROX
+//    					|| get_prox(FRONT_LEFT_IR) > TH_PROX){
+//
+//    				left_motor_set_speed(SPEED_MOVE + SPEED_CORR);
+//    				right_motor_set_speed(SPEED_MOVE - SPEED_CORR);
+//    			}
+//    			else if(get_prox(DIAG_RIGHT_IR) > TH_PROX
+//    					|| get_prox(FRONT_RIGHT_IR) > TH_PROX){
+//
+//    				left_motor_set_speed(SPEED_MOVE - SPEED_CORR);
+//    				right_motor_set_speed(SPEED_MOVE + SPEED_CORR);
+//    			}
+//    			else{
+//    				left_motor_set_speed(SPEED_MOVE);
+//    				right_motor_set_speed(SPEED_MOVE);
+//    			}
+//    		}
+//    		else{
+//    			left_motor_set_speed(-SPEED_MOVE);
+//    			right_motor_set_speed(SPEED_MOVE);
+//    		}
+//    	}
+//    	else{
+//    		left_motor_set_speed(STOP);
+//    		right_motor_set_speed(STOP);
+//    	}
+
+
+    	if(get_selector()){
     		if(distance > MIN_DIST_FRONT){
     			if(get_prox(DIAG_LEFT_IR) > TH_PROX
     					|| get_prox(FRONT_LEFT_IR) > TH_PROX){
@@ -101,15 +128,14 @@ static THD_FUNCTION(movement, arg) {
     			}
     		}
     		else{
-    			left_motor_set_speed(SPEED_MOVE);
-    			right_motor_set_speed(-SPEED_MOVE);
+    			left_motor_set_speed(-SPEED_MOVE);
+    			right_motor_set_speed(SPEED_MOVE);
     		}
     	}
     	else{
     		left_motor_set_speed(STOP);
     		right_motor_set_speed(STOP);
     	}
-
 
     	chThdSleepUntilWindowed(time, time + MS2ST(10)); // 100 Hz
     	//réfléchir si on met un sleep ou autre chose

@@ -20,7 +20,7 @@
 #include <pi_regulator.h>
 #include <process_image.h>
 #include <movement.h>
-
+#include <camera/po8030.h>
 messagebus_t bus;
 MUTEX_DECL(bus_lock);
 CONDVAR_DECL(bus_condvar);
@@ -64,15 +64,17 @@ int main(void)
 	motors_init();
 	//intits the movement thread
 	movement_start();
-	//initis the proximity sensors
+	//inits the proximity sensors
 	proximity_start();
 
     // starts the time of flight sensor
     VL53L0X_start();
 
+    po8030_set_awb(0);
 
 	//stars the threads for the pi regulator and the processing of the image
-	//pi_regulator_start();
+	pi_regulator_start();
+
 	process_image_start();
 
     /* Infinite loop. */
