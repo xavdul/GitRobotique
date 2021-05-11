@@ -17,6 +17,7 @@
 #include <usbcfg.h>
 #include <chprintf.h>
 #include <selector.h>
+#include <process_image.h>
 
 
 #include <main.h>
@@ -90,7 +91,7 @@ static THD_FUNCTION(movement, arg) {
 //    					|| get_prox(FRONT_RIGHT_IR) > TH_PROX){
 //
 //    				left_motor_set_speed(SPEED_MOVE - SPEED_CORR);
-//    				right_motor_set_speed(SPEED_MOVE + SPEED_CORR);
+//    				right_motor_set_speed(SPEED_MOVE + SPEED_CORR);    POURQUOI ON A EN 2 FOIS ?
 //    			}
 //    			else{
 //    				left_motor_set_speed(SPEED_MOVE);
@@ -108,7 +109,7 @@ static THD_FUNCTION(movement, arg) {
 //    	}
 
 
-    	if(get_selector()){
+    	if(get_selector() && !get_couleur_trouvee()){
     		if(distance > MIN_DIST_FRONT){
     			if(get_prox(DIAG_LEFT_IR) > TH_PROX
     					|| get_prox(FRONT_LEFT_IR) > TH_PROX){
@@ -142,13 +143,6 @@ static THD_FUNCTION(movement, arg) {
     }
 
 }
-
-
-
-
-
-
-
 
 
 void movement_start(void){
