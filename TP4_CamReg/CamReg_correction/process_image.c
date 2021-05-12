@@ -7,6 +7,8 @@
 #include <camera/po8030.h>
 #include <motors.h>
 #include <process_image.h>
+#include <movement.h>
+#include <leds.h>
 
 
 static float distance_cm = 0;
@@ -15,6 +17,13 @@ static uint16_t line_position = IMAGE_BUFFER_SIZE/2;	//middle
 static uint8_t line_not_found = 0;
 static uint8_t couleur_trouvee =0;
 static uint8_t couleur_selectionnee =0;
+
+//Leds
+#define RED		255, 0, 0
+#define GREEN	0, 255, 0
+#define	BLUE	0, 0, 255
+#define WHITE	255, 255, 255
+#define NB_LEDS	4
 
 //semaphore
 static BSEMAPHORE_DECL(image_ready_sem, TRUE);
@@ -183,11 +192,6 @@ static THD_FUNCTION(ProcessImage, arg) {
 			image_g[i/2] = ((((uint8_t)img_buff_ptr[i+1]&0xE0) >> 5) | (((uint8_t)img_buff_ptr[i]&0x07 ) << 3));
 		}
 
-		if(line_b.line_not_found == 0)
-			line_position = line_b.position;
-		if(line_b.width_pi && line_b.line_not_found == 0)
-			distance_cm = PXTOCM / line_b.width_pi;
-
 
 		for(int i = 0; i < IMAGE_BUFFER_SIZE; i++){
 			mean_r += image_r[i];
@@ -200,80 +204,63 @@ static THD_FUNCTION(ProcessImage, arg) {
 		for(int i = 0; i < IMAGE_BUFFER_SIZE; i++){
 			mean_b += image_b[i];
 		}
-		mean_r = mean_r / line_r.width;
-     	mean_g = mean_g / line_g.width;
-     	mean_b = mean_b / line_b.width;
-     	if(mean_r > 3)
-     		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée red:%d \n\n", mean_r);
-     	if(mean_g > 3)
-     		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée green :%d \n\n", mean_g);
-     	if(mean_b > 3)
-     		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée blue:%d \n\n", mean_b);
+		mean_r = mean_r / IMAGE_BUFFER_SIZE;
+     	mean_g = mean_g / IMAGE_BUFFER_SIZE;
+     	mean_b = mean_b / IMAGE_BUFFER_SIZE;
+
+//     	if(mean_r > 3)
+//     		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée red:%d \r\n", mean_r);
+//     	if(mean_g > 3)
+//     		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée green :%d \r\n", mean_g);
+//     	if(mean_b > 3)
+//     		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée blue:%d \r\n", mean_b);
 
 
-//		//PARTIE EXTRACTION DE LIGNE (ON UTILISE PLUS)
-     	//line_r = extract_line_width(image_r);
-     	//line_g = extract_line_width(image_g);
-     	//line_b = extract_line_width(image_b);
-
-//		chprintf((BaseSequentialStream *)&SD3, "line_position :%d \n\n", line_position);
-//		chprintf((BaseSequentialStream *)&SD3, "distance_cm :%f \n\n", distance_cm);
-//		chprintf((BaseSequentialStream *)&SD3, "line_b width :%d \n\n", line_b.width_pi);
-
-
-		//if(line_r.line_not_found == 0 && line_g.line_not_found == 0 && line_b.line_not_found == 0){
-		//	for(int i = line_r.begin; i < line_r.end; i++){
-		//		mean_r += image_r[i];
-		//	}
-
-		//	for(int i = line_g.begin; i < line_g.end; i++){
-		//		mean_g += image_g[i];
-		//					}
-
-		//	for(int i = line_b.begin; i < line_b.end; i++){
-		//		mean_b += image_b[i];
-		//	}
-
-		//	mean_r = mean_r / line_r.width;
-	     //	mean_g = mean_g / line_g.width;
-	     //	mean_b = mean_b / line_b.width;
 
 //DETECTION COULEUR AVEC SEUILS
 
-//			if(mean_r < 20 && mean_b < 22){
-//     			couleur_trouvee = 1;
-//				chprintf((BaseSequentialStream *)&SD3, "C'est du vert \n");
-//			}
-//			if(mean_g < 40 && mean_r > 20){
-//     			couleur_trouvee = 2;
-//				chprintf((BaseSequentialStream *)&SD3, "C'est du rouge \n");
-//			}
-//			else
-//     			couleur_trouvee = 3;
-//				chprintf((BaseSequentialStream *)&SD3, "C'est du bleu \n");
-//			}
-//			else{
-//				chprintf((BaseSequentialStream *)&SD3, "Pas de nouvelle image \n");
-//   			couleur_trouvee = 0;
-//    		}
+			if(mean_r > 20){
+     			couleur_trouvee = 1;
+				chprintf((BaseSequentialStream *)&SD3, "C'est du rouge \r\n");
+            	clear_leds();
+    			for(uint8_t i = 0; i < NB_LEDS; i++)
+    			{
+    				set_rgb_led(i, RED);
+    			}
+
+			}
+			else if(mean_b > 10){
+     			couleur_trouvee = 2;
+				chprintf((BaseSequentialStream *)&SD3, "C'est du bleu \r\n");
+				clear_leds();
+            	clear_leds();
+    			for(uint8_t i = 0; i < NB_LEDS; i++)
+    			{
+    				set_rgb_led(i, BLUE);
+    			}
+			}
+			else if(mean_b < 3){
+     			couleur_trouvee = 3;
+				chprintf((BaseSequentialStream *)&SD3, "C'est du vert \r\n");
+            	clear_leds();
+    			for(uint8_t i = 0; i < NB_LEDS; i++)
+    			{
+    				set_rgb_led(i, GREEN);
+    			}
+			}
+			else{
+				chprintf((BaseSequentialStream *)&SD3, "C'est du blanc \r\n");
+				couleur_trouvee = 0;
+            	clear_leds();
+    			for(uint8_t i = 0; i < NB_LEDS; i++)
+    			{
+    				set_rgb_led(i, WHITE);
+    			}
+    		}
 
 //
 		//sends to the computer the image
 		//SendUint8ToComputer(image_r, IMAGE_BUFFER_SIZE);
-
-     	if(couleur_trouvee){
-    		left_motor_set_speed(STOP);
-    		right_motor_set_speed(STOP);
-    		set_front_led(10);
-     		if(couleur_trouvee == couleur_selectionnee){
-     			//faire durer le temps de passer la feuille
-     			left_motor_set_speed(SPEED_MOVE);
-     			right_motor_set_speed(SPEED_MOVE);
-     			//puis tourner à droite
-
-
-     		}
-     	}
 
     }
 }
@@ -289,7 +276,6 @@ uint16_t get_line_position(void){
 void process_image_start(void){
 	chThdCreateStatic(waProcessImage, sizeof(waProcessImage), NORMALPRIO, ProcessImage+1, NULL);
 	chThdCreateStatic(waCaptureImage, sizeof(waCaptureImage), NORMALPRIO, CaptureImage, NULL);
-	couleur_selectionnee = get_selector();
 }
 
 
@@ -300,6 +286,7 @@ uint16_t get_line_not_found(void){
 uint8_t get_couleur_trouvee(void){
 	return couleur_trouvee;
 }
+
 
 
 

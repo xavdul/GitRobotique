@@ -16,6 +16,7 @@
 #include <sensors/VL53L0X/VL53L0X.h>
 #include <spi_comm.h>
 #include <i2c_bus.h>
+#include <leds.h>
 
 #include <pi_regulator.h>
 #include <process_image.h>
@@ -66,6 +67,8 @@ int main(void)
 	movement_start();
 	//inits the proximity sensors
 	proximity_start();
+	//inits the rgb leds
+	spi_comm_start();
 
     // starts the time of flight sensor
     VL53L0X_start();

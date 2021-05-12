@@ -36,8 +36,8 @@
 #define FRONT_LEFT_IR 7
 #define FRONT_RIGHT_IR 0
 
-#define TH_PROX 350
-#define MIN_DIST_FRONT 45
+#define TH_PROX 450
+#define MIN_DIST_FRONT 60
 
 //---------------------//
 
@@ -53,7 +53,7 @@
 //---------------------//
 
 #define SPEED_MOVE 600
-#define SPEED_CORR 250
+#define SPEED_CORR 350
 #define STOP 0
 
 
@@ -78,40 +78,16 @@ static THD_FUNCTION(movement, arg) {
 //    	chprintf((BaseSequentialStream *)&SD3, "DIAG_RIGHT_IR :%d \n\n", get_prox(DIAG_RIGHT_IR));
 //    	chprintf((BaseSequentialStream *)&SD3, "FRONT_LEFT_IR :%d \n\n", get_prox(FRONT_LEFT_IR));
 //    	chprintf((BaseSequentialStream *)&SD3, "FRONT_RIGHT_IR :%d \n\n", get_prox(FRONT_RIGHT_IR));
+//    	chprintf((BaseSequentialStream *)&SD3, "distance %d : \r\n", distance);
+    	chprintf((BaseSequentialStream *)&SD3, "couleur trouvée %d : \r\n", get_couleur_trouvee());
 
-//    	if(get_selector()){
-//    		if(distance > MIN_DIST_FRONT){
-//    			if(get_prox(DIAG_LEFT_IR) > TH_PROX
-//    					|| get_prox(FRONT_LEFT_IR) > TH_PROX){
-//
-//    				left_motor_set_speed(SPEED_MOVE + SPEED_CORR);
-//    				right_motor_set_speed(SPEED_MOVE - SPEED_CORR);
-//    			}
-//    			else if(get_prox(DIAG_RIGHT_IR) > TH_PROX
-//    					|| get_prox(FRONT_RIGHT_IR) > TH_PROX){
-//
-//    				left_motor_set_speed(SPEED_MOVE - SPEED_CORR);
-//    				right_motor_set_speed(SPEED_MOVE + SPEED_CORR);    POURQUOI ON A EN 2 FOIS ?
-//    			}
-//    			else{
-//    				left_motor_set_speed(SPEED_MOVE);
-//    				right_motor_set_speed(SPEED_MOVE);
-//    			}
-//    		}
-//    		else{
-//    			left_motor_set_speed(-SPEED_MOVE);
-//    			right_motor_set_speed(SPEED_MOVE);
-//    		}
-//    	}
-//    	else{
-//    		left_motor_set_speed(STOP);
-//    		right_motor_set_speed(STOP);
-//    	}
-
-
-    	if(get_selector() && !get_couleur_trouvee()){
-    		if(distance > MIN_DIST_FRONT){
-    			if(get_prox(DIAG_LEFT_IR) > TH_PROX
+    	if(get_selector()){
+    		if(get_couleur_trouvee() == 0){
+    			if(distance < MIN_DIST_FRONT && get_couleur_trouvee() == 0){
+    				left_motor_set_speed(-SPEED_MOVE);
+    				right_motor_set_speed(SPEED_MOVE);
+    			}
+    			else if(get_prox(DIAG_LEFT_IR) > TH_PROX
     					|| get_prox(FRONT_LEFT_IR) > TH_PROX){
 
     				left_motor_set_speed(SPEED_MOVE + SPEED_CORR);
@@ -123,12 +99,17 @@ static THD_FUNCTION(movement, arg) {
     				left_motor_set_speed(SPEED_MOVE - SPEED_CORR);
     				right_motor_set_speed(SPEED_MOVE + SPEED_CORR);
     			}
+
     			else{
     				left_motor_set_speed(SPEED_MOVE);
     				right_motor_set_speed(SPEED_MOVE);
     			}
     		}
-    		else{
+    		else if(get_couleur_trouvee() == get_selector() && distance < MIN_DIST_FRONT){
+    			left_motor_set_speed(SPEED_MOVE);
+    			right_motor_set_speed(SPEED_MOVE);
+    		}
+    		else if(get_couleur_trouvee() != get_selector() && distance < MIN_DIST_FRONT){
     			left_motor_set_speed(-SPEED_MOVE);
     			right_motor_set_speed(SPEED_MOVE);
     		}
