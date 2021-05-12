@@ -18,7 +18,6 @@
 #include <i2c_bus.h>
 #include <leds.h>
 
-#include <pi_regulator.h>
 #include <process_image.h>
 #include <movement.h>
 #include <camera/po8030.h>
@@ -61,23 +60,19 @@ int main(void)
     //starts the camera
     dcmi_start();
 	po8030_start();
+    po8030_set_awb(0); //disable auto white balance
 	//inits the motors
 	motors_init();
-	//intits the movement thread
-	movement_start();
 	//inits the proximity sensors
 	proximity_start();
 	//inits the rgb leds
 	spi_comm_start();
-
     // starts the time of flight sensor
     VL53L0X_start();
 
-    po8030_set_awb(0);
-
-	//stars the threads for the pi regulator and the processing of the image
-	pi_regulator_start();
-
+	//inits the movement thread
+	movement_start();
+	//inits the image processing thread to detect the colors
 	process_image_start();
 
     /* Infinite loop. */
