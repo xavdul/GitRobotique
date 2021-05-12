@@ -37,7 +37,8 @@
 #define FRONT_RIGHT_IR 0
 
 #define TH_PROX 450
-#define MIN_DIST_FRONT 60
+#define MIN_DIST_FRONT 50
+#define DIST_DETECTION 30
 
 //---------------------//
 
@@ -53,7 +54,8 @@
 //---------------------//
 
 #define SPEED_MOVE 600
-#define SPEED_CORR 350
+#define SPEED_TURN 500
+#define SPEED_CORR 400
 #define STOP 0
 
 
@@ -105,13 +107,13 @@ static THD_FUNCTION(movement, arg) {
     				right_motor_set_speed(SPEED_MOVE);
     			}
     		}
-    		else if(get_couleur_trouvee() == get_selector() && distance < MIN_DIST_FRONT){
+    		else if(get_couleur_trouvee() == get_selector() && distance < DIST_DETECTION){
     			left_motor_set_speed(SPEED_MOVE);
     			right_motor_set_speed(SPEED_MOVE);
     		}
     		else if(get_couleur_trouvee() != get_selector() && distance < MIN_DIST_FRONT){
-    			left_motor_set_speed(-SPEED_MOVE);
-    			right_motor_set_speed(SPEED_MOVE);
+    			left_motor_set_speed(-SPEED_TURN);
+    			right_motor_set_speed(SPEED_TURN);
     		}
     	}
     	else{
