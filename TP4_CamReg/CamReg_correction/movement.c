@@ -39,6 +39,7 @@
 #define TH_PROX 450
 #define MIN_DIST_FRONT 50
 #define DIST_DETECTION 30
+#define DISTANCE_PASSAGE_COULEUR 500
 
 //---------------------//
 
@@ -84,7 +85,7 @@ static THD_FUNCTION(movement, arg) {
     	chprintf((BaseSequentialStream *)&SD3, "couleur trouvée %d : \r\n", get_couleur_trouvee());
 
     	if(get_selector()){
-    		if(get_couleur_trouvee() == 0){
+    		if(get_couleur_trouvee() == 0){  //ou distance > 3 dans le cas ou une couleur a été trouvé, on corrige quand meme
     			if(distance < MIN_DIST_FRONT && get_couleur_trouvee() == 0){
     				left_motor_set_speed(-SPEED_MOVE);
     				right_motor_set_speed(SPEED_MOVE);
@@ -108,8 +109,10 @@ static THD_FUNCTION(movement, arg) {
     			}
     		}
     		else if(get_couleur_trouvee() == get_selector() && distance < DIST_DETECTION){
-    			left_motor_set_speed(SPEED_MOVE);
-    			right_motor_set_speed(SPEED_MOVE);
+    			for(int i = 0; i < DISTANCE_PASSAGE_COULEUR; i++){   //TROUVER i pour passer le mur (on peut jouer sur les leds pour montrer qu'on bloque le robot en mode passage de couleur)
+    				left_motor_set_speed(SPEED_MOVE);   // JOUER SUR LE FAIT QUE CE THREAD AURA UNE PRIORITE PLUS GRANDE QUE LES AUTRES THREADS POUR POUVOIR "BLOQUER"
+    				right_motor_set_speed(SPEED_MOVE);
+    			}
     		}
     		else if(get_couleur_trouvee() != get_selector() && distance < MIN_DIST_FRONT){
     			left_motor_set_speed(-SPEED_TURN);
@@ -120,6 +123,30 @@ static THD_FUNCTION(movement, arg) {
     		left_motor_set_speed(STOP);
     		right_motor_set_speed(STOP);
     	}
+
+
+
+    	//JE TESTE UN TRUC POUR LA COULEUR
+
+ //   				else if(distance < DIST_DETECTION){
+  //  					for(int j = 0; j < 1000; j++){
+  //  						toggle_rgb_led(1, RED_LED, RED)
+  //						toggle_rgb_led(1, RED_LED, RED)
+ //							toggle_rgb_led(1, RED_LED, RED)
+ //   						toggle_rgb_led(1, RED_LED, RED)
+ //						}
+ //   					if(get_couleur_trouvee() == get_selector()){
+ //   	    				for(int i = 0; i < DISTANCE_PASSAGE_COULEUR; i++){
+ //   	    				left_motor_set_speed(SPEED_MOVE);
+  //  	    				right_motor_set_speed(SPEED_MOVE);
+ //   	    				}
+ //						}
+  //  	    			else{
+ //   	    				left_motor_set_speed(-SPEED_TURN);
+ //   	    				right_motor_set_speed(SPEED_TURN);
+ //   	    			}
+//    	    		}
+
 
     	chThdSleepUntilWindowed(time, time + MS2ST(10)); // 100 Hz
     	//réfléchir si on met un sleep ou autre chose
