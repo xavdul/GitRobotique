@@ -4,7 +4,12 @@
 
 void process_image_start(void);
 
-uint8_t get_couleur_trouvee(void);
+uint8_t get_color_detected(void);
+
+uint8_t get_color_selected(void);
+
+void update_color_selected(void);
+
 
 
 

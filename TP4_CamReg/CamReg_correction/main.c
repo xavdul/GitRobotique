@@ -14,6 +14,7 @@
 #include <chprintf.h>
 #include <sensors/proximity.h>
 #include <sensors/VL53L0X/VL53L0X.h>
+#include <selector.h>
 #include <spi_comm.h>
 #include <i2c_bus.h>
 #include <leds.h>
@@ -24,6 +25,8 @@
 messagebus_t bus;
 MUTEX_DECL(bus_lock);
 CONDVAR_DECL(bus_condvar);
+
+static 	uint8_t mode = IDLE;
 
 void SendUint8ToComputer(uint8_t* data, uint16_t size) 
 {
@@ -77,6 +80,35 @@ int main(void)
 
     /* Infinite loop. */
     while (1) {
+
+    	switch(mode){
+
+    	case IDLE :
+    		chprintf((BaseSequentialStream *)&SD3, "IDLE \r\n");
+    		set_body_led(0);
+    		if(get_selector() == 0)
+    			update_color_selected();
+    		else
+    			mode = START;
+    		break;
+
+    	case START :
+    		chprintf((BaseSequentialStream *)&SD3, "START \r\n");
+    		break;
+
+    	case MOVEMENT :
+    		chprintf((BaseSequentialStream *)&SD3, "MOVEMENT \r\n");
+    		break;
+
+    	case FINISH :
+    		chprintf((BaseSequentialStream *)&SD3, "FINISH \r\n");
+    		break;
+    	case WAIT_NEXT_ATTEMPT :
+    		chprintf((BaseSequentialStream *)&SD3, "ATTENTE \r\n");
+    		if(get_selector() == 0)
+    			mode = IDLE;
+    	}
+
     	//waits 1 second
         chThdSleepMilliseconds(1000);
     }
@@ -88,4 +120,12 @@ uintptr_t __stack_chk_guard = STACK_CHK_GUARD;
 void __stack_chk_fail(void)
 {
     chSysHalt("Stack smashing detected");
+}
+
+uint8_t get_mode(void){
+	return mode;
+}
+
+void next_mode(void){
+	mode += 1;
 }

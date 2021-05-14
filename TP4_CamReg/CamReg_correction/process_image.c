@@ -9,6 +9,7 @@
 #include <process_image.h>
 #include <movement.h>
 #include <leds.h>
+#include <sensors/VL53L0X/VL53L0X.h>
 
 
 
@@ -20,8 +21,9 @@
 #define NB_LEDS	4
 
 //Defining the static variables to store the colors seen by the camera and the selected color mode on the robot
-static uint8_t couleur_trouvee =0;
-static uint8_t couleur_selectionnee =0;
+
+static uint8_t color_detected = 0;
+static uint8_t color_selected = 0;
 
 //semaphore
 static BSEMAPHORE_DECL(image_ready_sem, TRUE);
@@ -50,7 +52,7 @@ static THD_FUNCTION(CaptureImage, arg) {
 }
 
 
-static THD_WORKING_AREA(waProcessImage, 3072);
+static THD_WORKING_AREA(waProcessImage, 4096); //3072
 static THD_FUNCTION(ProcessImage, arg) {
 
     chRegSetThreadName(__FUNCTION__);
@@ -70,12 +72,13 @@ static THD_FUNCTION(ProcessImage, arg) {
 
 
     while(1){
-    	//waits until an image has been captured
+
 
     	mean_r = 0;
     	mean_g = 0;
     	mean_b = 0;
 
+    	//waits until an image has been captured
         chBSemWait(&image_ready_sem);
 		//gets the pointer to the array filled with the last image in RGB565    
 		img_buff_ptr = dcmi_get_last_image_ptr();
@@ -103,66 +106,96 @@ static THD_FUNCTION(ProcessImage, arg) {
      	mean_g = mean_g / IMAGE_BUFFER_SIZE;
      	mean_b = mean_b / IMAGE_BUFFER_SIZE;
 
-//     	if(mean_r > 3)
-//     		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée red:%d \r\n", mean_r);
-//     	if(mean_g > 3)
-//     		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée green :%d \r\n", mean_g);
-//     	if(mean_b > 3)
-//     		chprintf((BaseSequentialStream *)&SD3, "wesh bien moyenne calculée blue:%d \r\n", mean_b);
-
 
 
 //DETECTION COULEUR AVEC SEUILS
+     	if( !get_no_more_color_needed() ){
+     		if(VL53L0X_get_dist_mm() > 100){
+     			color_detected = 0;
+     			if(get_mode() != FINISH){
+     				clear_leds();
+     				for(uint8_t i = 0; i < NB_LEDS; i++)
+     				{
+     					set_rgb_led(i, WHITE);
+     				}
+     			}
+     			else
+     				clear_leds();
+     		}
+     		else{
+     			if(mean_r > 20){
+     				color_detected = 1;
+     				//				chprintf((BaseSequentialStream *)&SD3, "C'est du rouge \r\n");
+     				if(get_mode() != FINISH){
+     					clear_leds();
+     					for(uint8_t i = 0; i < NB_LEDS; i++)
+     					{
+     						set_rgb_led(i, RED);
+     					}
+     				}
+     				else
+     					clear_leds();
+     			}
+     			else if(mean_b > 10){
+     				color_detected = 2;
+     				//				chprintf((BaseSequentialStream *)&SD3, "C'est du bleu \r\n");
+     				if(get_mode() != FINISH){
+     					clear_leds();
+     					for(uint8_t i = 0; i < NB_LEDS; i++)
+     					{
+     						set_rgb_led(i, BLUE);
+     					}
+     				}
+     				else
+     					clear_leds();
+     			}
+     			else if(mean_b < 7 && mean_r < 12){
+     				color_detected = 3;
+     				//				chprintf((BaseSequentialStream *)&SD3, "C'est du vert \r\n");
+     				if(get_mode() != FINISH){
+     					clear_leds();
+     					for(uint8_t i = 0; i < NB_LEDS; i++)
+     					{
+     						set_rgb_led(i, GREEN);
+     					}
+     				}
+     				else
+     					clear_leds();
+     			}
+     			else{
+     				//				chprintf((BaseSequentialStream *)&SD3, "C'est du blanc \r\n");
+     				color_detected = 0;
+     				if(get_mode() != FINISH){
+     					clear_leds();
+     					for(uint8_t i = 0; i < NB_LEDS; i++)
+     					{
+     						set_rgb_led(i, WHITE);
+     					}
+     				}
+     				else
+     					clear_leds();
+     			}
+     		}
+     	}
 
-			if(mean_r > 20){
-     			couleur_trouvee = 1;
-				chprintf((BaseSequentialStream *)&SD3, "C'est du rouge \r\n");
-            	clear_leds();
-    			for(uint8_t i = 0; i < NB_LEDS; i++)
-    			{
-    				set_rgb_led(i, RED);
-    			}
 
-			}
-			else if(mean_b > 10){
-     			couleur_trouvee = 2;
-				chprintf((BaseSequentialStream *)&SD3, "C'est du bleu \r\n");
-				clear_leds();
-            	clear_leds();
-    			for(uint8_t i = 0; i < NB_LEDS; i++)
-    			{
-    				set_rgb_led(i, BLUE);
-    			}
-			}
-			else if(mean_b < 3){
-     			couleur_trouvee = 3;
-				chprintf((BaseSequentialStream *)&SD3, "C'est du vert \r\n");
-            	clear_leds();
-    			for(uint8_t i = 0; i < NB_LEDS; i++)
-    			{
-    				set_rgb_led(i, GREEN);
-    			}
-			}
-			else{
-				chprintf((BaseSequentialStream *)&SD3, "C'est du blanc \r\n");
-				couleur_trouvee = 0;
-            	clear_leds();
-    			for(uint8_t i = 0; i < NB_LEDS; i++)
-    			{
-    				set_rgb_led(i, WHITE);
-    			}
-    		}
-
-//
 		//sends to the computer the image
 		//SendUint8ToComputer(image_r, IMAGE_BUFFER_SIZE);
-
     }
 }
 
 
-uint8_t get_couleur_trouvee(void){
-	return couleur_trouvee;
+uint8_t get_color_detected(void){
+	return color_detected;
+}
+
+uint8_t get_color_selected(void){
+	return color_selected;
+}
+
+void update_color_selected(void){
+	color_selected = color_detected;
+//	chprintf((BaseSequentialStream *)&SD3, "color = %d \r\n", color_selected);
 }
 
 

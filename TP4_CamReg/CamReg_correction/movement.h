@@ -11,5 +11,6 @@
 
 //creating the movement thread
 void movement_start(void);
+uint8_t get_no_more_color_needed(void);
 
 #endif /* MOVEMENT_H_ */
