@@ -18,6 +18,7 @@
 #include <chprintf.h>
 #include <selector.h>
 #include <process_image.h>
+#include <movement.h>
 
 
 #include <main.h>
@@ -26,9 +27,8 @@
 #include <leds.h>
 #include <spi_comm.h>
 
-//---------------------//
-//proximity sensors
 
+//proximity sensors
 #define LEFT_IR 5
 #define RIGHT_IR 2
 #define DIAG_LEFT_IR 6
@@ -36,34 +36,30 @@
 #define FRONT_LEFT_IR 7
 #define FRONT_RIGHT_IR 0
 
-#define TH_PROX 450
-#define TH_PROX_COLOR 550
-#define MIN_DIST_FRONT 50
-#define DIST_DETECTION 30
-#define MIN_MAUVAISE_COULEUR 60
-#define STEPS_90 270
+//thresholds and distances for the obstacle detection
+#define TH_PROX 500				//proximity threshold for the lateral obstacles
+#define MIN_DIST_FRONT 50		//TOF detection distance [mm] for the frontal obstacles
+#define DIST_DETECTION 30		//TOF threshold distance [mm] to prepare for passing trough the "color wall"
+#define MIN_MAUVAISE_COULEUR 60 //TOF detection distance [mm] to turn if the detected color is different as the selected one
 
-//---------------------//
+//steps number for turns
+#define STEPS_NINETY 270		//number of steps to turn for a 90° turn
+#define STEPS_RED 480			//number of steps for the red start turn
+#define STEPS_BLUE 400			//number of steps for the blue start turn
+#define STEPS_GREEN 550			//number of steps for the green start turn
 
-//TP2
-#define PI                  3.1415926536f
-//TO ADJUST IF NECESSARY. NOT ALL THE E-PUCK2 HAVE EXACTLY THE SAME WHEEL DISTANCE
-#define WHEEL_DISTANCE      5.35f    //cm
-#define PERIMETER_EPUCK     (PI * WHEEL_DISTANCE)
-//TP2
-//Convert angle to wheel angle
-#define ANGLE(angle) (PERIMETER_EPUCK*angle)/360
+//speeds
+#define SPEED_TURN 700			//turning speed for 90° turns
+#define SPEED_CORR 300			//speed correction for lateral obstacle avoidance
+#define SPEED_END  210			//rotating speed for the color detection in FINISH mode
+#define STOP       0			//stopped speed
 
-//---------------------//
+//distances
+#define DIST_OBSTACLE 10000000  //distance needed to pass through an obstacle
 
-
-#define SPEED_MOVE_TURN 700
-#define SPEED_TURN 700
-#define SPEED_CORR 300
-#define STOP 0
-
-static uint8_t no_more_color_needed = 0;
-static uint8_t find_the_end = 0;
+//condition variables
+static uint8_t no_more_color_needed = 0; //tells if a color detection is needed or not
+static uint8_t find_the_end = 0;		 //tells if we are in the end of the labyrinth or not
 
 // movement thread
 
@@ -82,176 +78,116 @@ static THD_FUNCTION(movement, arg) {
 
     	time = chVTGetSystemTime();
 
-    	// uint16_t distance = VL53L0X_get_dist_mm();
-
-
-    	if(get_mode() == MOVEMENT){
-    		chprintf((BaseSequentialStream *)&SD3, "MOVEMENT MOVEMENT \r\n");
-    		if(get_color_detected() == 0){
-    			if(VL53L0X_get_dist_mm() < MIN_DIST_FRONT){
-    				right_motor_set_pos(0);
-    				left_motor_set_pos(0);
-    				left_motor_set_speed(-SPEED_MOVE);
-    				right_motor_set_speed(SPEED_MOVE);
-    				while(right_motor_get_pos() != STEPS_90){}
+    	if(get_mode() == MOVEMENT){									//trajectory control for movement mode
+    		if(get_color_detected() == WHITE){						//the obstacle in front is a wall (WHITE)
+    			if(VL53L0X_get_dist_mm() < MIN_DIST_FRONT){			//front obstacle avoidance
+    				left_turn();
+    				while(right_motor_get_pos() != STEPS_NINETY){}
     			}
-    			else if(get_prox(DIAG_LEFT_IR) > TH_PROX
-    					|| get_prox(FRONT_LEFT_IR) > TH_PROX){
-
-    				left_motor_set_speed(SPEED_MOVE + SPEED_CORR);
-    				right_motor_set_speed(SPEED_MOVE - SPEED_CORR);
-    			}
-    			else if(get_prox(DIAG_RIGHT_IR) > TH_PROX
-    					|| get_prox(FRONT_RIGHT_IR) > TH_PROX){
-
-    				left_motor_set_speed(SPEED_MOVE - SPEED_CORR);
-    				right_motor_set_speed(SPEED_MOVE + SPEED_CORR);
-    			}
-    			else{
-    				left_motor_set_speed(SPEED_MOVE);
-    				right_motor_set_speed(SPEED_MOVE);
-    			}
+    			proximity();										//side obstacles avoidance
     		}
-    		else{
-    			if(get_color_detected() == get_color_selected()){
-    				if(VL53L0X_get_dist_mm() > DIST_DETECTION){
-    					if(get_prox(DIAG_LEFT_IR) > TH_PROX_COLOR
-    							|| get_prox(FRONT_LEFT_IR) > TH_PROX_COLOR){
-
-    						left_motor_set_speed(SPEED_MOVE + SPEED_CORR);
-    						right_motor_set_speed(SPEED_MOVE - SPEED_CORR);
-    					}
-    					else if(get_prox(DIAG_RIGHT_IR) > TH_PROX
-    							|| get_prox(FRONT_RIGHT_IR) > TH_PROX){
-
-    						left_motor_set_speed(SPEED_MOVE - SPEED_CORR);
-    						right_motor_set_speed(SPEED_MOVE + SPEED_CORR);
-    					}
-    					else{
-    						left_motor_set_speed(SPEED_MOVE);
-    						right_motor_set_speed(SPEED_MOVE);
-    					}
+    		else{													//the obstacle in front is of a color :
+    			if(get_color_detected() == get_color_selected()){	//color of the obstacle is the one selected -> pass trough the obstacle
+    				if(VL53L0X_get_dist_mm() > DIST_DETECTION){		//while at distance from the obstacle, avoid side obstacles
+    					proximity();
     				}
-    				else{
-    					no_more_color_needed = 1;
+    				else{											//when close to the obstacle :
+    					no_more_color_needed = 1;					//deactivate color detection to avoid errors while passing through
     					left_motor_set_speed(SPEED_MOVE);
     					right_motor_set_speed(SPEED_MOVE);
-    					for(i =0; i < 10000000; i++){}
-    					no_more_color_needed = 0;
+    					for(i =0; i < DIST_OBSTACLE; i++){}			//force forward move during DIST_OBSTACLE while passing through
+    					no_more_color_needed = 0;					//reactivate color detection
     				}
     			}
     			else{
-    				if(VL53L0X_get_dist_mm() > MIN_MAUVAISE_COULEUR){
-    					if(get_prox(DIAG_LEFT_IR) > TH_PROX
-    							|| get_prox(FRONT_LEFT_IR) > TH_PROX){
-    						left_motor_set_speed(SPEED_MOVE + SPEED_CORR);
-    						right_motor_set_speed(SPEED_MOVE - SPEED_CORR);
-    					}
-    					else if(get_prox(DIAG_RIGHT_IR) > TH_PROX
-    							|| get_prox(FRONT_RIGHT_IR) > TH_PROX){
-
-    						left_motor_set_speed(SPEED_MOVE - SPEED_CORR);
-    						right_motor_set_speed(SPEED_MOVE + SPEED_CORR);
-    					}
-    					else{
-    						left_motor_set_speed(SPEED_MOVE);
-    						right_motor_set_speed(SPEED_MOVE);
-    					}
+    				if(VL53L0X_get_dist_mm() > MIN_MAUVAISE_COULEUR){ //color of the obstacle in front is not the one selected :
+    					proximity();								  //avoid side obstacle while far from the object
     				}
-    				else{
-    					right_motor_set_pos(0);
-    					left_motor_set_pos(0);
-    					left_motor_set_speed(-SPEED_MOVE);
-    					right_motor_set_speed(SPEED_MOVE);
-    					while(right_motor_get_pos() != STEPS_90){}
+    				else{											  //when close enough to the object, take the other route by turning left
+    					left_turn();
+    					while(right_motor_get_pos() != STEPS_NINETY){}
     				}
     			}
     		}
     	}
-    	else if(get_mode() == START){
-    		chprintf((BaseSequentialStream *)&SD3, "MOVEMENT START \r\n");
-    		if(get_color_selected() == 1){
-    			right_motor_set_pos(0);
-    			left_motor_set_pos(0);
-    			left_motor_set_speed(-SPEED_MOVE);
-    			right_motor_set_speed(SPEED_MOVE);
-    			while(right_motor_get_pos() != 480){}
-    			next_mode();
+    	else if(get_mode() == START){								//trajectory control for START mode
+    		if(get_color_selected() == RED){
+    			left_turn();
+    			while(right_motor_get_pos() != STEPS_RED){}			//turn away from RED start position
+
     		}
-    		else if(get_color_selected() == 2){
-    			right_motor_set_pos(0);
-    			left_motor_set_pos(0);
-    			left_motor_set_speed(-SPEED_MOVE);
-    			right_motor_set_speed(SPEED_MOVE);
-    			while(right_motor_get_pos() != 400){}
-    			next_mode();
+    		else if(get_color_selected() == BLUE){
+    			left_turn();
+    			while(right_motor_get_pos() != STEPS_BLUE){}		//turn away from BLUE start position
     		}
-    		else if(get_color_selected() == 3){
-    			right_motor_set_pos(0);
-    			left_motor_set_pos(0);
-    			left_motor_set_speed(-SPEED_MOVE);
-    			right_motor_set_speed(SPEED_MOVE);
-    			while(right_motor_get_pos() != 550){}
-    			next_mode();
+    		else if(get_color_selected() == GREEN){
+    			left_turn();
+    			while(right_motor_get_pos() != STEPS_GREEN){}		//turn away from GREEN start position
     		}
+    		next_mode();											//pass to MOVEMENT mode to move and avoid obstacles
     	}
-    	else if(get_mode() == FINISH){
-    		if(VL53L0X_get_dist_mm() > 50 && find_the_end == 0){
-    			if(get_prox(DIAG_LEFT_IR) > TH_PROX
-    					|| get_prox(FRONT_LEFT_IR) > TH_PROX){
-
-    				left_motor_set_speed(SPEED_MOVE + SPEED_CORR);
-    				right_motor_set_speed(SPEED_MOVE - SPEED_CORR);
-    			}
-    			else if(get_prox(DIAG_RIGHT_IR) > TH_PROX
-    					|| get_prox(FRONT_RIGHT_IR) > TH_PROX){
-
-    				left_motor_set_speed(SPEED_MOVE - SPEED_CORR);
-    				right_motor_set_speed(SPEED_MOVE + SPEED_CORR);
-    			}
-    			else{
-    				left_motor_set_speed(SPEED_MOVE);
-    				right_motor_set_speed(SPEED_MOVE);
-    			}
+    	else if(get_mode() == FINISH){								//trajectory control for FINISH mode
+    		if(VL53L0X_get_dist_mm() > MIN_DIST_FRONT && find_the_end == 0){
+    			proximity();										//avoid side obstacle if not in the end zone
     		}
     		else{
-    			left_motor_set_speed(STOP);
+    			left_motor_set_speed(STOP);							//if in the end zone
     			right_motor_set_speed(STOP);
     			find_the_end = 1;
-    			if(get_color_detected() == get_color_selected()){
+    			if(get_color_detected() == get_color_selected()){	//illuminate body led if end color is found in end zone
     				find_the_end = 0;
     				set_body_led(1);
     				next_mode();
     			}
-    			else{
+    			else{												//turn to find the end color matching to the selected color
     				right_motor_set_pos(0);
     				left_motor_set_pos(0);
     				left_motor_set_speed(-SPEED_END);
     				right_motor_set_speed(SPEED_END);
-    				while(right_motor_get_pos() != 270){}
+    				while(right_motor_get_pos() != STEPS_NINETY){}
     			}
     		}
     	}
-    	else{
+    	else{														//stop if in other modes
     		left_motor_set_speed(STOP);
     		right_motor_set_speed(STOP);
     	}
+
     	//check if we can pass to FINISH mode
-    	if(get_color_detected() == 3 && (get_mode() == MOVEMENT)){
+    	if(get_color_detected() == GREEN && (get_mode() == MOVEMENT)){
     		next_mode();
 		}
     	chThdSleepUntilWindowed(time, time + MS2ST(10)); // 100 Hz
-    	//réfléchir si on met un sleep ou autre chose
     }
 
 }
 
+uint8_t get_no_more_color_needed(void){
+	return no_more_color_needed;
+}
+
+void proximity(void){
+	if(get_prox(DIAG_LEFT_IR) > TH_PROX					//if there is an obstacle on the left
+			|| get_prox(FRONT_LEFT_IR) > TH_PROX){
+
+		left_motor_set_speed(SPEED_MOVE + SPEED_CORR);	//trajectory correction to the right
+		right_motor_set_speed(SPEED_MOVE - SPEED_CORR);
+	}
+	else if(get_prox(DIAG_RIGHT_IR) > TH_PROX			//if there is an obstacle on the right
+			|| get_prox(FRONT_RIGHT_IR) > TH_PROX){
+
+		left_motor_set_speed(SPEED_MOVE - SPEED_CORR);	//trajectory correction to the left
+		right_motor_set_speed(SPEED_MOVE + SPEED_CORR);
+	}
+	else{
+		left_motor_set_speed(SPEED_MOVE);				//if no obstacle, no correction
+		right_motor_set_speed(SPEED_MOVE);
+	}
+}
 
 void movement_start(void){
 	chThdCreateStatic(wamovement, sizeof(wamovement), NORMALPRIO, movement, NULL);
 }
 
 
-uint8_t get_no_more_color_needed(void){
-	return no_more_color_needed;
-}
+

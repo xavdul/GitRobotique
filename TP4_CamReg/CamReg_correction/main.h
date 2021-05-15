@@ -20,8 +20,6 @@ extern "C" {
 #define FINISH 3
 #define WAIT_NEXT_ATTEMPT 4
 
-#define SPEED_MOVE 500
-#define SPEED_END 210
 
 /** Robot wide IPC bus. */
 extern messagebus_t bus;

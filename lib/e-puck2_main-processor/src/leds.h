@@ -9,6 +9,8 @@ extern "C" {
 
 #define RGB_MAX_INTENSITY 100	//percentage
 
+#define NB_LEDS	4				//Number of RGB leds
+
 //List of the RED LEDs present on the e-puck 2
 typedef enum {
 	LED1,
@@ -60,6 +62,8 @@ void set_front_led(unsigned int value); //value (0=off 1=on higher=inverse)
 void get_all_rgb_state(uint8_t* values);
 void toggle_rgb_led(rgb_led_name_t led_number, color_led_name_t led, uint8_t intensity);
 void set_rgb_led(rgb_led_name_t led_number, uint8_t red_val, uint8_t green_val, uint8_t blue_val);
+
+void set_all_leds(uint8_t red, uint8_t green, uint8_t blue);
 
 
 #ifdef __cplusplus

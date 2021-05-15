@@ -48,6 +48,13 @@ void left_motor_set_pos(int32_t counter_value);
  */
 void right_motor_set_pos(int32_t counter_value);
 
+/**
+ * @brief 	makes a 90° turn to the left
+ *
+* @param number of steps for the turn
+*/
+void left_turn(void);
+
  /**
  * @brief   Initializes the control of the motors.
  */

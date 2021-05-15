@@ -12,15 +12,21 @@
 #include <sensors/VL53L0X/VL53L0X.h>
 
 
+//Thresholds for color detection
+#define RED_TH    20
+#define BLUE_TH   10
+#define GREEN_TH1 7
+#define GREEN_TH2 12
 
 //RGB colors for the leds
-#define RED		255, 0, 0
-#define GREEN	0, 255, 0
-#define	BLUE	0, 0, 255
-#define WHITE	255, 255, 255
+#define RED_LED	    255, 0, 0
+#define GREEN_LED	0, 255, 0
+#define	BLUE_LED	0, 0, 255
+#define WHITE_LED	255, 255, 255
 
-//Number of RGB leds
-#define NB_LEDS	4
+
+//Security threshold to detect color under a certain distance
+#define SECURITY_TH 100
 
 //Defining the static variables to store the colors seen by the camera and the selected color mode on the robot
 
@@ -65,12 +71,10 @@ static THD_FUNCTION(ProcessImage, arg) {
 
 	//Initializing the array to extract each colors pixels
 	uint8_t image_r[IMAGE_BUFFER_SIZE] = {0};
-	uint8_t image_g[IMAGE_BUFFER_SIZE] = {0};
 	uint8_t image_b[IMAGE_BUFFER_SIZE] = {0};
 
 	//Initializing the variables for the future calculations of the colors mean
 	uint32_t mean_r = 0;
-	uint32_t mean_g = 0;
 	uint32_t mean_b = 0;
 
 
@@ -78,7 +82,6 @@ static THD_FUNCTION(ProcessImage, arg) {
 
 
     	mean_r = 0;
-    	mean_g = 0;
     	mean_b = 0;
 
     	//waits until an image has been captured
@@ -86,96 +89,47 @@ static THD_FUNCTION(ProcessImage, arg) {
 		//gets the pointer to the array filled with the last image in RGB565    
 		img_buff_ptr = dcmi_get_last_image_ptr();
 
-		//Extracts the pixels of each color in an array
+		//Extracts the blue and red pixels in the respective array
 		for(uint16_t i = 0 ; i < (2 * IMAGE_BUFFER_SIZE) ; i+=2){
 			image_b[i/2] = (uint8_t)img_buff_ptr[i+1]&0x1F;
 			image_r[i/2] = (((uint8_t)img_buff_ptr[i]&0xF8) >> 3);
-			image_g[i/2] = ((((uint8_t)img_buff_ptr[i+1]&0xE0) >> 5) | (((uint8_t)img_buff_ptr[i]&0x07 ) << 3));
 		}
 
-		// Computing the mean value of the red, green, and blue pixels over the line
+		// Computing the mean value of the red and blue pixels over the lines
 		for(int i = 0; i < IMAGE_BUFFER_SIZE; i++){
 			mean_r += image_r[i];
-			mean_g += image_g[i];
 			mean_b += image_b[i];
 		}
 
 		mean_r = mean_r / IMAGE_BUFFER_SIZE;
-     	mean_g = mean_g / IMAGE_BUFFER_SIZE;
      	mean_b = mean_b / IMAGE_BUFFER_SIZE;
 
 
 
 //Detection of the colors with thresholds on the average for every color
-     	if(!get_no_more_color_needed()){				//checking if we want a detection or not
-     		if(VL53L0X_get_dist_mm() > 100){
-     			color_detected = 0;
-     			if(get_mode() != FINISH){
-     				clear_leds();
-     				for(uint8_t i = 0; i < NB_LEDS; i++)
-     				{
-     					set_rgb_led(i, WHITE);
-     				}
+     	if(!get_no_more_color_needed()){				//checking if we want a color detection or not
+     		if(VL53L0X_get_dist_mm() > SECURITY_TH){	//no detection over 10cm to avoid false detections
+     			color_detected = WHITE;					//white as default color when no detection
+     			if(get_mode() != FINISH){				//set leds to detected color unless in FINISH mode
+     				set_all_leds(WHITE_LED);
      			}
      			else
      				clear_leds();
      		}
      		else{
-     			if(mean_r > 20){
-     				color_detected = 1;
-     				//				chprintf((BaseSequentialStream *)&SD3, "C'est du rouge \r\n");
-     				if(get_mode() != FINISH){
-     					clear_leds();
-     					for(uint8_t i = 0; i < NB_LEDS; i++)
-     					{
-     						set_rgb_led(i, RED);
-     					}
-     				}
-     				else
-     					clear_leds();
-     			}
-     			else if(mean_b > 10){
-     				color_detected = 2;
-     				//				chprintf((BaseSequentialStream *)&SD3, "C'est du bleu \r\n");
-     				if(get_mode() != FINISH){
-     					clear_leds();
-     					for(uint8_t i = 0; i < NB_LEDS; i++)
-     					{
-     						set_rgb_led(i, BLUE);
-     					}
-     				}
-     				else
-     					clear_leds();
-     			}
-     			else if(mean_b < 7 && mean_r < 12){
-     				color_detected = 3;
-     				//				chprintf((BaseSequentialStream *)&SD3, "C'est du vert \r\n");
-     				if(get_mode() != FINISH){
-     					clear_leds();
-     					for(uint8_t i = 0; i < NB_LEDS; i++)
-     					{
-     						set_rgb_led(i, GREEN);
-     					}
-     				}
-     				else
-     					clear_leds();
-     			}
-     			else{
-     				//				chprintf((BaseSequentialStream *)&SD3, "C'est du blanc \r\n");
-     				color_detected = 0;
-     				if(get_mode() != FINISH){
-     					clear_leds();
-     					for(uint8_t i = 0; i < NB_LEDS; i++)
-     					{
-     						set_rgb_led(i, WHITE);
-     					}
-     				}
-     				else
-     					clear_leds();
+     			color_detection(mean_r, mean_b);		//color detection
+     			if(get_mode() != FINISH){				//set leds to detected color unless in FINISH mode
+     				if(color_detected == RED)
+     					set_all_leds(RED_LED);
+     				if(color_detected == GREEN)
+     					set_all_leds(GREEN_LED);
+     				if(color_detected == BLUE)
+     					set_all_leds(BLUE_LED);
+     				if(color_detected == WHITE)
+     					set_all_leds(WHITE_LED);
      			}
      		}
      	}
-
 
 		//sends to the computer the image
 		//SendUint8ToComputer(image_r, IMAGE_BUFFER_SIZE);
@@ -195,6 +149,21 @@ void update_color_selected(void){
 	color_selected = color_detected;
 }
 
+
+void color_detection(uint32_t mean_r, uint32_t mean_b){
+	if(mean_r > RED_TH){								//RED detection
+		color_detected = RED;
+	}
+	else if(mean_b > BLUE_TH){							//BLUE detection
+		color_detected = BLUE;
+	}
+	else if(mean_b < GREEN_TH1 && mean_r < GREEN_TH2){  //GREEN detection
+		color_detected = GREEN;
+	}
+	else{												//WHITE as default (walls) colors if no other color detected
+		color_detected = WHITE;
+	}
+}
 
 void process_image_start(void){
 	chThdCreateStatic(waProcessImage, sizeof(waProcessImage), NORMALPRIO, ProcessImage, NULL);

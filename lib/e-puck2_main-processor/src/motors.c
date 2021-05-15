@@ -2,6 +2,7 @@
 #include <hal.h>
 #include "motors.h"
 #include "leds.h"
+#include <movement.h>
 
 #define MOTOR_TIMER_FREQ 100000 // [Hz]
 #define THRESV 650 // This is the speed under which the power save feature is active.
@@ -255,6 +256,13 @@ void left_motor_set_pos(int32_t counter_value){
 
 void right_motor_set_pos(int32_t counter_value){
     right_motor.count = counter_value*2; //converts steps to microsteps
+}
+
+void left_turn(void){
+	right_motor_set_pos(0);
+	left_motor_set_pos(0);
+	left_motor_set_speed(-SPEED_MOVE);
+	right_motor_set_speed(SPEED_MOVE);
 }
 
 void motors_init(void)

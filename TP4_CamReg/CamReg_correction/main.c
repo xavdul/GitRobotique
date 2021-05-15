@@ -26,7 +26,7 @@ messagebus_t bus;
 MUTEX_DECL(bus_lock);
 CONDVAR_DECL(bus_condvar);
 
-static 	uint8_t mode = IDLE;
+static 	uint8_t mode = IDLE; //initialising MODE in IDLE
 
 void SendUint8ToComputer(uint8_t* data, uint16_t size) 
 {
@@ -84,7 +84,6 @@ int main(void)
     	switch(mode){
 
     	case IDLE :
-    		chprintf((BaseSequentialStream *)&SD3, "IDLE \r\n");
     		set_body_led(0);
     		if(get_selector() == 0)
     			update_color_selected();
@@ -93,18 +92,18 @@ int main(void)
     		break;
 
     	case START :
-    		chprintf((BaseSequentialStream *)&SD3, "START \r\n");
+
     		break;
 
     	case MOVEMENT :
-    		chprintf((BaseSequentialStream *)&SD3, "MOVEMENT \r\n");
+
     		break;
 
     	case FINISH :
-    		chprintf((BaseSequentialStream *)&SD3, "FINISH \r\n");
+
     		break;
     	case WAIT_NEXT_ATTEMPT :
-    		chprintf((BaseSequentialStream *)&SD3, "ATTENTE \r\n");
+
     		if(get_selector() == 0)
     			mode = IDLE;
     	}

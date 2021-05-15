@@ -95,3 +95,11 @@ void get_all_rgb_state(uint8_t* values) {
 	memcpy(values, rgb_led, NUM_RGB_LED * NUM_COLOR_LED);
 }
 
+void set_all_leds(uint8_t red, uint8_t green, uint8_t blue){
+		clear_leds();
+		for(uint8_t i = 0; i < NB_LEDS; i++)
+		{
+			set_rgb_led(i, red, green, blue);
+		}
+}
+
