@@ -13,11 +13,13 @@
 
 
 
-//Leds
+//RGB colors for the leds
 #define RED		255, 0, 0
 #define GREEN	0, 255, 0
 #define	BLUE	0, 0, 255
 #define WHITE	255, 255, 255
+
+//Number of RGB leds
 #define NB_LEDS	4
 
 //Defining the static variables to store the colors seen by the camera and the selected color mode on the robot
@@ -28,7 +30,7 @@ static uint8_t color_selected = 0;
 //semaphore
 static BSEMAPHORE_DECL(image_ready_sem, TRUE);
 
-
+//Thread to capture the image from the camera, code taken from TP4
 static THD_WORKING_AREA(waCaptureImage, 256);
 static THD_FUNCTION(CaptureImage, arg) {
 
@@ -51,6 +53,7 @@ static THD_FUNCTION(CaptureImage, arg) {
     }
 }
 
+//Thread to process the image and extract the color of the image, adapted from TP4
 
 static THD_WORKING_AREA(waProcessImage, 4096); //3072
 static THD_FUNCTION(ProcessImage, arg) {
@@ -90,26 +93,21 @@ static THD_FUNCTION(ProcessImage, arg) {
 			image_g[i/2] = ((((uint8_t)img_buff_ptr[i+1]&0xE0) >> 5) | (((uint8_t)img_buff_ptr[i]&0x07 ) << 3));
 		}
 
-		// Computing the mean value of the red, green, and blue pixels
+		// Computing the mean value of the red, green, and blue pixels over the line
 		for(int i = 0; i < IMAGE_BUFFER_SIZE; i++){
 			mean_r += image_r[i];
-		}
-
-		for(int i = 0; i < IMAGE_BUFFER_SIZE; i++){
 			mean_g += image_g[i];
-						}
-
-		for(int i = 0; i < IMAGE_BUFFER_SIZE; i++){
 			mean_b += image_b[i];
 		}
+
 		mean_r = mean_r / IMAGE_BUFFER_SIZE;
      	mean_g = mean_g / IMAGE_BUFFER_SIZE;
      	mean_b = mean_b / IMAGE_BUFFER_SIZE;
 
 
 
-//DETECTION COULEUR AVEC SEUILS
-     	if( !get_no_more_color_needed() ){
+//Detection of the colors with thresholds on the average for every color
+     	if(!get_no_more_color_needed()){				//checking if we want a detection or not
      		if(VL53L0X_get_dist_mm() > 100){
      			color_detected = 0;
      			if(get_mode() != FINISH){
@@ -195,11 +193,10 @@ uint8_t get_color_selected(void){
 
 void update_color_selected(void){
 	color_selected = color_detected;
-//	chprintf((BaseSequentialStream *)&SD3, "color = %d \r\n", color_selected);
 }
 
 
 void process_image_start(void){
-	chThdCreateStatic(waProcessImage, sizeof(waProcessImage), NORMALPRIO, ProcessImage+1, NULL);
+	chThdCreateStatic(waProcessImage, sizeof(waProcessImage), NORMALPRIO, ProcessImage, NULL);
 	chThdCreateStatic(waCaptureImage, sizeof(waCaptureImage), NORMALPRIO, CaptureImage, NULL);
 }

@@ -38,7 +38,7 @@
 
 #define TH_PROX 450
 #define TH_PROX_COLOR 550
-#define MIN_DIST_FRONT 10
+#define MIN_DIST_FRONT 50
 #define DIST_DETECTION 30
 #define MIN_MAUVAISE_COULEUR 60
 #define STEPS_90 270
@@ -88,7 +88,7 @@ static THD_FUNCTION(movement, arg) {
     	if(get_mode() == MOVEMENT){
     		chprintf((BaseSequentialStream *)&SD3, "MOVEMENT MOVEMENT \r\n");
     		if(get_color_detected() == 0){
-    			if(VL53L0X_get_dist_mm() < MIN_DIST_FRONT){ //40 ou 50 (VOIR AVEC DEBUT)
+    			if(VL53L0X_get_dist_mm() < MIN_DIST_FRONT){
     				right_motor_set_pos(0);
     				left_motor_set_pos(0);
     				left_motor_set_speed(-SPEED_MOVE);
@@ -136,8 +136,7 @@ static THD_FUNCTION(movement, arg) {
     					no_more_color_needed = 1;
     					left_motor_set_speed(SPEED_MOVE);
     					right_motor_set_speed(SPEED_MOVE);
-    					for(i =0; i < 10000000; i++){
-    					}
+    					for(i =0; i < 10000000; i++){}
     					no_more_color_needed = 0;
     				}
     			}
@@ -197,7 +196,7 @@ static THD_FUNCTION(movement, arg) {
     		}
     	}
     	else if(get_mode() == FINISH){
-    		if(VL53L0X_get_dist_mm() > 10 && find_the_end == 0){
+    		if(VL53L0X_get_dist_mm() > 50 && find_the_end == 0){
     			if(get_prox(DIAG_LEFT_IR) > TH_PROX
     					|| get_prox(FRONT_LEFT_IR) > TH_PROX){
 
@@ -227,8 +226,8 @@ static THD_FUNCTION(movement, arg) {
     			else{
     				right_motor_set_pos(0);
     				left_motor_set_pos(0);
-    				left_motor_set_speed(-SPEED_MOVE);
-    				right_motor_set_speed(SPEED_MOVE);
+    				left_motor_set_speed(-SPEED_END);
+    				right_motor_set_speed(SPEED_END);
     				while(right_motor_get_pos() != 270){}
     			}
     		}

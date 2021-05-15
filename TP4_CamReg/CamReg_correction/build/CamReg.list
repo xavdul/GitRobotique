@@ -1653,10 +1653,10 @@ Disassembly of section .text:
 
 08001480 <ProcessImage>:
  8001480:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
- 8001484:	4a68      	ldr	r2, [pc, #416]	; (8001628 <ProcessImage+0x1a8>)
- 8001486:	4b69      	ldr	r3, [pc, #420]	; (800162c <ProcessImage+0x1ac>)
+ 8001484:	4a66      	ldr	r2, [pc, #408]	; (8001620 <ProcessImage+0x1a0>)
+ 8001486:	4b67      	ldr	r3, [pc, #412]	; (8001624 <ProcessImage+0x1a4>)
  8001488:	6992      	ldr	r2, [r2, #24]
- 800148a:	4969      	ldr	r1, [pc, #420]	; (8001630 <ProcessImage+0x1b0>)
+ 800148a:	4967      	ldr	r1, [pc, #412]	; (8001628 <ProcessImage+0x1a8>)
  800148c:	6191      	str	r1, [r2, #24]
  800148e:	f2ad 5d0c 	subw	sp, sp, #1292	; 0x50c
  8001492:	ae01      	add	r6, sp, #4
@@ -1671,145 +1671,140 @@ Disassembly of section .text:
  80014aa:	f44f 7220 	mov.w	r2, #640	; 0x280
  80014ae:	2100      	movs	r1, #0
  80014b0:	f010 fa0e 	bl	80118d0 <memset>
- 80014b4:	f8df 9184 	ldr.w	r9, [pc, #388]	; 800163c <ProcessImage+0x1bc>
- 80014b8:	f20d 2483 	addw	r4, sp, #643	; 0x283
- 80014bc:	f20d 5703 	addw	r7, sp, #1283	; 0x503
- 80014c0:	4648      	mov	r0, r9
- 80014c2:	f007 fc2d 	bl	8008d20 <chSemWait>
- 80014c6:	f000 fff3 	bl	80024b0 <dcmi_get_last_image_ptr>
- 80014ca:	2300      	movs	r3, #0
- 80014cc:	18c1      	adds	r1, r0, r3
- 80014ce:	5cc2      	ldrb	r2, [r0, r3]
- 80014d0:	7849      	ldrb	r1, [r1, #1]
- 80014d2:	f3c3 0c4e 	ubfx	ip, r3, #1, #15
- 80014d6:	3302      	adds	r3, #2
- 80014d8:	f001 011f 	and.w	r1, r1, #31
- 80014dc:	08d2      	lsrs	r2, r2, #3
- 80014de:	f5b3 6fa0 	cmp.w	r3, #1280	; 0x500
- 80014e2:	f805 100c 	strb.w	r1, [r5, ip]
- 80014e6:	f806 200c 	strb.w	r2, [r6, ip]
- 80014ea:	d1ef      	bne.n	80014cc <ProcessImage+0x4c>
- 80014ec:	f10d 0303 	add.w	r3, sp, #3
- 80014f0:	f04f 0800 	mov.w	r8, #0
- 80014f4:	f813 2f01 	ldrb.w	r2, [r3, #1]!
- 80014f8:	42a3      	cmp	r3, r4
- 80014fa:	4490      	add	r8, r2
- 80014fc:	d1fa      	bne.n	80014f4 <ProcessImage+0x74>
- 80014fe:	4623      	mov	r3, r4
- 8001500:	f04f 0a00 	mov.w	sl, #0
- 8001504:	f813 2f01 	ldrb.w	r2, [r3, #1]!
- 8001508:	429f      	cmp	r7, r3
- 800150a:	4492      	add	sl, r2
- 800150c:	d1fa      	bne.n	8001504 <ProcessImage+0x84>
- 800150e:	f000 fb47 	bl	8001ba0 <get_no_more_color_needed>
- 8001512:	4683      	mov	fp, r0
- 8001514:	2800      	cmp	r0, #0
- 8001516:	d1d3      	bne.n	80014c0 <ProcessImage+0x40>
- 8001518:	f006 f922 	bl	8007760 <VL53L0X_get_dist_mm>
- 800151c:	2864      	cmp	r0, #100	; 0x64
- 800151e:	d82b      	bhi.n	8001578 <ProcessImage+0xf8>
- 8001520:	4b44      	ldr	r3, [pc, #272]	; (8001634 <ProcessImage+0x1b4>)
- 8001522:	fba3 2308 	umull	r2, r3, r3, r8
- 8001526:	0a5b      	lsrs	r3, r3, #9
- 8001528:	2b14      	cmp	r3, #20
- 800152a:	d83b      	bhi.n	80015a4 <ProcessImage+0x124>
- 800152c:	4a41      	ldr	r2, [pc, #260]	; (8001634 <ProcessImage+0x1b4>)
- 800152e:	fba2 120a 	umull	r1, r2, r2, sl
- 8001532:	0a52      	lsrs	r2, r2, #9
- 8001534:	2a0a      	cmp	r2, #10
- 8001536:	d84b      	bhi.n	80015d0 <ProcessImage+0x150>
- 8001538:	2a06      	cmp	r2, #6
- 800153a:	d801      	bhi.n	8001540 <ProcessImage+0xc0>
- 800153c:	2b0b      	cmp	r3, #11
- 800153e:	d95d      	bls.n	80015fc <ProcessImage+0x17c>
- 8001540:	4b3d      	ldr	r3, [pc, #244]	; (8001638 <ProcessImage+0x1b8>)
- 8001542:	f04f 0200 	mov.w	r2, #0
- 8001546:	701a      	strb	r2, [r3, #0]
- 8001548:	f7ff ff6a 	bl	8001420 <get_mode>
- 800154c:	2803      	cmp	r0, #3
- 800154e:	d010      	beq.n	8001572 <ProcessImage+0xf2>
- 8001550:	f001 fcce 	bl	8002ef0 <clear_leds>
- 8001554:	f04f 0800 	mov.w	r8, #0
- 8001558:	23ff      	movs	r3, #255	; 0xff
- 800155a:	fa5f f088 	uxtb.w	r0, r8
- 800155e:	461a      	mov	r2, r3
- 8001560:	4619      	mov	r1, r3
- 8001562:	f108 0801 	add.w	r8, r8, #1
- 8001566:	f001 fc8b 	bl	8002e80 <set_rgb_led>
- 800156a:	f1b8 0f04 	cmp.w	r8, #4
- 800156e:	d1f3      	bne.n	8001558 <ProcessImage+0xd8>
- 8001570:	e7a6      	b.n	80014c0 <ProcessImage+0x40>
- 8001572:	f001 fcbd 	bl	8002ef0 <clear_leds>
- 8001576:	e7a3      	b.n	80014c0 <ProcessImage+0x40>
- 8001578:	4b2f      	ldr	r3, [pc, #188]	; (8001638 <ProcessImage+0x1b8>)
- 800157a:	f883 b000 	strb.w	fp, [r3]
- 800157e:	f7ff ff4f 	bl	8001420 <get_mode>
- 8001582:	2803      	cmp	r0, #3
- 8001584:	d0f5      	beq.n	8001572 <ProcessImage+0xf2>
- 8001586:	f001 fcb3 	bl	8002ef0 <clear_leds>
- 800158a:	23ff      	movs	r3, #255	; 0xff
- 800158c:	fa5f f08b 	uxtb.w	r0, fp
- 8001590:	461a      	mov	r2, r3
- 8001592:	4619      	mov	r1, r3
- 8001594:	f10b 0b01 	add.w	fp, fp, #1
- 8001598:	f001 fc72 	bl	8002e80 <set_rgb_led>
- 800159c:	f1bb 0f04 	cmp.w	fp, #4
- 80015a0:	d1f3      	bne.n	800158a <ProcessImage+0x10a>
- 80015a2:	e78d      	b.n	80014c0 <ProcessImage+0x40>
- 80015a4:	4a24      	ldr	r2, [pc, #144]	; (8001638 <ProcessImage+0x1b8>)
- 80015a6:	2301      	movs	r3, #1
- 80015a8:	7013      	strb	r3, [r2, #0]
- 80015aa:	f7ff ff39 	bl	8001420 <get_mode>
- 80015ae:	2803      	cmp	r0, #3
- 80015b0:	d0df      	beq.n	8001572 <ProcessImage+0xf2>
- 80015b2:	f001 fc9d 	bl	8002ef0 <clear_leds>
- 80015b6:	2300      	movs	r3, #0
- 80015b8:	fa5f f08b 	uxtb.w	r0, fp
- 80015bc:	461a      	mov	r2, r3
- 80015be:	21ff      	movs	r1, #255	; 0xff
- 80015c0:	f10b 0b01 	add.w	fp, fp, #1
- 80015c4:	f001 fc5c 	bl	8002e80 <set_rgb_led>
- 80015c8:	f1bb 0f04 	cmp.w	fp, #4
- 80015cc:	d1f3      	bne.n	80015b6 <ProcessImage+0x136>
- 80015ce:	e777      	b.n	80014c0 <ProcessImage+0x40>
- 80015d0:	4a19      	ldr	r2, [pc, #100]	; (8001638 <ProcessImage+0x1b8>)
- 80015d2:	2302      	movs	r3, #2
- 80015d4:	7013      	strb	r3, [r2, #0]
- 80015d6:	f7ff ff23 	bl	8001420 <get_mode>
- 80015da:	2803      	cmp	r0, #3
- 80015dc:	d0c9      	beq.n	8001572 <ProcessImage+0xf2>
- 80015de:	f001 fc87 	bl	8002ef0 <clear_leds>
- 80015e2:	2200      	movs	r2, #0
- 80015e4:	fa5f f08b 	uxtb.w	r0, fp
- 80015e8:	4611      	mov	r1, r2
- 80015ea:	23ff      	movs	r3, #255	; 0xff
- 80015ec:	f10b 0b01 	add.w	fp, fp, #1
- 80015f0:	f001 fc46 	bl	8002e80 <set_rgb_led>
- 80015f4:	f1bb 0f04 	cmp.w	fp, #4
- 80015f8:	d1f3      	bne.n	80015e2 <ProcessImage+0x162>
- 80015fa:	e761      	b.n	80014c0 <ProcessImage+0x40>
- 80015fc:	4a0e      	ldr	r2, [pc, #56]	; (8001638 <ProcessImage+0x1b8>)
- 80015fe:	2303      	movs	r3, #3
- 8001600:	7013      	strb	r3, [r2, #0]
- 8001602:	f7ff ff0d 	bl	8001420 <get_mode>
- 8001606:	2803      	cmp	r0, #3
- 8001608:	d0b3      	beq.n	8001572 <ProcessImage+0xf2>
- 800160a:	f001 fc71 	bl	8002ef0 <clear_leds>
- 800160e:	2300      	movs	r3, #0
- 8001610:	fa5f f08b 	uxtb.w	r0, fp
- 8001614:	4619      	mov	r1, r3
- 8001616:	22ff      	movs	r2, #255	; 0xff
- 8001618:	f10b 0b01 	add.w	fp, fp, #1
- 800161c:	f001 fc30 	bl	8002e80 <set_rgb_led>
- 8001620:	f1bb 0f04 	cmp.w	fp, #4
- 8001624:	d1f3      	bne.n	800160e <ProcessImage+0x18e>
- 8001626:	e74b      	b.n	80014c0 <ProcessImage+0x40>
- 8001628:	20005e20 	.word	0x20005e20
- 800162c:	20000800 	.word	0x20000800
- 8001630:	08014e10 	.word	0x08014e10
- 8001634:	cccccccd 	.word	0xcccccccd
- 8001638:	200014f5 	.word	0x200014f5
- 800163c:	2000082c 	.word	0x2000082c
+ 80014b4:	f8df 817c 	ldr.w	r8, [pc, #380]	; 8001634 <ProcessImage+0x1b4>
+ 80014b8:	4f5c      	ldr	r7, [pc, #368]	; (800162c <ProcessImage+0x1ac>)
+ 80014ba:	f20d 2483 	addw	r4, sp, #643	; 0x283
+ 80014be:	4638      	mov	r0, r7
+ 80014c0:	f007 fc2e 	bl	8008d20 <chSemWait>
+ 80014c4:	f000 fff4 	bl	80024b0 <dcmi_get_last_image_ptr>
+ 80014c8:	2300      	movs	r3, #0
+ 80014ca:	18c1      	adds	r1, r0, r3
+ 80014cc:	5cc2      	ldrb	r2, [r0, r3]
+ 80014ce:	7849      	ldrb	r1, [r1, #1]
+ 80014d0:	f3c3 0c4e 	ubfx	ip, r3, #1, #15
+ 80014d4:	3302      	adds	r3, #2
+ 80014d6:	f001 011f 	and.w	r1, r1, #31
+ 80014da:	08d2      	lsrs	r2, r2, #3
+ 80014dc:	f5b3 6fa0 	cmp.w	r3, #1280	; 0x500
+ 80014e0:	f805 100c 	strb.w	r1, [r5, ip]
+ 80014e4:	f806 200c 	strb.w	r2, [r6, ip]
+ 80014e8:	d1ef      	bne.n	80014ca <ProcessImage+0x4a>
+ 80014ea:	f04f 0b00 	mov.w	fp, #0
+ 80014ee:	46d9      	mov	r9, fp
+ 80014f0:	f10d 0303 	add.w	r3, sp, #3
+ 80014f4:	4622      	mov	r2, r4
+ 80014f6:	f813 cf01 	ldrb.w	ip, [r3, #1]!
+ 80014fa:	f812 0f01 	ldrb.w	r0, [r2, #1]!
+ 80014fe:	429c      	cmp	r4, r3
+ 8001500:	44e1      	add	r9, ip
+ 8001502:	4483      	add	fp, r0
+ 8001504:	d1f7      	bne.n	80014f6 <ProcessImage+0x76>
+ 8001506:	f000 fb4b 	bl	8001ba0 <get_no_more_color_needed>
+ 800150a:	4682      	mov	sl, r0
+ 800150c:	2800      	cmp	r0, #0
+ 800150e:	d1d6      	bne.n	80014be <ProcessImage+0x3e>
+ 8001510:	f006 f926 	bl	8007760 <VL53L0X_get_dist_mm>
+ 8001514:	2864      	cmp	r0, #100	; 0x64
+ 8001516:	d82b      	bhi.n	8001570 <ProcessImage+0xf0>
+ 8001518:	4b45      	ldr	r3, [pc, #276]	; (8001630 <ProcessImage+0x1b0>)
+ 800151a:	fba3 3109 	umull	r3, r1, r3, r9
+ 800151e:	0a49      	lsrs	r1, r1, #9
+ 8001520:	2914      	cmp	r1, #20
+ 8001522:	d83a      	bhi.n	800159a <ProcessImage+0x11a>
+ 8001524:	4b42      	ldr	r3, [pc, #264]	; (8001630 <ProcessImage+0x1b0>)
+ 8001526:	fba3 230b 	umull	r2, r3, r3, fp
+ 800152a:	0a5b      	lsrs	r3, r3, #9
+ 800152c:	2b0a      	cmp	r3, #10
+ 800152e:	d84a      	bhi.n	80015c6 <ProcessImage+0x146>
+ 8001530:	2b06      	cmp	r3, #6
+ 8001532:	d801      	bhi.n	8001538 <ProcessImage+0xb8>
+ 8001534:	290b      	cmp	r1, #11
+ 8001536:	d95c      	bls.n	80015f2 <ProcessImage+0x172>
+ 8001538:	f04f 0300 	mov.w	r3, #0
+ 800153c:	f888 3000 	strb.w	r3, [r8]
+ 8001540:	f7ff ff6e 	bl	8001420 <get_mode>
+ 8001544:	2803      	cmp	r0, #3
+ 8001546:	d010      	beq.n	800156a <ProcessImage+0xea>
+ 8001548:	f001 fcd2 	bl	8002ef0 <clear_leds>
+ 800154c:	f04f 0b00 	mov.w	fp, #0
+ 8001550:	23ff      	movs	r3, #255	; 0xff
+ 8001552:	fa5f f08b 	uxtb.w	r0, fp
+ 8001556:	461a      	mov	r2, r3
+ 8001558:	4619      	mov	r1, r3
+ 800155a:	f10b 0b01 	add.w	fp, fp, #1
+ 800155e:	f001 fc8f 	bl	8002e80 <set_rgb_led>
+ 8001562:	f1bb 0f04 	cmp.w	fp, #4
+ 8001566:	d1f3      	bne.n	8001550 <ProcessImage+0xd0>
+ 8001568:	e7a9      	b.n	80014be <ProcessImage+0x3e>
+ 800156a:	f001 fcc1 	bl	8002ef0 <clear_leds>
+ 800156e:	e7a6      	b.n	80014be <ProcessImage+0x3e>
+ 8001570:	f888 a000 	strb.w	sl, [r8]
+ 8001574:	f7ff ff54 	bl	8001420 <get_mode>
+ 8001578:	2803      	cmp	r0, #3
+ 800157a:	d0f6      	beq.n	800156a <ProcessImage+0xea>
+ 800157c:	f001 fcb8 	bl	8002ef0 <clear_leds>
+ 8001580:	23ff      	movs	r3, #255	; 0xff
+ 8001582:	fa5f f08a 	uxtb.w	r0, sl
+ 8001586:	461a      	mov	r2, r3
+ 8001588:	4619      	mov	r1, r3
+ 800158a:	f10a 0a01 	add.w	sl, sl, #1
+ 800158e:	f001 fc77 	bl	8002e80 <set_rgb_led>
+ 8001592:	f1ba 0f04 	cmp.w	sl, #4
+ 8001596:	d1f3      	bne.n	8001580 <ProcessImage+0x100>
+ 8001598:	e791      	b.n	80014be <ProcessImage+0x3e>
+ 800159a:	2301      	movs	r3, #1
+ 800159c:	f888 3000 	strb.w	r3, [r8]
+ 80015a0:	f7ff ff3e 	bl	8001420 <get_mode>
+ 80015a4:	2803      	cmp	r0, #3
+ 80015a6:	d0e0      	beq.n	800156a <ProcessImage+0xea>
+ 80015a8:	f001 fca2 	bl	8002ef0 <clear_leds>
+ 80015ac:	2300      	movs	r3, #0
+ 80015ae:	fa5f f08a 	uxtb.w	r0, sl
+ 80015b2:	461a      	mov	r2, r3
+ 80015b4:	21ff      	movs	r1, #255	; 0xff
+ 80015b6:	f10a 0a01 	add.w	sl, sl, #1
+ 80015ba:	f001 fc61 	bl	8002e80 <set_rgb_led>
+ 80015be:	f1ba 0f04 	cmp.w	sl, #4
+ 80015c2:	d1f3      	bne.n	80015ac <ProcessImage+0x12c>
+ 80015c4:	e77b      	b.n	80014be <ProcessImage+0x3e>
+ 80015c6:	2302      	movs	r3, #2
+ 80015c8:	f888 3000 	strb.w	r3, [r8]
+ 80015cc:	f7ff ff28 	bl	8001420 <get_mode>
+ 80015d0:	2803      	cmp	r0, #3
+ 80015d2:	d0ca      	beq.n	800156a <ProcessImage+0xea>
+ 80015d4:	f001 fc8c 	bl	8002ef0 <clear_leds>
+ 80015d8:	2200      	movs	r2, #0
+ 80015da:	fa5f f08a 	uxtb.w	r0, sl
+ 80015de:	4611      	mov	r1, r2
+ 80015e0:	23ff      	movs	r3, #255	; 0xff
+ 80015e2:	f10a 0a01 	add.w	sl, sl, #1
+ 80015e6:	f001 fc4b 	bl	8002e80 <set_rgb_led>
+ 80015ea:	f1ba 0f04 	cmp.w	sl, #4
+ 80015ee:	d1f3      	bne.n	80015d8 <ProcessImage+0x158>
+ 80015f0:	e765      	b.n	80014be <ProcessImage+0x3e>
+ 80015f2:	2303      	movs	r3, #3
+ 80015f4:	f888 3000 	strb.w	r3, [r8]
+ 80015f8:	f7ff ff12 	bl	8001420 <get_mode>
+ 80015fc:	2803      	cmp	r0, #3
+ 80015fe:	d0b4      	beq.n	800156a <ProcessImage+0xea>
+ 8001600:	f001 fc76 	bl	8002ef0 <clear_leds>
+ 8001604:	46d3      	mov	fp, sl
+ 8001606:	2300      	movs	r3, #0
+ 8001608:	fa5f f08b 	uxtb.w	r0, fp
+ 800160c:	4619      	mov	r1, r3
+ 800160e:	22ff      	movs	r2, #255	; 0xff
+ 8001610:	f10b 0b01 	add.w	fp, fp, #1
+ 8001614:	f001 fc34 	bl	8002e80 <set_rgb_led>
+ 8001618:	f1bb 0f04 	cmp.w	fp, #4
+ 800161c:	d1f3      	bne.n	8001606 <ProcessImage+0x186>
+ 800161e:	e74e      	b.n	80014be <ProcessImage+0x3e>
+ 8001620:	20005e20 	.word	0x20005e20
+ 8001624:	20000800 	.word	0x20000800
+ 8001628:	08014e10 	.word	0x08014e10
+ 800162c:	2000082c 	.word	0x2000082c
+ 8001630:	cccccccd 	.word	0xcccccccd
+ 8001634:	200014f5 	.word	0x200014f5
+	...
 
 08001640 <CaptureImage>:
  8001640:	b580      	push	{r7, lr}
@@ -2050,7 +2045,7 @@ Disassembly of section .text:
  80018b0:	2800      	cmp	r0, #0
  80018b2:	d14b      	bne.n	800194c <movement+0x13c>
  80018b4:	f005 ff54 	bl	8007760 <VL53L0X_get_dist_mm>
- 80018b8:	2809      	cmp	r0, #9
+ 80018b8:	2831      	cmp	r0, #49	; 0x31
  80018ba:	f240 80a8 	bls.w	8001a0e <movement+0x1fe>
  80018be:	2006      	movs	r0, #6
  80018c0:	f002 f92e 	bl	8003b20 <get_prox>
@@ -2072,7 +2067,7 @@ Disassembly of section .text:
  80018f4:	d1b2      	bne.n	800185c <movement+0x4c>
  80018f6:	f7ff fdab 	bl	8001450 <next_mode>
  80018fa:	e7af      	b.n	800185c <movement+0x4c>
- 80018fc:	4992      	ldr	r1, [pc, #584]	; (8001b48 <movement+0x338>)
+ 80018fc:	4651      	mov	r1, sl
  80018fe:	4891      	ldr	r0, [pc, #580]	; (8001b44 <movement+0x334>)
  8001900:	f7ff ff66 	bl	80017d0 <chprintf.constprop.0>
  8001904:	f7ff ff0c 	bl	8001720 <get_color_selected>
@@ -2088,7 +2083,7 @@ Disassembly of section .text:
  8001922:	f001 fe7d 	bl	8003620 <right_motor_set_pos>
  8001926:	4630      	mov	r0, r6
  8001928:	f001 fe62 	bl	80035f0 <left_motor_set_pos>
- 800192c:	4650      	mov	r0, sl
+ 800192c:	4886      	ldr	r0, [pc, #536]	; (8001b48 <movement+0x338>)
  800192e:	f001 fe17 	bl	8003560 <left_motor_set_speed>
  8001932:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
  8001936:	f001 fe2b 	bl	8003590 <right_motor_set_speed>
@@ -2128,7 +2123,7 @@ Disassembly of section .text:
  80019a0:	f001 fdf6 	bl	8003590 <right_motor_set_speed>
  80019a4:	e756      	b.n	8001854 <movement+0x44>
  80019a6:	f005 fedb 	bl	8007760 <VL53L0X_get_dist_mm>
- 80019aa:	280a      	cmp	r0, #10
+ 80019aa:	2832      	cmp	r0, #50	; 0x32
  80019ac:	d903      	bls.n	80019b6 <movement+0x1a6>
  80019ae:	f898 6000 	ldrb.w	r6, [r8]
  80019b2:	2e00      	cmp	r6, #0
@@ -2167,7 +2162,7 @@ Disassembly of section .text:
  8001a10:	f001 fe06 	bl	8003620 <right_motor_set_pos>
  8001a14:	4638      	mov	r0, r7
  8001a16:	f001 fdeb 	bl	80035f0 <left_motor_set_pos>
- 8001a1a:	4650      	mov	r0, sl
+ 8001a1a:	484b      	ldr	r0, [pc, #300]	; (8001b48 <movement+0x338>)
  8001a1c:	f001 fda0 	bl	8003560 <left_motor_set_speed>
  8001a20:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
  8001a24:	f001 fdb4 	bl	8003590 <right_motor_set_speed>
@@ -2179,9 +2174,9 @@ Disassembly of section .text:
  8001a36:	f001 fdf3 	bl	8003620 <right_motor_set_pos>
  8001a3a:	2000      	movs	r0, #0
  8001a3c:	f001 fdd8 	bl	80035f0 <left_motor_set_pos>
- 8001a40:	4650      	mov	r0, sl
- 8001a42:	f001 fd8d 	bl	8003560 <left_motor_set_speed>
- 8001a46:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
+ 8001a40:	f06f 00d1 	mvn.w	r0, #209	; 0xd1
+ 8001a44:	f001 fd8c 	bl	8003560 <left_motor_set_speed>
+ 8001a48:	20d2      	movs	r0, #210	; 0xd2
  8001a4a:	f001 fda1 	bl	8003590 <right_motor_set_speed>
  8001a4e:	f001 fdb7 	bl	80035c0 <right_motor_get_pos>
  8001a52:	f5b0 7f87 	cmp.w	r0, #270	; 0x10e
@@ -2191,7 +2186,7 @@ Disassembly of section .text:
  8001a5c:	f001 fde0 	bl	8003620 <right_motor_set_pos>
  8001a60:	4630      	mov	r0, r6
  8001a62:	f001 fdc5 	bl	80035f0 <left_motor_set_pos>
- 8001a66:	4650      	mov	r0, sl
+ 8001a66:	4838      	ldr	r0, [pc, #224]	; (8001b48 <movement+0x338>)
  8001a68:	f001 fd7a 	bl	8003560 <left_motor_set_speed>
  8001a6c:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
  8001a70:	f001 fd8e 	bl	8003590 <right_motor_set_speed>
@@ -2204,7 +2199,7 @@ Disassembly of section .text:
  8001a86:	f001 fdcb 	bl	8003620 <right_motor_set_pos>
  8001a8a:	4630      	mov	r0, r6
  8001a8c:	f001 fdb0 	bl	80035f0 <left_motor_set_pos>
- 8001a90:	4650      	mov	r0, sl
+ 8001a90:	482d      	ldr	r0, [pc, #180]	; (8001b48 <movement+0x338>)
  8001a92:	f001 fd65 	bl	8003560 <left_motor_set_speed>
  8001a96:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
  8001a9a:	f001 fd79 	bl	8003590 <right_motor_set_speed>
@@ -2216,7 +2211,7 @@ Disassembly of section .text:
  8001aac:	f001 fdb8 	bl	8003620 <right_motor_set_pos>
  8001ab0:	4630      	mov	r0, r6
  8001ab2:	f001 fd9d 	bl	80035f0 <left_motor_set_pos>
- 8001ab6:	4650      	mov	r0, sl
+ 8001ab6:	4824      	ldr	r0, [pc, #144]	; (8001b48 <movement+0x338>)
  8001ab8:	f001 fd52 	bl	8003560 <left_motor_set_speed>
  8001abc:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
  8001ac0:	f001 fd66 	bl	8003590 <right_motor_set_speed>
@@ -2264,11 +2259,11 @@ Disassembly of section .text:
  8001b3c:	08014e30 	.word	0x08014e30
  8001b40:	08014e50 	.word	0x08014e50
  8001b44:	20006c44 	.word	0x20006c44
- 8001b48:	08014e68 	.word	0x08014e68
+ 8001b48:	fffffe0c 	.word	0xfffffe0c
  8001b4c:	200028e9 	.word	0x200028e9
  8001b50:	200028e8 	.word	0x200028e8
  8001b54:	08014e40 	.word	0x08014e40
- 8001b58:	fffffe0c 	.word	0xfffffe0c
+ 8001b58:	08014e68 	.word	0x08014e68
  8001b5c:	0098967f 	.word	0x0098967f
 
 08001b60 <movement_start>:
