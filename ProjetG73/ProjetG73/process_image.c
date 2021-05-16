@@ -61,7 +61,7 @@ static THD_FUNCTION(CaptureImage, arg) {
 
 //Thread to process the image and extract the color of the image, adapted from TP4
 
-static THD_WORKING_AREA(waProcessImage, 2048);
+static THD_WORKING_AREA(waProcessImage, 3072);
 static THD_FUNCTION(ProcessImage, arg) {
 
     chRegSetThreadName(__FUNCTION__);

@@ -96,7 +96,7 @@ Disassembly of section .text:
  8000290:	20000800 	.word	0x20000800
  8000294:	200014e4 	.word	0x200014e4
  8000298:	200014e8 	.word	0x200014e8
- 800029c:	200064f0 	.word	0x200064f0
+ 800029c:	200068f0 	.word	0x200068f0
  80002a0:	080001c0 	.word	0x080001c0
  80002a4:	080001c0 	.word	0x080001c0
  80002a8:	080001c0 	.word	0x080001c0
@@ -1482,7 +1482,7 @@ Disassembly of section .text:
  8001298:	20000800 	.word	0x20000800
  800129c:	200014f4 	.word	0x200014f4
  80012a0:	20000820 	.word	0x20000820
- 80012a4:	20006444 	.word	0x20006444
+ 80012a4:	20006844 	.word	0x20006844
  80012a8:	20000804 	.word	0x20000804
  80012ac:	2000080c 	.word	0x2000080c
  80012b0:	200014e8 	.word	0x200014e8
@@ -1603,7 +1603,7 @@ Disassembly of section .text:
  80013d8:	f007 fbca 	bl	8008b70 <chSemSignalI>
  80013dc:	e7d8      	b.n	8001390 <CaptureImage+0x40>
  80013de:	bf00      	nop
- 80013e0:	20005620 	.word	0x20005620
+ 80013e0:	20005a20 	.word	0x20005a20
  80013e4:	20000800 	.word	0x20000800
  80013e8:	080145f0 	.word	0x080145f0
  80013ec:	2000082c 	.word	0x2000082c
@@ -1736,7 +1736,7 @@ Disassembly of section .text:
  8001536:	2303      	movs	r3, #3
  8001538:	703b      	strb	r3, [r7, #0]
  800153a:	e7b9      	b.n	80014b0 <ProcessImage+0xb0>
- 800153c:	20005620 	.word	0x20005620
+ 800153c:	20005a20 	.word	0x20005a20
  8001540:	20000800 	.word	0x20000800
  8001544:	08014600 	.word	0x08014600
  8001548:	200014f5 	.word	0x200014f5
@@ -1812,7 +1812,7 @@ Disassembly of section .text:
  80015fa:	b085      	sub	sp, #20
  80015fc:	2500      	movs	r5, #0
  80015fe:	9203      	str	r2, [sp, #12]
- 8001600:	f640 1178 	movw	r1, #2424	; 0x978
+ 8001600:	f640 5178 	movw	r1, #3448	; 0xd78
  8001604:	2240      	movs	r2, #64	; 0x40
  8001606:	9500      	str	r5, [sp, #0]
  8001608:	f006 fe7a 	bl	8008300 <chThdCreateStatic>
@@ -1851,7 +1851,7 @@ Disassembly of section .text:
  8001658:	f85d fb04 	ldr.w	pc, [sp], #4
  800165c:	f7ff fe30 	bl	80012c0 <__stack_chk_fail>
  8001660:	20000800 	.word	0x20000800
- 8001664:	200020e9 	.word	0x200020e9
+ 8001664:	200024e9 	.word	0x200024e9
 	...
 
 08001670 <proximity>:
@@ -2076,11 +2076,11 @@ Disassembly of section .text:
  80018d0:	f5b0 7f0c 	cmp.w	r0, #560	; 0x230
  80018d4:	d1fa      	bne.n	80018cc <movement+0x1cc>
  80018d6:	e77a      	b.n	80017ce <movement+0xce>
- 80018d8:	20005620 	.word	0x20005620
+ 80018d8:	20005a20 	.word	0x20005a20
  80018dc:	20000800 	.word	0x20000800
  80018e0:	08014620 	.word	0x08014620
- 80018e4:	200020e8 	.word	0x200020e8
- 80018e8:	200020e9 	.word	0x200020e9
+ 80018e4:	200024e8 	.word	0x200024e8
+ 80018e8:	200024e9 	.word	0x200024e9
  80018ec:	08014630 	.word	0x08014630
  80018f0:	0098967f 	.word	0x0098967f
 	...
@@ -2107,7 +2107,7 @@ Disassembly of section .text:
  8001928:	f7ff fcca 	bl	80012c0 <__stack_chk_fail>
  800192c:	20000800 	.word	0x20000800
  8001930:	08001701 	.word	0x08001701
- 8001934:	200020f0 	.word	0x200020f0
+ 8001934:	200024f0 	.word	0x200024f0
 	...
 
 08001940 <dcmi_lld_stop_stream.part.0>:
@@ -2142,7 +2142,7 @@ Disassembly of section .text:
  800197e:	f7ff fc9f 	bl	80012c0 <__stack_chk_fail>
  8001982:	bf00      	nop
  8001984:	20000800 	.word	0x20000800
- 8001988:	20005620 	.word	0x20005620
+ 8001988:	20005a20 	.word	0x20005a20
  800198c:	00000000 	.word	0x00000000
 
 08001990 <dcmi_lld_serve_dma_rx_interrupt>:
@@ -2271,7 +2271,7 @@ Disassembly of section .text:
  8001aa0:	f7ff fc0e 	bl	80012c0 <__stack_chk_fail>
  8001aa4:	20000800 	.word	0x20000800
  8001aa8:	50050000 	.word	0x50050000
- 8001aac:	20002468 	.word	0x20002468
+ 8001aac:	20002868 	.word	0x20002868
 
 08001ab0 <dcmi_lld_init>:
  8001ab0:	b530      	push	{r4, r5, lr}
@@ -2296,7 +2296,7 @@ Disassembly of section .text:
  8001ada:	f7ff fbf1 	bl	80012c0 <__stack_chk_fail>
  8001ade:	bf00      	nop
  8001ae0:	20000800 	.word	0x20000800
- 8001ae4:	20002468 	.word	0x20002468
+ 8001ae4:	20002868 	.word	0x20002868
  8001ae8:	0801533c 	.word	0x0801533c
  8001aec:	50050000 	.word	0x50050000
  8001af0:	02025516 	.word	0x02025516
@@ -2385,7 +2385,7 @@ Disassembly of section .text:
  8001bbe:	e7d4      	b.n	8001b6a <dcmi_lld_prepare+0x6a>
  8001bc0:	f7ff fb7e 	bl	80012c0 <__stack_chk_fail>
  8001bc4:	20000800 	.word	0x20000800
- 8001bc8:	20002468 	.word	0x20002468
+ 8001bc8:	20002868 	.word	0x20002868
  8001bcc:	08001991 	.word	0x08001991
  8001bd0:	40023800 	.word	0x40023800
  8001bd4:	08014640 	.word	0x08014640
@@ -2435,7 +2435,7 @@ Disassembly of section .text:
  8001c3c:	f00a bee8 	b.w	800ca10 <dmaStreamRelease>
  8001c40:	f7ff fb3e 	bl	80012c0 <__stack_chk_fail>
  8001c44:	20000800 	.word	0x20000800
- 8001c48:	20002468 	.word	0x20002468
+ 8001c48:	20002868 	.word	0x20002868
  8001c4c:	40023800 	.word	0x40023800
 
 08001c50 <dcmi_lld_start_oneshot>:
@@ -2604,7 +2604,7 @@ Disassembly of section .text:
  8001dec:	20000800 	.word	0x20000800
  8001df0:	0003fffc 	.word	0x0003fffc
  8001df4:	08014670 	.word	0x08014670
- 8001df8:	20005620 	.word	0x20005620
+ 8001df8:	20005a20 	.word	0x20005a20
  8001dfc:	08014660 	.word	0x08014660
 
 08001e00 <dcmiUnprepare>:
@@ -2657,7 +2657,7 @@ Disassembly of section .text:
  8001e72:	bf00      	nop
  8001e74:	20000800 	.word	0x20000800
  8001e78:	08014680 	.word	0x08014680
- 8001e7c:	20005620 	.word	0x20005620
+ 8001e7c:	20005a20 	.word	0x20005a20
  8001e80:	08014660 	.word	0x08014660
 	...
 
@@ -2711,7 +2711,7 @@ Disassembly of section .text:
  8001f02:	bf00      	nop
  8001f04:	20000800 	.word	0x20000800
  8001f08:	08014690 	.word	0x08014690
- 8001f0c:	20005620 	.word	0x20005620
+ 8001f0c:	20005a20 	.word	0x20005a20
  8001f10:	08014660 	.word	0x08014660
 	...
 
@@ -2765,7 +2765,7 @@ Disassembly of section .text:
  8001f92:	bf00      	nop
  8001f94:	20000800 	.word	0x20000800
  8001f98:	080146b0 	.word	0x080146b0
- 8001f9c:	20005620 	.word	0x20005620
+ 8001f9c:	20005a20 	.word	0x20005a20
  8001fa0:	08014660 	.word	0x08014660
 	...
 
@@ -2785,7 +2785,7 @@ Disassembly of section .text:
  8001fc8:	f85d fb04 	ldr.w	pc, [sp], #4
  8001fcc:	f7ff f978 	bl	80012c0 <__stack_chk_fail>
  8001fd0:	20000800 	.word	0x20000800
- 8001fd4:	2000247c 	.word	0x2000247c
+ 8001fd4:	2000287c 	.word	0x2000287c
 	...
 
 08001fe0 <dmaTransferEndCb>:
@@ -2846,7 +2846,7 @@ Disassembly of section .text:
  800205e:	f7ff f92f 	bl	80012c0 <__stack_chk_fail>
  8002062:	bf00      	nop
  8002064:	20000800 	.word	0x20000800
- 8002068:	20002488 	.word	0x20002488
+ 8002068:	20002888 	.word	0x20002888
  800206c:	20000838 	.word	0x20000838
 
 08002070 <dcmi_start>:
@@ -2874,7 +2874,7 @@ Disassembly of section .text:
  80020a6:	bd30      	pop	{r4, r5, pc}
  80020a8:	f7ff f90a 	bl	80012c0 <__stack_chk_fail>
  80020ac:	20000800 	.word	0x20000800
- 80020b0:	20002480 	.word	0x20002480
+ 80020b0:	20002880 	.word	0x20002880
 	...
 
 080020c0 <dcmi_prepare>:
@@ -2919,13 +2919,13 @@ Disassembly of section .text:
  8002116:	f7ff fe73 	bl	8001e00 <dcmiUnprepare>
  800211a:	e7da      	b.n	80020d2 <dcmi_prepare+0x12>
  800211c:	f7ff f8d0 	bl	80012c0 <__stack_chk_fail>
- 8002120:	2000247e 	.word	0x2000247e
+ 8002120:	2000287e 	.word	0x2000287e
  8002124:	20000800 	.word	0x20000800
- 8002128:	2000247f 	.word	0x2000247f
- 800212c:	20002484 	.word	0x20002484
- 8002130:	20002480 	.word	0x20002480
+ 8002128:	2000287f 	.word	0x2000287f
+ 800212c:	20002884 	.word	0x20002884
+ 8002130:	20002880 	.word	0x20002880
  8002134:	080146c0 	.word	0x080146c0
- 8002138:	20002468 	.word	0x20002468
+ 8002138:	20002868 	.word	0x20002868
  800213c:	00000000 	.word	0x00000000
 
 08002140 <wait_image_ready>:
@@ -2989,10 +2989,10 @@ Disassembly of section .text:
  80021ce:	f04f 30ff 	mov.w	r0, #4294967295	; 0xffffffff
  80021d2:	e7f6      	b.n	80021c2 <dcmi_enable_double_buffering+0x42>
  80021d4:	f7ff f874 	bl	80012c0 <__stack_chk_fail>
- 80021d8:	20002480 	.word	0x20002480
+ 80021d8:	20002880 	.word	0x20002880
  80021dc:	20000800 	.word	0x20000800
- 80021e0:	2000247f 	.word	0x2000247f
- 80021e4:	20002484 	.word	0x20002484
+ 80021e0:	2000287f 	.word	0x2000287f
+ 80021e4:	20002884 	.word	0x20002884
 	...
 
 080021f0 <dcmi_set_capture_mode>:
@@ -3011,7 +3011,7 @@ Disassembly of section .text:
  8002208:	f85d fb04 	ldr.w	pc, [sp], #4
  800220c:	f7ff f858 	bl	80012c0 <__stack_chk_fail>
  8002210:	20000800 	.word	0x20000800
- 8002214:	2000247d 	.word	0x2000247d
+ 8002214:	2000287d 	.word	0x2000287d
 	...
 
 08002220 <dcmi_get_last_image_ptr>:
@@ -3041,11 +3041,11 @@ Disassembly of section .text:
  800224e:	b003      	add	sp, #12
  8002250:	f85d fb04 	ldr.w	pc, [sp], #4
  8002254:	f7ff f834 	bl	80012c0 <__stack_chk_fail>
- 8002258:	2000247f 	.word	0x2000247f
+ 8002258:	2000287f 	.word	0x2000287f
  800225c:	20000800 	.word	0x20000800
- 8002260:	20002468 	.word	0x20002468
- 8002264:	20002484 	.word	0x20002484
- 8002268:	20002480 	.word	0x20002480
+ 8002260:	20002868 	.word	0x20002868
+ 8002264:	20002884 	.word	0x20002884
+ 8002268:	20002880 	.word	0x20002880
  800226c:	00000000 	.word	0x00000000
 
 08002270 <dcmi_capture_start>:
@@ -3074,9 +3074,9 @@ Disassembly of section .text:
  80022a0:	f85d eb04 	ldr.w	lr, [sp], #4
  80022a4:	f7ff bdf4 	b.w	8001e90 <dcmiStartOneShot>
  80022a8:	f7ff f80a 	bl	80012c0 <__stack_chk_fail>
- 80022ac:	2000247d 	.word	0x2000247d
+ 80022ac:	2000287d 	.word	0x2000287d
  80022b0:	20000800 	.word	0x20000800
- 80022b4:	20002468 	.word	0x20002468
+ 80022b4:	20002868 	.word	0x20002868
 	...
 
 080022c0 <po8030_set_format>:
@@ -3152,7 +3152,7 @@ Disassembly of section .text:
  800235a:	f7fe ffb1 	bl	80012c0 <__stack_chk_fail>
  800235e:	bf00      	nop
  8002360:	20000800 	.word	0x20000800
- 8002364:	2000248c 	.word	0x2000248c
+ 8002364:	2000288c 	.word	0x2000288c
 	...
 
 08002370 <po8030_advanced_config>:
@@ -3515,7 +3515,7 @@ Disassembly of section .text:
  8002768:	aaaaaaab 	.word	0xaaaaaaab
  800276c:	44220000 	.word	0x44220000
  8002770:	44a30000 	.word	0x44a30000
- 8002774:	2000248c 	.word	0x2000248c
+ 8002774:	2000288c 	.word	0x2000288c
  8002778:	20000800 	.word	0x20000800
  800277c:	4a24      	ldr	r2, [pc, #144]	; (8002810 <po8030_advanced_config+0x4a0>)
  800277e:	ea4f 034c 	mov.w	r3, ip, lsl #1
@@ -3601,7 +3601,7 @@ Disassembly of section .text:
  8002866:	bf00      	nop
  8002868:	20000800 	.word	0x20000800
  800286c:	080146d0 	.word	0x080146d0
- 8002870:	20006428 	.word	0x20006428
+ 8002870:	20006828 	.word	0x20006828
 	...
 
 08002880 <po8030_set_awb>:
@@ -3664,7 +3664,7 @@ Disassembly of section .text:
  8002904:	b002      	add	sp, #8
  8002906:	bd10      	pop	{r4, pc}
  8002908:	f7fe fcda 	bl	80012c0 <__stack_chk_fail>
- 800290c:	2000248c 	.word	0x2000248c
+ 800290c:	2000288c 	.word	0x2000288c
  8002910:	20000800 	.word	0x20000800
 	...
 
@@ -3707,7 +3707,7 @@ Disassembly of section .text:
  800297c:	20000800 	.word	0x20000800
  8002980:	40020400 	.word	0x40020400
  8002984:	08014710 	.word	0x08014710
- 8002988:	200060a0 	.word	0x200060a0
+ 8002988:	200064a0 	.word	0x200064a0
  800298c:	00000000 	.word	0x00000000
 
 08002990 <i2c_start>:
@@ -3733,7 +3733,7 @@ Disassembly of section .text:
  80029ba:	f7ff bfb1 	b.w	8002920 <i2c_start.part.0>
  80029be:	f7fe fc7f 	bl	80012c0 <__stack_chk_fail>
  80029c2:	bf00      	nop
- 80029c4:	200060a0 	.word	0x200060a0
+ 80029c4:	200064a0 	.word	0x200064a0
  80029c8:	20000800 	.word	0x20000800
  80029cc:	00000000 	.word	0x00000000
 
@@ -3754,7 +3754,7 @@ Disassembly of section .text:
  80029ee:	f7fe fc67 	bl	80012c0 <__stack_chk_fail>
  80029f2:	bf00      	nop
  80029f4:	20000800 	.word	0x20000800
- 80029f8:	200060a0 	.word	0x200060a0
+ 80029f8:	200064a0 	.word	0x200064a0
  80029fc:	00000000 	.word	0x00000000
 
 08002a00 <read_reg>:
@@ -3816,9 +3816,9 @@ Disassembly of section .text:
  8002a88:	e7f1      	b.n	8002a6e <read_reg+0x6e>
  8002a8a:	f7fe fc19 	bl	80012c0 <__stack_chk_fail>
  8002a8e:	bf00      	nop
- 8002a90:	200060a0 	.word	0x200060a0
+ 8002a90:	200064a0 	.word	0x200064a0
  8002a94:	20000800 	.word	0x20000800
- 8002a98:	20002494 	.word	0x20002494
+ 8002a98:	20002894 	.word	0x20002894
  8002a9c:	00000000 	.word	0x00000000
 
 08002aa0 <write_reg>:
@@ -3879,9 +3879,9 @@ Disassembly of section .text:
  8002b20:	e7f1      	b.n	8002b06 <write_reg+0x66>
  8002b22:	f7fe fbcd 	bl	80012c0 <__stack_chk_fail>
  8002b26:	bf00      	nop
- 8002b28:	200060a0 	.word	0x200060a0
+ 8002b28:	200064a0 	.word	0x200064a0
  8002b2c:	20000800 	.word	0x20000800
- 8002b30:	20002494 	.word	0x20002494
+ 8002b30:	20002894 	.word	0x20002894
 	...
 
 08002b40 <set_led>:
@@ -4018,7 +4018,7 @@ Disassembly of section .text:
  8002c62:	bdf0      	pop	{r4, r5, r6, r7, pc}
  8002c64:	f7fe fb2c 	bl	80012c0 <__stack_chk_fail>
  8002c68:	20000800 	.word	0x20000800
- 8002c6c:	20002498 	.word	0x20002498
+ 8002c6c:	20002898 	.word	0x20002898
 
 08002c70 <get_all_rgb_state>:
  8002c70:	b530      	push	{r4, r5, lr}
@@ -4040,7 +4040,7 @@ Disassembly of section .text:
  8002c90:	bd30      	pop	{r4, r5, pc}
  8002c92:	f7fe fb15 	bl	80012c0 <__stack_chk_fail>
  8002c96:	bf00      	nop
- 8002c98:	20002498 	.word	0x20002498
+ 8002c98:	20002898 	.word	0x20002898
  8002c9c:	20000800 	.word	0x20000800
 
 08002ca0 <set_all_leds>:
@@ -4068,7 +4068,7 @@ Disassembly of section .text:
  8002cd6:	b002      	add	sp, #8
  8002cd8:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
  8002cdc:	f7fe faf0 	bl	80012c0 <__stack_chk_fail>
- 8002ce0:	20002498 	.word	0x20002498
+ 8002ce0:	20002898 	.word	0x20002898
  8002ce4:	20000800 	.word	0x20000800
 	...
 
@@ -4134,7 +4134,7 @@ Disassembly of section .text:
  8002d88:	f7fe fa9a 	bl	80012c0 <__stack_chk_fail>
  8002d8c:	20000800 	.word	0x20000800
  8002d90:	e000ed90 	.word	0xe000ed90
- 8002d94:	20005620 	.word	0x20005620
+ 8002d94:	20005a20 	.word	0x20005a20
  8002d98:	080147a0 	.word	0x080147a0
  8002d9c:	08014780 	.word	0x08014780
 
@@ -4198,7 +4198,7 @@ Disassembly of section .text:
  8002e30:	e000ed90 	.word	0xe000ed90
  8002e34:	e000ed00 	.word	0xe000ed00
  8002e38:	10000009 	.word	0x10000009
- 8002e3c:	20005620 	.word	0x20005620
+ 8002e3c:	20005a20 	.word	0x20005a20
  8002e40:	080147a0 	.word	0x080147a0
 	...
 
@@ -4250,7 +4250,7 @@ Disassembly of section .text:
  8002eb6:	e7e0      	b.n	8002e7a <MemManage_Handler+0x2a>
  8002eb8:	f7fe fa02 	bl	80012c0 <__stack_chk_fail>
  8002ebc:	08014764 	.word	0x08014764
- 8002ec0:	200024a4 	.word	0x200024a4
+ 8002ec0:	200028a4 	.word	0x200028a4
  8002ec4:	20000800 	.word	0x20000800
  8002ec8:	e000ed00 	.word	0xe000ed00
  8002ecc:	08014740 	.word	0x08014740
@@ -4449,7 +4449,7 @@ Disassembly of section .text:
  80030aa:	f7fe f909 	bl	80012c0 <__stack_chk_fail>
  80030ae:	bf00      	nop
  80030b0:	20000800 	.word	0x20000800
- 80030b4:	200063f0 	.word	0x200063f0
+ 80030b4:	200067f0 	.word	0x200067f0
 	...
 
 080030c0 <left_motor_enable_power_save>:
@@ -4474,7 +4474,7 @@ Disassembly of section .text:
  80030ea:	f7fe f8e9 	bl	80012c0 <__stack_chk_fail>
  80030ee:	bf00      	nop
  80030f0:	20000800 	.word	0x20000800
- 80030f4:	2000640c 	.word	0x2000640c
+ 80030f4:	2000680c 	.word	0x2000680c
 	...
 
 08003100 <right_motor_disable_power_save>:
@@ -4494,7 +4494,7 @@ Disassembly of section .text:
  800311c:	f007 ba00 	b.w	800a520 <pwmDisableChannel>
  8003120:	f7fe f8ce 	bl	80012c0 <__stack_chk_fail>
  8003124:	20000800 	.word	0x20000800
- 8003128:	200063f0 	.word	0x200063f0
+ 8003128:	200067f0 	.word	0x200067f0
  800312c:	00000000 	.word	0x00000000
 
 08003130 <left_motor_disable_power_save>:
@@ -4514,7 +4514,7 @@ Disassembly of section .text:
  800314c:	f007 b9e8 	b.w	800a520 <pwmDisableChannel>
  8003150:	f7fe f8b6 	bl	80012c0 <__stack_chk_fail>
  8003154:	20000800 	.word	0x20000800
- 8003158:	2000640c 	.word	0x2000640c
+ 8003158:	2000680c 	.word	0x2000680c
  800315c:	00000000 	.word	0x00000000
 
 08003160 <right_motor_timer_callback>:
@@ -4566,7 +4566,7 @@ Disassembly of section .text:
  80031c4:	6063      	str	r3, [r4, #4]
  80031c6:	e7e1      	b.n	800318c <right_motor_timer_callback+0x2c>
  80031c8:	f7fe f87a 	bl	80012c0 <__stack_chk_fail>
- 80031cc:	2000253c 	.word	0x2000253c
+ 80031cc:	2000293c 	.word	0x2000293c
  80031d0:	20000800 	.word	0x20000800
  80031d4:	08014840 	.word	0x08014840
  80031d8:	08014830 	.word	0x08014830
@@ -4621,7 +4621,7 @@ Disassembly of section .text:
  8003244:	6063      	str	r3, [r4, #4]
  8003246:	e7e1      	b.n	800320c <left_motor_timer_callback+0x2c>
  8003248:	f7fe f83a 	bl	80012c0 <__stack_chk_fail>
- 800324c:	20002524 	.word	0x20002524
+ 800324c:	20002924 	.word	0x20002924
  8003250:	20000800 	.word	0x20000800
  8003254:	08014840 	.word	0x08014840
  8003258:	08014830 	.word	0x08014830
@@ -4706,7 +4706,7 @@ Disassembly of section .text:
  800330c:	f7ff bfa8 	b.w	8003260 <motor_set_speed>
  8003310:	f7fd ffd6 	bl	80012c0 <__stack_chk_fail>
  8003314:	20000800 	.word	0x20000800
- 8003318:	20002524 	.word	0x20002524
+ 8003318:	20002924 	.word	0x20002924
  800331c:	00000000 	.word	0x00000000
 
 08003320 <right_motor_set_speed>:
@@ -4726,7 +4726,7 @@ Disassembly of section .text:
  800333c:	f7ff bf90 	b.w	8003260 <motor_set_speed>
  8003340:	f7fd ffbe 	bl	80012c0 <__stack_chk_fail>
  8003344:	20000800 	.word	0x20000800
- 8003348:	2000253c 	.word	0x2000253c
+ 8003348:	2000293c 	.word	0x2000293c
  800334c:	00000000 	.word	0x00000000
 
 08003350 <right_motor_get_pos>:
@@ -4748,7 +4748,7 @@ Disassembly of section .text:
  8003372:	f7fd ffa5 	bl	80012c0 <__stack_chk_fail>
  8003376:	bf00      	nop
  8003378:	20000800 	.word	0x20000800
- 800337c:	2000253c 	.word	0x2000253c
+ 800337c:	2000293c 	.word	0x2000293c
 
 08003380 <left_motor_set_pos>:
  8003380:	b500      	push	{lr}
@@ -4768,7 +4768,7 @@ Disassembly of section .text:
  800339e:	f7fd ff8f 	bl	80012c0 <__stack_chk_fail>
  80033a2:	bf00      	nop
  80033a4:	20000800 	.word	0x20000800
- 80033a8:	20002524 	.word	0x20002524
+ 80033a8:	20002924 	.word	0x20002924
  80033ac:	00000000 	.word	0x00000000
 
 080033b0 <right_motor_set_pos>:
@@ -4789,7 +4789,7 @@ Disassembly of section .text:
  80033ce:	f7fd ff77 	bl	80012c0 <__stack_chk_fail>
  80033d2:	bf00      	nop
  80033d4:	20000800 	.word	0x20000800
- 80033d8:	2000253c 	.word	0x2000253c
+ 80033d8:	2000293c 	.word	0x2000293c
  80033dc:	00000000 	.word	0x00000000
 
 080033e0 <left_turn>:
@@ -4817,8 +4817,8 @@ Disassembly of section .text:
  8003410:	f7ff bf26 	b.w	8003260 <motor_set_speed>
  8003414:	f7fd ff54 	bl	80012c0 <__stack_chk_fail>
  8003418:	20000800 	.word	0x20000800
- 800341c:	20002524 	.word	0x20002524
- 8003420:	2000253c 	.word	0x2000253c
+ 800341c:	20002924 	.word	0x20002924
+ 8003420:	2000293c 	.word	0x2000293c
  8003424:	fffffe0c 	.word	0xfffffe0c
 	...
 
@@ -4875,16 +4875,16 @@ Disassembly of section .text:
  80034a2:	f7fd ff0d 	bl	80012c0 <__stack_chk_fail>
  80034a6:	bf00      	nop
  80034a8:	20000800 	.word	0x20000800
- 80034ac:	2000253c 	.word	0x2000253c
- 80034b0:	20002524 	.word	0x20002524
+ 80034ac:	2000293c 	.word	0x2000293c
+ 80034b0:	20002924 	.word	0x20002924
  80034b4:	08002ee1 	.word	0x08002ee1
  80034b8:	08003081 	.word	0x08003081
- 80034bc:	200063f0 	.word	0x200063f0
+ 80034bc:	200067f0 	.word	0x200067f0
  80034c0:	08003101 	.word	0x08003101
  80034c4:	08002f71 	.word	0x08002f71
  80034c8:	080030c1 	.word	0x080030c1
  80034cc:	08003131 	.word	0x08003131
- 80034d0:	2000640c 	.word	0x2000640c
+ 80034d0:	2000680c 	.word	0x2000680c
  80034d4:	08014830 	.word	0x08014830
  80034d8:	080147f0 	.word	0x080147f0
  80034dc:	080147b0 	.word	0x080147b0
@@ -5002,7 +5002,7 @@ Disassembly of section .text:
  80035e4:	e7d9      	b.n	800359a <pwm_reset_cb+0x2a>
  80035e6:	f7fd fe6b 	bl	80012c0 <__stack_chk_fail>
  80035ea:	bf00      	nop
- 80035ec:	200028d0 	.word	0x200028d0
+ 80035ec:	20002cd0 	.word	0x20002cd0
  80035f0:	20000800 	.word	0x20000800
  80035f4:	40021000 	.word	0x40021000
  80035f8:	40020400 	.word	0x40020400
@@ -5169,24 +5169,24 @@ Disassembly of section .text:
  8003778:	2201      	movs	r2, #1
  800377a:	f88b 2000 	strb.w	r2, [fp]
  800377e:	e78d      	b.n	800369c <proximity_thd+0x5c>
- 8003780:	20005620 	.word	0x20005620
+ 8003780:	20005a20 	.word	0x20005a20
  8003784:	20000800 	.word	0x20000800
  8003788:	08014860 	.word	0x08014860
- 800378c:	200025d8 	.word	0x200025d8
+ 800378c:	200029d8 	.word	0x200029d8
  8003790:	080148a0 	.word	0x080148a0
  8003794:	200014e8 	.word	0x200014e8
- 8003798:	20002574 	.word	0x20002574
- 800379c:	200025d4 	.word	0x200025d4
- 80037a0:	20002618 	.word	0x20002618
- 80037a4:	200025b5 	.word	0x200025b5
- 80037a8:	20002638 	.word	0x20002638
+ 8003798:	20002974 	.word	0x20002974
+ 800379c:	200029d4 	.word	0x200029d4
+ 80037a0:	20002a18 	.word	0x20002a18
+ 80037a4:	200029b5 	.word	0x200029b5
+ 80037a8:	20002a38 	.word	0x20002a38
  80037ac:	51eb851f 	.word	0x51eb851f
- 80037b0:	200025d4 	.word	0x200025d4
- 80037b4:	200025b8 	.word	0x200025b8
- 80037b8:	200025b4 	.word	0x200025b4
- 80037bc:	200025b6 	.word	0x200025b6
+ 80037b0:	200029d4 	.word	0x200029d4
+ 80037b4:	200029b8 	.word	0x200029b8
+ 80037b8:	200029b4 	.word	0x200029b4
+ 80037bc:	200029b6 	.word	0x200029b6
  80037c0:	20000854 	.word	0x20000854
- 80037c4:	200025b4 	.word	0x200025b4
+ 80037c4:	200029b4 	.word	0x200029b4
 	...
 
 080037d0 <adc_cb>:
@@ -5243,9 +5243,9 @@ Disassembly of section .text:
  800384a:	f7fd fd39 	bl	80012c0 <__stack_chk_fail>
  800384e:	bf00      	nop
  8003850:	20000800 	.word	0x20000800
- 8003854:	20002574 	.word	0x20002574
+ 8003854:	20002974 	.word	0x20002974
  8003858:	20000854 	.word	0x20000854
- 800385c:	200028d0 	.word	0x200028d0
+ 800385c:	20002cd0 	.word	0x20002cd0
 
 08003860 <proximity_start>:
  8003860:	b570      	push	{r4, r5, r6, lr}
@@ -5299,14 +5299,14 @@ Disassembly of section .text:
  80038d8:	e7cb      	b.n	8003872 <proximity_start+0x12>
  80038da:	f7fd fcf1 	bl	80012c0 <__stack_chk_fail>
  80038de:	bf00      	nop
- 80038e0:	20005d7c 	.word	0x20005d7c
+ 80038e0:	2000617c 	.word	0x2000617c
  80038e4:	20000800 	.word	0x20000800
- 80038e8:	20002554 	.word	0x20002554
+ 80038e8:	20002954 	.word	0x20002954
  80038ec:	08014870 	.word	0x08014870
  80038f0:	080148b0 	.word	0x080148b0
- 80038f4:	200063d4 	.word	0x200063d4
+ 80038f4:	200067d4 	.word	0x200067d4
  80038f8:	08003641 	.word	0x08003641
- 80038fc:	20002658 	.word	0x20002658
+ 80038fc:	20002a58 	.word	0x20002a58
 
 08003900 <get_prox>:
  8003900:	b500      	push	{lr}
@@ -5329,7 +5329,7 @@ Disassembly of section .text:
  8003926:	f7fd fccb 	bl	80012c0 <__stack_chk_fail>
  800392a:	bf00      	nop
  800392c:	20000800 	.word	0x20000800
- 8003930:	200025d8 	.word	0x200025d8
+ 8003930:	200029d8 	.word	0x200029d8
 	...
 
 08003940 <spi_thread>:
@@ -5369,13 +5369,13 @@ Disassembly of section .text:
  8003994:	e7e3      	b.n	800395e <spi_thread+0x1e>
  8003996:	f7fe fbd3 	bl	8002140 <wait_image_ready>
  800399a:	e7e0      	b.n	800395e <spi_thread+0x1e>
- 800399c:	20005620 	.word	0x20005620
+ 800399c:	20005a20 	.word	0x20005a20
  80039a0:	20000800 	.word	0x20000800
- 80039a4:	200028d4 	.word	0x200028d4
+ 80039a4:	20002cd4 	.word	0x20002cd4
  80039a8:	08014900 	.word	0x08014900
- 80039ac:	20003e48 	.word	0x20003e48
- 80039b0:	2000637c 	.word	0x2000637c
- 80039b4:	20002468 	.word	0x20002468
+ 80039ac:	20004248 	.word	0x20004248
+ 80039b0:	2000677c 	.word	0x2000677c
+ 80039b4:	20002868 	.word	0x20002868
 	...
 
 080039c0 <spi_comm_start>:
@@ -5403,9 +5403,9 @@ Disassembly of section .text:
  80039f0:	f7fd fc66 	bl	80012c0 <__stack_chk_fail>
  80039f4:	20000800 	.word	0x20000800
  80039f8:	080148f0 	.word	0x080148f0
- 80039fc:	2000637c 	.word	0x2000637c
+ 80039fc:	2000677c 	.word	0x2000677c
  8003a00:	08003941 	.word	0x08003941
- 8003a04:	200038d0 	.word	0x200038d0
+ 8003a04:	20003cd0 	.word	0x20003cd0
 	...
 
 08003a10 <get_descriptor>:
@@ -5481,7 +5481,7 @@ Disassembly of section .text:
  8003ab8:	20000800 	.word	0x20000800
  8003abc:	08014910 	.word	0x08014910
  8003ac0:	08014940 	.word	0x08014940
- 8003ac4:	20004e44 	.word	0x20004e44
+ 8003ac4:	20005244 	.word	0x20005244
 	...
 
 08003ad0 <usb_start>:
@@ -5518,8 +5518,8 @@ Disassembly of section .text:
  8003b1a:	f7fd fbd1 	bl	80012c0 <__stack_chk_fail>
  8003b1e:	bf00      	nop
  8003b20:	20000800 	.word	0x20000800
- 8003b24:	200060e0 	.word	0x200060e0
- 8003b28:	20004e44 	.word	0x20004e44
+ 8003b24:	200064e0 	.word	0x200064e0
+ 8003b28:	20005244 	.word	0x20005244
  8003b2c:	08014970 	.word	0x08014970
  8003b30:	08014980 	.word	0x08014980
 	...
@@ -10570,7 +10570,7 @@ Disassembly of section .text:
  8006e76:	f7fa fa23 	bl	80012c0 <__stack_chk_fail>
  8006e7a:	bf00      	nop
  8006e7c:	20000800 	.word	0x20000800
- 8006e80:	200060a0 	.word	0x200060a0
+ 8006e80:	200064a0 	.word	0x200064a0
 	...
 
 08006e90 <VL53L0X_read_multi>:
@@ -10619,7 +10619,7 @@ Disassembly of section .text:
  8006efe:	e7f4      	b.n	8006eea <VL53L0X_read_multi+0x5a>
  8006f00:	f7fa f9de 	bl	80012c0 <__stack_chk_fail>
  8006f04:	20000800 	.word	0x20000800
- 8006f08:	200060a0 	.word	0x200060a0
+ 8006f08:	200064a0 	.word	0x200064a0
  8006f0c:	00000000 	.word	0x00000000
 
 08006f10 <VL53L0X_write_byte>:
@@ -11221,13 +11221,13 @@ Disassembly of section .text:
  80074c2:	e8bd 83f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, pc}
  80074c6:	f7f9 fefb 	bl	80012c0 <__stack_chk_fail>
  80074ca:	bf00      	nop
- 80074cc:	20005620 	.word	0x20005620
+ 80074cc:	20005a20 	.word	0x20005a20
  80074d0:	20000800 	.word	0x20000800
- 80074d4:	200050dc 	.word	0x200050dc
+ 80074d4:	200054dc 	.word	0x200054dc
  80074d8:	08014b20 	.word	0x08014b20
- 80074dc:	200050d8 	.word	0x200050d8
- 80074e0:	2000512c 	.word	0x2000512c
- 80074e4:	200052a0 	.word	0x200052a0
+ 80074dc:	200054d8 	.word	0x200054d8
+ 80074e0:	2000552c 	.word	0x2000552c
+ 80074e4:	200056a0 	.word	0x200056a0
 	...
 
 080074f0 <VL53L0X_start>:
@@ -11255,11 +11255,11 @@ Disassembly of section .text:
  8007520:	b005      	add	sp, #20
  8007522:	bd30      	pop	{r4, r5, pc}
  8007524:	f7f9 fecc 	bl	80012c0 <__stack_chk_fail>
- 8007528:	200050d8 	.word	0x200050d8
+ 8007528:	200054d8 	.word	0x200054d8
  800752c:	20000800 	.word	0x20000800
  8007530:	08007441 	.word	0x08007441
- 8007534:	200052a8 	.word	0x200052a8
- 8007538:	2000529c 	.word	0x2000529c
+ 8007534:	200056a8 	.word	0x200056a8
+ 8007538:	2000569c 	.word	0x2000569c
  800753c:	00000000 	.word	0x00000000
 
 08007540 <VL53L0X_get_dist_mm>:
@@ -11278,7 +11278,7 @@ Disassembly of section .text:
  8007558:	f85d fb04 	ldr.w	pc, [sp], #4
  800755c:	f7f9 feb0 	bl	80012c0 <__stack_chk_fail>
  8007560:	20000800 	.word	0x20000800
- 8007564:	200052a0 	.word	0x200052a0
+ 8007564:	200056a0 	.word	0x200056a0
 	...
 
 08007570 <messagebus_init>:
@@ -11538,7 +11538,7 @@ Disassembly of section .text:
  80077e0:	e000edf0 	.word	0xe000edf0
  80077e4:	05fa0300 	.word	0x05fa0300
  80077e8:	e0001000 	.word	0xe0001000
- 80077ec:	20005620 	.word	0x20005620
+ 80077ec:	20005a20 	.word	0x20005a20
  80077f0:	20000400 	.word	0x20000400
  80077f4:	08014cd0 	.word	0x08014cd0
  80077f8:	08007721 	.word	0x08007721
@@ -11557,7 +11557,7 @@ Disassembly of section .text:
  8007814:	62dc      	str	r4, [r3, #44]	; 0x2c
  8007816:	e7fe      	b.n	8007816 <chSysHalt+0x16>
  8007818:	20000800 	.word	0x20000800
- 800781c:	20005620 	.word	0x20005620
+ 800781c:	20005a20 	.word	0x20005a20
 
 08007820 <chSysTimerHandlerI>:
  8007820:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
@@ -11615,9 +11615,9 @@ Disassembly of section .text:
  80078aa:	b002      	add	sp, #8
  80078ac:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
  80078b0:	f7f9 fd06 	bl	80012c0 <__stack_chk_fail>
- 80078b4:	20005620 	.word	0x20005620
+ 80078b4:	20005a20 	.word	0x20005a20
  80078b8:	20000800 	.word	0x20000800
- 80078bc:	2000563c 	.word	0x2000563c
+ 80078bc:	20005a3c 	.word	0x20005a3c
 
 080078c0 <chSysPolledDelayX>:
  80078c0:	b510      	push	{r4, lr}
@@ -11669,7 +11669,7 @@ Disassembly of section .text:
  8007922:	f85d fb04 	ldr.w	pc, [sp], #4
  8007926:	f7f9 fccb 	bl	80012c0 <__stack_chk_fail>
  800792a:	bf00      	nop
- 800792c:	20005620 	.word	0x20005620
+ 800792c:	20005a20 	.word	0x20005a20
  8007930:	20000800 	.word	0x20000800
  8007934:	08014b60 	.word	0x08014b60
 	...
@@ -11697,7 +11697,7 @@ Disassembly of section .text:
  8007968:	bd30      	pop	{r4, r5, pc}
  800796a:	f7f9 fca9 	bl	80012c0 <__stack_chk_fail>
  800796e:	bf00      	nop
- 8007970:	20005620 	.word	0x20005620
+ 8007970:	20005a20 	.word	0x20005a20
  8007974:	20000800 	.word	0x20000800
  8007978:	08014b90 	.word	0x08014b90
  800797c:	00000000 	.word	0x00000000
@@ -11727,7 +11727,7 @@ Disassembly of section .text:
  80079ac:	e7f3      	b.n	8007996 <_dbg_check_unlock+0x16>
  80079ae:	f7f9 fc87 	bl	80012c0 <__stack_chk_fail>
  80079b2:	bf00      	nop
- 80079b4:	20005620 	.word	0x20005620
+ 80079b4:	20005a20 	.word	0x20005a20
  80079b8:	20000800 	.word	0x20000800
  80079bc:	08014bb0 	.word	0x08014bb0
 
@@ -11754,7 +11754,7 @@ Disassembly of section .text:
  80079e8:	b003      	add	sp, #12
  80079ea:	bd30      	pop	{r4, r5, pc}
  80079ec:	f7f9 fc68 	bl	80012c0 <__stack_chk_fail>
- 80079f0:	20005620 	.word	0x20005620
+ 80079f0:	20005a20 	.word	0x20005a20
  80079f4:	20000800 	.word	0x20000800
  80079f8:	08014ba0 	.word	0x08014ba0
  80079fc:	00000000 	.word	0x00000000
@@ -11784,7 +11784,7 @@ Disassembly of section .text:
  8007a2a:	f7ff fee9 	bl	8007800 <chSysHalt>
  8007a2e:	e7f3      	b.n	8007a18 <_dbg_check_unlock_from_isr+0x18>
  8007a30:	f7f9 fc46 	bl	80012c0 <__stack_chk_fail>
- 8007a34:	20005620 	.word	0x20005620
+ 8007a34:	20005a20 	.word	0x20005a20
  8007a38:	20000800 	.word	0x20000800
  8007a3c:	08014bc0 	.word	0x08014bc0
 
@@ -11818,7 +11818,7 @@ Disassembly of section .text:
  8007a7a:	f7f9 fc21 	bl	80012c0 <__stack_chk_fail>
  8007a7e:	bf00      	nop
  8007a80:	20000800 	.word	0x20000800
- 8007a84:	20005620 	.word	0x20005620
+ 8007a84:	20005a20 	.word	0x20005a20
  8007a88:	08014b70 	.word	0x08014b70
  8007a8c:	00000000 	.word	0x00000000
 
@@ -11852,7 +11852,7 @@ Disassembly of section .text:
  8007aca:	f7f9 fbf9 	bl	80012c0 <__stack_chk_fail>
  8007ace:	bf00      	nop
  8007ad0:	20000800 	.word	0x20000800
- 8007ad4:	20005620 	.word	0x20005620
+ 8007ad4:	20005a20 	.word	0x20005a20
  8007ad8:	08014b80 	.word	0x08014b80
  8007adc:	00000000 	.word	0x00000000
 
@@ -11885,7 +11885,7 @@ Disassembly of section .text:
  8007b16:	f7ff be73 	b.w	8007800 <chSysHalt>
  8007b1a:	f7f9 fbd1 	bl	80012c0 <__stack_chk_fail>
  8007b1e:	bf00      	nop
- 8007b20:	20005620 	.word	0x20005620
+ 8007b20:	20005a20 	.word	0x20005a20
  8007b24:	20000800 	.word	0x20000800
  8007b28:	08014bd0 	.word	0x08014bd0
  8007b2c:	00000000 	.word	0x00000000
@@ -11917,7 +11917,7 @@ Disassembly of section .text:
  8007b60:	f85d eb04 	ldr.w	lr, [sp], #4
  8007b64:	f7ff be4c 	b.w	8007800 <chSysHalt>
  8007b68:	f7f9 fbaa 	bl	80012c0 <__stack_chk_fail>
- 8007b6c:	20005620 	.word	0x20005620
+ 8007b6c:	20005a20 	.word	0x20005a20
  8007b70:	20000800 	.word	0x20000800
  8007b74:	08014be0 	.word	0x08014be0
 	...
@@ -11940,7 +11940,7 @@ Disassembly of section .text:
  8007b9e:	bd10      	pop	{r4, pc}
  8007ba0:	f7f9 fb8e 	bl	80012c0 <__stack_chk_fail>
  8007ba4:	20000800 	.word	0x20000800
- 8007ba8:	20005620 	.word	0x20005620
+ 8007ba8:	20005a20 	.word	0x20005a20
  8007bac:	00000000 	.word	0x00000000
 
 08007bb0 <_dbg_trace>:
@@ -11977,7 +11977,7 @@ Disassembly of section .text:
  8007bf2:	bd10      	pop	{r4, pc}
  8007bf4:	f7f9 fb64 	bl	80012c0 <__stack_chk_fail>
  8007bf8:	20000800 	.word	0x20000800
- 8007bfc:	20005620 	.word	0x20005620
+ 8007bfc:	20005a20 	.word	0x20005a20
 
 08007c00 <_vt_init>:
  8007c00:	b510      	push	{r4, lr}
@@ -12001,7 +12001,7 @@ Disassembly of section .text:
  8007c2a:	f7f9 fb49 	bl	80012c0 <__stack_chk_fail>
  8007c2e:	bf00      	nop
  8007c30:	20000800 	.word	0x20000800
- 8007c34:	20005620 	.word	0x20005620
+ 8007c34:	20005a20 	.word	0x20005a20
 	...
 
 08007c40 <chVTDoSetI>:
@@ -12051,7 +12051,7 @@ Disassembly of section .text:
  8007ca2:	e7dc      	b.n	8007c5e <chVTDoSetI+0x1e>
  8007ca4:	f7f9 fb0c 	bl	80012c0 <__stack_chk_fail>
  8007ca8:	20000800 	.word	0x20000800
- 8007cac:	20005620 	.word	0x20005620
+ 8007cac:	20005a20 	.word	0x20005a20
  8007cb0:	08014bf0 	.word	0x08014bf0
 	...
 
@@ -12096,7 +12096,7 @@ Disassembly of section .text:
  8007d16:	f7f9 fad3 	bl	80012c0 <__stack_chk_fail>
  8007d1a:	bf00      	nop
  8007d1c:	20000800 	.word	0x20000800
- 8007d20:	20005620 	.word	0x20005620
+ 8007d20:	20005a20 	.word	0x20005a20
  8007d24:	08014c00 	.word	0x08014c00
 	...
 
@@ -12121,7 +12121,7 @@ Disassembly of section .text:
  8007d56:	f7f9 fab3 	bl	80012c0 <__stack_chk_fail>
  8007d5a:	bf00      	nop
  8007d5c:	20000800 	.word	0x20000800
- 8007d60:	20005620 	.word	0x20005620
+ 8007d60:	20005a20 	.word	0x20005a20
 	...
 
 08007d70 <chSchReadyI>:
@@ -12166,7 +12166,7 @@ Disassembly of section .text:
  8007dc6:	f7f9 fa7b 	bl	80012c0 <__stack_chk_fail>
  8007dca:	bf00      	nop
  8007dcc:	20000800 	.word	0x20000800
- 8007dd0:	20005620 	.word	0x20005620
+ 8007dd0:	20005a20 	.word	0x20005a20
  8007dd4:	08014c10 	.word	0x08014c10
 	...
 
@@ -12266,7 +12266,7 @@ Disassembly of section .text:
  8007ed0:	f7f8 b9ee 	b.w	80002b0 <_port_switch>
  8007ed4:	f7f9 f9f4 	bl	80012c0 <__stack_chk_fail>
  8007ed8:	20000800 	.word	0x20000800
- 8007edc:	20005620 	.word	0x20005620
+ 8007edc:	20005a20 	.word	0x20005a20
  8007ee0:	08014c20 	.word	0x08014c20
 	...
 
@@ -12309,7 +12309,7 @@ Disassembly of section .text:
  8007f42:	f7f9 f9bd 	bl	80012c0 <__stack_chk_fail>
  8007f46:	bf00      	nop
  8007f48:	20000800 	.word	0x20000800
- 8007f4c:	20005620 	.word	0x20005620
+ 8007f4c:	20005a20 	.word	0x20005a20
  8007f50:	08007de1 	.word	0x08007de1
 	...
 
@@ -12365,7 +12365,7 @@ Disassembly of section .text:
  8007fd6:	e7e6      	b.n	8007fa6 <chSchWakeupS+0x46>
  8007fd8:	f7f9 f972 	bl	80012c0 <__stack_chk_fail>
  8007fdc:	20000800 	.word	0x20000800
- 8007fe0:	20005620 	.word	0x20005620
+ 8007fe0:	20005a20 	.word	0x20005a20
  8007fe4:	08014c20 	.word	0x08014c20
 	...
 
@@ -12398,7 +12398,7 @@ Disassembly of section .text:
  8008024:	2001      	movhi	r0, #1
  8008026:	e7f4      	b.n	8008012 <chSchIsPreemptionRequired+0x22>
  8008028:	f7f9 f94a 	bl	80012c0 <__stack_chk_fail>
- 800802c:	20005620 	.word	0x20005620
+ 800802c:	20005a20 	.word	0x20005a20
  8008030:	20000800 	.word	0x20000800
 	...
 
@@ -12443,7 +12443,7 @@ Disassembly of section .text:
  8008098:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
  800809c:	f7f8 b908 	b.w	80002b0 <_port_switch>
  80080a0:	f7f9 f90e 	bl	80012c0 <__stack_chk_fail>
- 80080a4:	20005620 	.word	0x20005620
+ 80080a4:	20005a20 	.word	0x20005a20
  80080a8:	20000800 	.word	0x20000800
  80080ac:	08014c20 	.word	0x08014c20
 
@@ -12497,7 +12497,7 @@ Disassembly of section .text:
  8008118:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
  800811c:	f7f8 b8c8 	b.w	80002b0 <_port_switch>
  8008120:	f7f9 f8ce 	bl	80012c0 <__stack_chk_fail>
- 8008124:	20005620 	.word	0x20005620
+ 8008124:	20005a20 	.word	0x20005a20
  8008128:	20000800 	.word	0x20000800
  800812c:	08014c20 	.word	0x08014c20
 
@@ -12530,7 +12530,7 @@ Disassembly of section .text:
  800816a:	f7f9 f8a9 	bl	80012c0 <__stack_chk_fail>
  800816e:	bf00      	nop
  8008170:	20000800 	.word	0x20000800
- 8008174:	20005620 	.word	0x20005620
+ 8008174:	20005a20 	.word	0x20005a20
 	...
 
 08008180 <chSchDoReschedule>:
@@ -12558,7 +12558,7 @@ Disassembly of section .text:
  80081b0:	f85d eb04 	ldr.w	lr, [sp], #4
  80081b4:	f7ff bf44 	b.w	8008040 <chSchDoRescheduleBehind>
  80081b8:	f7f9 f882 	bl	80012c0 <__stack_chk_fail>
- 80081bc:	20005620 	.word	0x20005620
+ 80081bc:	20005a20 	.word	0x20005a20
  80081c0:	20000800 	.word	0x20000800
 	...
 
@@ -12606,7 +12606,7 @@ Disassembly of section .text:
  8008234:	b003      	add	sp, #12
  8008236:	bdf0      	pop	{r4, r5, r6, r7, pc}
  8008238:	f7f9 f842 	bl	80012c0 <__stack_chk_fail>
- 800823c:	20005620 	.word	0x20005620
+ 800823c:	20005a20 	.word	0x20005a20
  8008240:	20000800 	.word	0x20000800
 	...
 
@@ -12740,7 +12740,7 @@ Disassembly of section .text:
  800839c:	e7ef      	b.n	800837e <chThdCreateStatic+0x7e>
  800839e:	f7f8 ff8f 	bl	80012c0 <__stack_chk_fail>
  80083a2:	bf00      	nop
- 80083a4:	20005620 	.word	0x20005620
+ 80083a4:	20005a20 	.word	0x20005a20
  80083a8:	08014c30 	.word	0x08014c30
  80083ac:	20000800 	.word	0x20000800
 
@@ -12787,7 +12787,7 @@ Disassembly of section .text:
  8008412:	bf00      	nop
  8008414:	20000800 	.word	0x20000800
  8008418:	08014c40 	.word	0x08014c40
- 800841c:	20005620 	.word	0x20005620
+ 800841c:	20005a20 	.word	0x20005a20
  8008420:	08014c30 	.word	0x08014c30
 	...
 
@@ -12841,7 +12841,7 @@ Disassembly of section .text:
  800849e:	e7db      	b.n	8008458 <chThdSleepUntilWindowed+0x28>
  80084a0:	f7f8 ff0e 	bl	80012c0 <__stack_chk_fail>
  80084a4:	20000800 	.word	0x20000800
- 80084a8:	20005620 	.word	0x20005620
+ 80084a8:	20005a20 	.word	0x20005a20
  80084ac:	08014c30 	.word	0x08014c30
  80084b0:	08014c40 	.word	0x08014c40
 	...
@@ -12884,7 +12884,7 @@ Disassembly of section .text:
  8008510:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
  8008514:	f7ff b974 	b.w	8007800 <chSysHalt>
  8008518:	f7f8 fed2 	bl	80012c0 <__stack_chk_fail>
- 800851c:	20005620 	.word	0x20005620
+ 800851c:	20005a20 	.word	0x20005a20
  8008520:	20000800 	.word	0x20000800
  8008524:	08014c80 	.word	0x08014c80
 	...
@@ -12940,7 +12940,7 @@ Disassembly of section .text:
  80085a2:	bdf0      	pop	{r4, r5, r6, r7, pc}
  80085a4:	f7f8 fe8c 	bl	80012c0 <__stack_chk_fail>
  80085a8:	20000800 	.word	0x20000800
- 80085ac:	20005620 	.word	0x20005620
+ 80085ac:	20005a20 	.word	0x20005a20
  80085b0:	08014c90 	.word	0x08014c90
 	...
 
@@ -12979,7 +12979,7 @@ Disassembly of section .text:
  8008606:	bdf0      	pop	{r4, r5, r6, r7, pc}
  8008608:	f7f8 fe5a 	bl	80012c0 <__stack_chk_fail>
  800860c:	20000800 	.word	0x20000800
- 8008610:	20005620 	.word	0x20005620
+ 8008610:	20005a20 	.word	0x20005a20
  8008614:	08014ca0 	.word	0x08014ca0
 	...
 
@@ -13053,7 +13053,7 @@ Disassembly of section .text:
  80086be:	f7f8 fdff 	bl	80012c0 <__stack_chk_fail>
  80086c2:	bf00      	nop
  80086c4:	20000800 	.word	0x20000800
- 80086c8:	20005620 	.word	0x20005620
+ 80086c8:	20005a20 	.word	0x20005a20
  80086cc:	00000000 	.word	0x00000000
 
 080086d0 <chThdDequeueNextI>:
@@ -13217,7 +13217,7 @@ Disassembly of section .text:
  8008852:	bf00      	nop
  8008854:	20000800 	.word	0x20000800
  8008858:	e0001000 	.word	0xe0001000
- 800885c:	20005620 	.word	0x20005620
+ 800885c:	20005a20 	.word	0x20005a20
 
 08008860 <_tm_init>:
  8008860:	b530      	push	{r4, r5, lr}
@@ -13249,7 +13249,7 @@ Disassembly of section .text:
  80088a2:	bd30      	pop	{r4, r5, pc}
  80088a4:	f7f8 fd0c 	bl	80012c0 <__stack_chk_fail>
  80088a8:	20000800 	.word	0x20000800
- 80088ac:	20005620 	.word	0x20005620
+ 80088ac:	20005a20 	.word	0x20005a20
 
 080088b0 <chTMChainMeasurementToX>:
  80088b0:	e92d 4870 	stmdb	sp!, {r4, r5, r6, fp, lr}
@@ -13311,7 +13311,7 @@ Disassembly of section .text:
  8008940:	f7ff bf26 	b.w	8008790 <chTMObjectInit>
  8008944:	f7f8 fcbc 	bl	80012c0 <__stack_chk_fail>
  8008948:	20000800 	.word	0x20000800
- 800894c:	20005620 	.word	0x20005620
+ 800894c:	20005a20 	.word	0x20005a20
 
 08008950 <_stats_increase_irq>:
  8008950:	b500      	push	{lr}
@@ -13331,7 +13331,7 @@ Disassembly of section .text:
  8008970:	f85d fb04 	ldr.w	pc, [sp], #4
  8008974:	f7f8 fca4 	bl	80012c0 <__stack_chk_fail>
  8008978:	20000800 	.word	0x20000800
- 800897c:	20005620 	.word	0x20005620
+ 800897c:	20005a20 	.word	0x20005a20
 
 08008980 <_stats_ctxswc>:
  8008980:	b570      	push	{r4, r5, r6, lr}
@@ -13356,7 +13356,7 @@ Disassembly of section .text:
  80089b2:	f7f8 fc85 	bl	80012c0 <__stack_chk_fail>
  80089b6:	bf00      	nop
  80089b8:	20000800 	.word	0x20000800
- 80089bc:	20005620 	.word	0x20005620
+ 80089bc:	20005a20 	.word	0x20005a20
 
 080089c0 <_stats_start_measure_crit_thd>:
  80089c0:	b500      	push	{lr}
@@ -13375,7 +13375,7 @@ Disassembly of section .text:
  80089de:	f7f8 fc6f 	bl	80012c0 <__stack_chk_fail>
  80089e2:	bf00      	nop
  80089e4:	20000800 	.word	0x20000800
- 80089e8:	20005ad8 	.word	0x20005ad8
+ 80089e8:	20005ed8 	.word	0x20005ed8
  80089ec:	00000000 	.word	0x00000000
 
 080089f0 <_stats_stop_measure_crit_thd>:
@@ -13395,7 +13395,7 @@ Disassembly of section .text:
  8008a0e:	f7f8 fc57 	bl	80012c0 <__stack_chk_fail>
  8008a12:	bf00      	nop
  8008a14:	20000800 	.word	0x20000800
- 8008a18:	20005ad8 	.word	0x20005ad8
+ 8008a18:	20005ed8 	.word	0x20005ed8
  8008a1c:	00000000 	.word	0x00000000
 
 08008a20 <_stats_start_measure_crit_isr>:
@@ -13415,7 +13415,7 @@ Disassembly of section .text:
  8008a3e:	f7f8 fc3f 	bl	80012c0 <__stack_chk_fail>
  8008a42:	bf00      	nop
  8008a44:	20000800 	.word	0x20000800
- 8008a48:	20005af0 	.word	0x20005af0
+ 8008a48:	20005ef0 	.word	0x20005ef0
  8008a4c:	00000000 	.word	0x00000000
 
 08008a50 <_stats_stop_measure_crit_isr>:
@@ -13435,7 +13435,7 @@ Disassembly of section .text:
  8008a6e:	f7f8 fc27 	bl	80012c0 <__stack_chk_fail>
  8008a72:	bf00      	nop
  8008a74:	20000800 	.word	0x20000800
- 8008a78:	20005af0 	.word	0x20005af0
+ 8008a78:	20005ef0 	.word	0x20005ef0
  8008a7c:	00000000 	.word	0x00000000
 
 08008a80 <chSemWaitS>:
@@ -13492,7 +13492,7 @@ Disassembly of section .text:
  8008aec:	f7f8 fbe8 	bl	80012c0 <__stack_chk_fail>
  8008af0:	20000800 	.word	0x20000800
  8008af4:	08014d00 	.word	0x08014d00
- 8008af8:	20005620 	.word	0x20005620
+ 8008af8:	20005a20 	.word	0x20005a20
  8008afc:	00000000 	.word	0x00000000
 
 08008b00 <chSemWait>:
@@ -13534,7 +13534,7 @@ Disassembly of section .text:
  8008b56:	e7f1      	b.n	8008b3c <chSemWait+0x3c>
  8008b58:	f7f8 fbb2 	bl	80012c0 <__stack_chk_fail>
  8008b5c:	20000800 	.word	0x20000800
- 8008b60:	20005620 	.word	0x20005620
+ 8008b60:	20005a20 	.word	0x20005a20
  8008b64:	08014cf0 	.word	0x08014cf0
 	...
 
@@ -13789,7 +13789,7 @@ Disassembly of section .text:
  8008da2:	f7f8 fa8d 	bl	80012c0 <__stack_chk_fail>
  8008da6:	bf00      	nop
  8008da8:	20000800 	.word	0x20000800
- 8008dac:	20005620 	.word	0x20005620
+ 8008dac:	20005a20 	.word	0x20005a20
  8008db0:	08014d40 	.word	0x08014d40
 	...
 
@@ -13830,7 +13830,7 @@ Disassembly of section .text:
  8008e12:	e7f2      	b.n	8008dfa <chMtxLock+0x3a>
  8008e14:	f7f8 fa54 	bl	80012c0 <__stack_chk_fail>
  8008e18:	20000800 	.word	0x20000800
- 8008e1c:	20005620 	.word	0x20005620
+ 8008e1c:	20005a20 	.word	0x20005a20
  8008e20:	08014d20 	.word	0x08014d20
 	...
 
@@ -13938,7 +13938,7 @@ Disassembly of section .text:
  8008f24:	e79b      	b.n	8008e5e <chMtxUnlock+0x2e>
  8008f26:	f7f8 f9cb 	bl	80012c0 <__stack_chk_fail>
  8008f2a:	bf00      	nop
- 8008f2c:	20005620 	.word	0x20005620
+ 8008f2c:	20005a20 	.word	0x20005a20
  8008f30:	08014d50 	.word	0x08014d50
  8008f34:	08014d20 	.word	0x08014d20
  8008f38:	20000800 	.word	0x20000800
@@ -14035,7 +14035,7 @@ Disassembly of section .text:
  8009010:	6c33      	ldr	r3, [r6, #64]	; 0x40
  8009012:	e7a7      	b.n	8008f64 <chMtxUnlockS+0x24>
  8009014:	f7f8 f954 	bl	80012c0 <__stack_chk_fail>
- 8009018:	20005620 	.word	0x20005620
+ 8009018:	20005a20 	.word	0x20005a20
  800901c:	08014d60 	.word	0x08014d60
  8009020:	20000800 	.word	0x20000800
 	...
@@ -14113,7 +14113,7 @@ Disassembly of section .text:
  80090d6:	e7f2      	b.n	80090be <chCondBroadcast+0x3e>
  80090d8:	f7f8 f8f2 	bl	80012c0 <__stack_chk_fail>
  80090dc:	20000800 	.word	0x20000800
- 80090e0:	20005620 	.word	0x20005620
+ 80090e0:	20005a20 	.word	0x20005a20
  80090e4:	08014d70 	.word	0x08014d70
 	...
 
@@ -14173,7 +14173,7 @@ Disassembly of section .text:
  800916a:	f7f8 f8a9 	bl	80012c0 <__stack_chk_fail>
  800916e:	bf00      	nop
  8009170:	20000800 	.word	0x20000800
- 8009174:	20005620 	.word	0x20005620
+ 8009174:	20005a20 	.word	0x20005a20
  8009178:	08014da0 	.word	0x08014da0
  800917c:	00000000 	.word	0x00000000
 
@@ -14216,7 +14216,7 @@ Disassembly of section .text:
  80091d6:	e7f1      	b.n	80091bc <chCondWait+0x3c>
  80091d8:	f7f8 f872 	bl	80012c0 <__stack_chk_fail>
  80091dc:	20000800 	.word	0x20000800
- 80091e0:	20005620 	.word	0x20005620
+ 80091e0:	20005a20 	.word	0x20005a20
  80091e4:	08014d70 	.word	0x08014d70
 	...
 
@@ -14469,7 +14469,7 @@ Disassembly of section .text:
  800942a:	f7f7 ff49 	bl	80012c0 <__stack_chk_fail>
  800942e:	bf00      	nop
  8009430:	20000800 	.word	0x20000800
- 8009434:	20005620 	.word	0x20005620
+ 8009434:	20005a20 	.word	0x20005a20
  8009438:	08014de0 	.word	0x08014de0
  800943c:	00000000 	.word	0x00000000
 
@@ -14568,7 +14568,7 @@ Disassembly of section .text:
  8009528:	e79a      	b.n	8009460 <chIQReadTimeout+0x20>
  800952a:	f7f7 fec9 	bl	80012c0 <__stack_chk_fail>
  800952e:	bf00      	nop
- 8009530:	20005620 	.word	0x20005620
+ 8009530:	20005a20 	.word	0x20005a20
  8009534:	08014de0 	.word	0x08014de0
  8009538:	08014df0 	.word	0x08014df0
  800953c:	20000800 	.word	0x20000800
@@ -14703,7 +14703,7 @@ Disassembly of section .text:
  800967a:	f7f7 fe21 	bl	80012c0 <__stack_chk_fail>
  800967e:	bf00      	nop
  8009680:	20000800 	.word	0x20000800
- 8009684:	20005620 	.word	0x20005620
+ 8009684:	20005a20 	.word	0x20005a20
  8009688:	08014de0 	.word	0x08014de0
  800968c:	00000000 	.word	0x00000000
 
@@ -14846,7 +14846,7 @@ Disassembly of section .text:
  80097de:	e7eb      	b.n	80097b8 <chOQWriteTimeout+0xc8>
  80097e0:	f7f7 fd6e 	bl	80012c0 <__stack_chk_fail>
  80097e4:	20000800 	.word	0x20000800
- 80097e8:	20005620 	.word	0x20005620
+ 80097e8:	20005a20 	.word	0x20005a20
  80097ec:	08014de0 	.word	0x08014de0
  80097f0:	08014e00 	.word	0x08014e00
 	...
@@ -14874,9 +14874,9 @@ Disassembly of section .text:
  800982a:	f7f7 fd49 	bl	80012c0 <__stack_chk_fail>
  800982e:	bf00      	nop
  8009830:	20000800 	.word	0x20000800
- 8009834:	200064f7 	.word	0x200064f7
- 8009838:	20005c94 	.word	0x20005c94
- 800983c:	20005c90 	.word	0x20005c90
+ 8009834:	200068f7 	.word	0x200068f7
+ 8009838:	20006094 	.word	0x20006094
+ 800983c:	20006090 	.word	0x20006090
  8009840:	20020000 	.word	0x20020000
 	...
 
@@ -14930,9 +14930,9 @@ Disassembly of section .text:
  80098be:	f7f7 fcff 	bl	80012c0 <__stack_chk_fail>
  80098c2:	bf00      	nop
  80098c4:	20000800 	.word	0x20000800
- 80098c8:	20005c94 	.word	0x20005c94
- 80098cc:	20005c90 	.word	0x20005c90
- 80098d0:	20005620 	.word	0x20005620
+ 80098c8:	20006094 	.word	0x20006094
+ 80098cc:	20006090 	.word	0x20006090
+ 80098d0:	20005a20 	.word	0x20005a20
  80098d4:	08014e20 	.word	0x08014e20
 	...
 
@@ -14957,7 +14957,7 @@ Disassembly of section .text:
  8009908:	f7ff b972 	b.w	8008bf0 <chMtxObjectInit>
  800990c:	f7f7 fcd8 	bl	80012c0 <__stack_chk_fail>
  8009910:	20000800 	.word	0x20000800
- 8009914:	20005c98 	.word	0x20005c98
+ 8009914:	20006098 	.word	0x20006098
  8009918:	08009851 	.word	0x08009851
  800991c:	00000000 	.word	0x00000000
 
@@ -15300,7 +15300,7 @@ Disassembly of section .text:
  8009c84:	f7f7 fb1c 	bl	80012c0 <__stack_chk_fail>
  8009c88:	20000800 	.word	0x20000800
  8009c8c:	08014ea0 	.word	0x08014ea0
- 8009c90:	20005620 	.word	0x20005620
+ 8009c90:	20005a20 	.word	0x20005a20
  8009c94:	08014e90 	.word	0x08014e90
 	...
 
@@ -15393,7 +15393,7 @@ Disassembly of section .text:
  8009d72:	e7f1      	b.n	8009d58 <adcStartConversion+0x48>
  8009d74:	f7f7 faa4 	bl	80012c0 <__stack_chk_fail>
  8009d78:	20000800 	.word	0x20000800
- 8009d7c:	20005620 	.word	0x20005620
+ 8009d7c:	20005a20 	.word	0x20005a20
  8009d80:	08014e90 	.word	0x08014e90
 	...
 
@@ -15679,7 +15679,7 @@ Disassembly of section .text:
  800a05e:	bf00      	nop
  800a060:	20000800 	.word	0x20000800
  800a064:	08014ef0 	.word	0x08014ef0
- 800a068:	20005620 	.word	0x20005620
+ 800a068:	20005a20 	.word	0x20005a20
  800a06c:	08014ee0 	.word	0x08014ee0
 
 0800a070 <i2cStop>:
@@ -15734,7 +15734,7 @@ Disassembly of section .text:
  800a0e4:	f7f7 f8ec 	bl	80012c0 <__stack_chk_fail>
  800a0e8:	20000800 	.word	0x20000800
  800a0ec:	08014f00 	.word	0x08014f00
- 800a0f0:	20005620 	.word	0x20005620
+ 800a0f0:	20005a20 	.word	0x20005a20
  800a0f4:	08014ee0 	.word	0x08014ee0
 	...
 
@@ -15841,7 +15841,7 @@ Disassembly of section .text:
  800a1f6:	bf00      	nop
  800a1f8:	20000800 	.word	0x20000800
  800a1fc:	08014f20 	.word	0x08014f20
- 800a200:	20005620 	.word	0x20005620
+ 800a200:	20005a20 	.word	0x20005a20
  800a204:	08014ee0 	.word	0x08014ee0
 	...
 
@@ -16029,7 +16029,7 @@ Disassembly of section .text:
  800a3d6:	bf00      	nop
  800a3d8:	20000800 	.word	0x20000800
  800a3dc:	08014f70 	.word	0x08014f70
- 800a3e0:	20005620 	.word	0x20005620
+ 800a3e0:	20005a20 	.word	0x20005a20
  800a3e4:	08014f60 	.word	0x08014f60
 	...
 
@@ -16084,7 +16084,7 @@ Disassembly of section .text:
  800a462:	bf00      	nop
  800a464:	20000800 	.word	0x20000800
  800a468:	08014f80 	.word	0x08014f80
- 800a46c:	20005620 	.word	0x20005620
+ 800a46c:	20005a20 	.word	0x20005a20
  800a470:	08014f60 	.word	0x08014f60
 	...
 
@@ -16148,7 +16148,7 @@ Disassembly of section .text:
  800a506:	bf00      	nop
  800a508:	20000800 	.word	0x20000800
  800a50c:	08014f90 	.word	0x08014f90
- 800a510:	20005620 	.word	0x20005620
+ 800a510:	20005a20 	.word	0x20005a20
  800a514:	08014f60 	.word	0x08014f60
 	...
 
@@ -16209,7 +16209,7 @@ Disassembly of section .text:
  800a5a0:	f7f6 fe8e 	bl	80012c0 <__stack_chk_fail>
  800a5a4:	20000800 	.word	0x20000800
  800a5a8:	08014fb0 	.word	0x08014fb0
- 800a5ac:	20005620 	.word	0x20005620
+ 800a5ac:	20005a20 	.word	0x20005a20
  800a5b0:	08014f60 	.word	0x08014f60
 	...
 
@@ -16266,7 +16266,7 @@ Disassembly of section .text:
  800a638:	f7f6 fe42 	bl	80012c0 <__stack_chk_fail>
  800a63c:	20000800 	.word	0x20000800
  800a640:	08014fd0 	.word	0x08014fd0
- 800a644:	20005620 	.word	0x20005620
+ 800a644:	20005a20 	.word	0x20005a20
  800a648:	08014f60 	.word	0x08014f60
  800a64c:	00000000 	.word	0x00000000
 
@@ -16342,7 +16342,7 @@ Disassembly of section .text:
  800a6f6:	bf00      	nop
  800a6f8:	20000800 	.word	0x20000800
  800a6fc:	08014ff0 	.word	0x08014ff0
- 800a700:	20005620 	.word	0x20005620
+ 800a700:	20005a20 	.word	0x20005a20
  800a704:	08014f60 	.word	0x08014f60
 	...
 
@@ -17001,7 +17001,7 @@ Disassembly of section .text:
  800ad82:	f7f6 fa9d 	bl	80012c0 <__stack_chk_fail>
  800ad86:	bf00      	nop
  800ad88:	20000800 	.word	0x20000800
- 800ad8c:	20005620 	.word	0x20005620
+ 800ad8c:	20005a20 	.word	0x20005a20
  800ad90:	08015040 	.word	0x08015040
  800ad94:	08015090 	.word	0x08015090
 	...
@@ -17310,7 +17310,7 @@ Disassembly of section .text:
  800b094:	f7f6 f914 	bl	80012c0 <__stack_chk_fail>
  800b098:	20000800 	.word	0x20000800
  800b09c:	080150d0 	.word	0x080150d0
- 800b0a0:	20005620 	.word	0x20005620
+ 800b0a0:	20005a20 	.word	0x20005a20
  800b0a4:	080150c0 	.word	0x080150c0
 	...
 
@@ -17434,7 +17434,7 @@ Disassembly of section .text:
  800b1d6:	f7f6 f873 	bl	80012c0 <__stack_chk_fail>
  800b1da:	bf00      	nop
  800b1dc:	20000800 	.word	0x20000800
- 800b1e0:	20005620 	.word	0x20005620
+ 800b1e0:	20005a20 	.word	0x20005a20
  800b1e4:	08015110 	.word	0x08015110
 	...
 
@@ -17665,7 +17665,7 @@ Disassembly of section .text:
  800b416:	f7f5 ff53 	bl	80012c0 <__stack_chk_fail>
  800b41a:	bf00      	nop
  800b41c:	20000800 	.word	0x20000800
- 800b420:	20005620 	.word	0x20005620
+ 800b420:	20005a20 	.word	0x20005a20
  800b424:	08015110 	.word	0x08015110
 	...
 
@@ -17784,7 +17784,7 @@ Disassembly of section .text:
  800b542:	bf00      	nop
  800b544:	20000800 	.word	0x20000800
  800b548:	08015120 	.word	0x08015120
- 800b54c:	20005620 	.word	0x20005620
+ 800b54c:	20005a20 	.word	0x20005a20
  800b550:	08015110 	.word	0x08015110
 	...
 
@@ -18102,7 +18102,7 @@ Disassembly of section .text:
  800b89a:	bf00      	nop
  800b89c:	20000800 	.word	0x20000800
  800b8a0:	08015160 	.word	0x08015160
- 800b8a4:	20005620 	.word	0x20005620
+ 800b8a4:	20005a20 	.word	0x20005a20
  800b8a8:	08015150 	.word	0x08015150
  800b8ac:	00000000 	.word	0x00000000
 
@@ -18154,7 +18154,7 @@ Disassembly of section .text:
  800b91e:	bf00      	nop
  800b920:	20000800 	.word	0x20000800
  800b924:	08015170 	.word	0x08015170
- 800b928:	20005620 	.word	0x20005620
+ 800b928:	20005a20 	.word	0x20005a20
  800b92c:	08015150 	.word	0x08015150
 
 0800b930 <spiUnselect>:
@@ -18205,7 +18205,7 @@ Disassembly of section .text:
  800b99e:	bf00      	nop
  800b9a0:	20000800 	.word	0x20000800
  800b9a4:	08015180 	.word	0x08015180
- 800b9a8:	20005620 	.word	0x20005620
+ 800b9a8:	20005a20 	.word	0x20005a20
  800b9ac:	08015150 	.word	0x08015150
 
 0800b9b0 <spiExchange>:
@@ -18277,7 +18277,7 @@ Disassembly of section .text:
  800ba52:	bf00      	nop
  800ba54:	20000800 	.word	0x20000800
  800ba58:	08015190 	.word	0x08015190
- 800ba5c:	20005620 	.word	0x20005620
+ 800ba5c:	20005a20 	.word	0x20005a20
  800ba60:	08015150 	.word	0x08015150
 	...
 
@@ -18398,7 +18398,7 @@ Disassembly of section .text:
  800bb90:	f7f5 fb96 	bl	80012c0 <__stack_chk_fail>
  800bb94:	20000800 	.word	0x20000800
  800bb98:	080151a0 	.word	0x080151a0
- 800bb9c:	20005620 	.word	0x20005620
+ 800bb9c:	20005a20 	.word	0x20005a20
  800bba0:	08015230 	.word	0x08015230
 	...
 
@@ -19219,7 +19219,7 @@ Disassembly of section .text:
  800c40c:	f7f4 ff58 	bl	80012c0 <__stack_chk_fail>
  800c410:	20000800 	.word	0x20000800
  800c414:	40026000 	.word	0x40026000
- 800c418:	20005cc0 	.word	0x20005cc0
+ 800c418:	200060c0 	.word	0x200060c0
  800c41c:	00000000 	.word	0x00000000
 
 0800c420 <Vector70>:
@@ -19252,7 +19252,7 @@ Disassembly of section .text:
  800c460:	f7f4 ff2e 	bl	80012c0 <__stack_chk_fail>
  800c464:	20000800 	.word	0x20000800
  800c468:	40026000 	.word	0x40026000
- 800c46c:	20005cc0 	.word	0x20005cc0
+ 800c46c:	200060c0 	.word	0x200060c0
 
 0800c470 <Vector74>:
  800c470:	b530      	push	{r4, r5, lr}
@@ -19284,7 +19284,7 @@ Disassembly of section .text:
  800c4b0:	f7f4 ff06 	bl	80012c0 <__stack_chk_fail>
  800c4b4:	20000800 	.word	0x20000800
  800c4b8:	40026000 	.word	0x40026000
- 800c4bc:	20005cc0 	.word	0x20005cc0
+ 800c4bc:	200060c0 	.word	0x200060c0
 
 0800c4c0 <Vector78>:
  800c4c0:	b530      	push	{r4, r5, lr}
@@ -19316,7 +19316,7 @@ Disassembly of section .text:
  800c500:	f7f4 fede 	bl	80012c0 <__stack_chk_fail>
  800c504:	20000800 	.word	0x20000800
  800c508:	40026000 	.word	0x40026000
- 800c50c:	20005cc0 	.word	0x20005cc0
+ 800c50c:	200060c0 	.word	0x200060c0
 
 0800c510 <Vector7C>:
  800c510:	b510      	push	{r4, lr}
@@ -19346,7 +19346,7 @@ Disassembly of section .text:
  800c54c:	f7f4 feb8 	bl	80012c0 <__stack_chk_fail>
  800c550:	20000800 	.word	0x20000800
  800c554:	40026000 	.word	0x40026000
- 800c558:	20005cc0 	.word	0x20005cc0
+ 800c558:	200060c0 	.word	0x200060c0
  800c55c:	00000000 	.word	0x00000000
 
 0800c560 <Vector80>:
@@ -19379,7 +19379,7 @@ Disassembly of section .text:
  800c5a0:	f7f4 fe8e 	bl	80012c0 <__stack_chk_fail>
  800c5a4:	20000800 	.word	0x20000800
  800c5a8:	40026000 	.word	0x40026000
- 800c5ac:	20005cc0 	.word	0x20005cc0
+ 800c5ac:	200060c0 	.word	0x200060c0
 
 0800c5b0 <Vector84>:
  800c5b0:	b530      	push	{r4, r5, lr}
@@ -19411,7 +19411,7 @@ Disassembly of section .text:
  800c5f0:	f7f4 fe66 	bl	80012c0 <__stack_chk_fail>
  800c5f4:	20000800 	.word	0x20000800
  800c5f8:	40026000 	.word	0x40026000
- 800c5fc:	20005cc0 	.word	0x20005cc0
+ 800c5fc:	200060c0 	.word	0x200060c0
 
 0800c600 <VectorFC>:
  800c600:	b530      	push	{r4, r5, lr}
@@ -19443,7 +19443,7 @@ Disassembly of section .text:
  800c640:	f7f4 fe3e 	bl	80012c0 <__stack_chk_fail>
  800c644:	20000800 	.word	0x20000800
  800c648:	40026000 	.word	0x40026000
- 800c64c:	20005cc0 	.word	0x20005cc0
+ 800c64c:	200060c0 	.word	0x200060c0
 
 0800c650 <Vector120>:
  800c650:	b510      	push	{r4, lr}
@@ -19473,7 +19473,7 @@ Disassembly of section .text:
  800c68c:	f7f4 fe18 	bl	80012c0 <__stack_chk_fail>
  800c690:	20000800 	.word	0x20000800
  800c694:	40026400 	.word	0x40026400
- 800c698:	20005cc0 	.word	0x20005cc0
+ 800c698:	200060c0 	.word	0x200060c0
  800c69c:	00000000 	.word	0x00000000
 
 0800c6a0 <Vector124>:
@@ -19506,7 +19506,7 @@ Disassembly of section .text:
  800c6e0:	f7f4 fdee 	bl	80012c0 <__stack_chk_fail>
  800c6e4:	20000800 	.word	0x20000800
  800c6e8:	40026400 	.word	0x40026400
- 800c6ec:	20005cc0 	.word	0x20005cc0
+ 800c6ec:	200060c0 	.word	0x200060c0
 
 0800c6f0 <Vector128>:
  800c6f0:	b530      	push	{r4, r5, lr}
@@ -19538,7 +19538,7 @@ Disassembly of section .text:
  800c730:	f7f4 fdc6 	bl	80012c0 <__stack_chk_fail>
  800c734:	20000800 	.word	0x20000800
  800c738:	40026400 	.word	0x40026400
- 800c73c:	20005cc0 	.word	0x20005cc0
+ 800c73c:	200060c0 	.word	0x200060c0
 
 0800c740 <Vector12C>:
  800c740:	b530      	push	{r4, r5, lr}
@@ -19570,7 +19570,7 @@ Disassembly of section .text:
  800c780:	f7f4 fd9e 	bl	80012c0 <__stack_chk_fail>
  800c784:	20000800 	.word	0x20000800
  800c788:	40026400 	.word	0x40026400
- 800c78c:	20005cc0 	.word	0x20005cc0
+ 800c78c:	200060c0 	.word	0x200060c0
 
 0800c790 <Vector130>:
  800c790:	b510      	push	{r4, lr}
@@ -19600,7 +19600,7 @@ Disassembly of section .text:
  800c7cc:	f7f4 fd78 	bl	80012c0 <__stack_chk_fail>
  800c7d0:	20000800 	.word	0x20000800
  800c7d4:	40026400 	.word	0x40026400
- 800c7d8:	20005cc0 	.word	0x20005cc0
+ 800c7d8:	200060c0 	.word	0x200060c0
  800c7dc:	00000000 	.word	0x00000000
 
 0800c7e0 <Vector150>:
@@ -19633,7 +19633,7 @@ Disassembly of section .text:
  800c820:	f7f4 fd4e 	bl	80012c0 <__stack_chk_fail>
  800c824:	20000800 	.word	0x20000800
  800c828:	40026400 	.word	0x40026400
- 800c82c:	20005cc0 	.word	0x20005cc0
+ 800c82c:	200060c0 	.word	0x200060c0
 
 0800c830 <Vector154>:
  800c830:	b530      	push	{r4, r5, lr}
@@ -19665,7 +19665,7 @@ Disassembly of section .text:
  800c870:	f7f4 fd26 	bl	80012c0 <__stack_chk_fail>
  800c874:	20000800 	.word	0x20000800
  800c878:	40026400 	.word	0x40026400
- 800c87c:	20005cc0 	.word	0x20005cc0
+ 800c87c:	200060c0 	.word	0x200060c0
 
 0800c880 <Vector158>:
  800c880:	b530      	push	{r4, r5, lr}
@@ -19697,7 +19697,7 @@ Disassembly of section .text:
  800c8c0:	f7f4 fcfe 	bl	80012c0 <__stack_chk_fail>
  800c8c4:	20000800 	.word	0x20000800
  800c8c8:	40026400 	.word	0x40026400
- 800c8cc:	20005cc0 	.word	0x20005cc0
+ 800c8cc:	200060c0 	.word	0x200060c0
 
 0800c8d0 <dmaInit>:
  800c8d0:	b570      	push	{r4, r5, r6, lr}
@@ -19736,10 +19736,10 @@ Disassembly of section .text:
  800c91a:	f7f4 fcd1 	bl	80012c0 <__stack_chk_fail>
  800c91e:	bf00      	nop
  800c920:	20000800 	.word	0x20000800
- 800c924:	20005d40 	.word	0x20005d40
+ 800c924:	20006140 	.word	0x20006140
  800c928:	080152dc 	.word	0x080152dc
  800c92c:	40026010 	.word	0x40026010
- 800c930:	20005cc0 	.word	0x20005cc0
+ 800c930:	200060c0 	.word	0x200060c0
  800c934:	40026400 	.word	0x40026400
  800c938:	40026000 	.word	0x40026000
  800c93c:	00000000 	.word	0x00000000
@@ -19821,8 +19821,8 @@ Disassembly of section .text:
  800c9f6:	e7ab      	b.n	800c950 <dmaStreamAllocate+0x10>
  800c9f8:	f7f4 fc62 	bl	80012c0 <__stack_chk_fail>
  800c9fc:	20000800 	.word	0x20000800
- 800ca00:	20005d40 	.word	0x20005d40
- 800ca04:	20005cc0 	.word	0x20005cc0
+ 800ca00:	20006140 	.word	0x20006140
+ 800ca04:	200060c0 	.word	0x200060c0
  800ca08:	40023800 	.word	0x40023800
  800ca0c:	08015290 	.word	0x08015290
 
@@ -19875,7 +19875,7 @@ Disassembly of section .text:
  800ca7a:	e7d0      	b.n	800ca1e <dmaStreamRelease+0xe>
  800ca7c:	f7f4 fc20 	bl	80012c0 <__stack_chk_fail>
  800ca80:	20000800 	.word	0x20000800
- 800ca84:	20005d40 	.word	0x20005d40
+ 800ca84:	20006140 	.word	0x20006140
  800ca88:	40023800 	.word	0x40023800
  800ca8c:	080152b0 	.word	0x080152b0
 
@@ -20077,10 +20077,10 @@ Disassembly of section .text:
  800cc72:	f7ff bb45 	b.w	800c300 <nvicEnableVector>
  800cc76:	f7f4 fb23 	bl	80012c0 <__stack_chk_fail>
  800cc7a:	bf00      	nop
- 800cc7c:	20005d44 	.word	0x20005d44
- 800cc80:	20005d7c 	.word	0x20005d7c
+ 800cc7c:	20006144 	.word	0x20006144
+ 800cc80:	2000617c 	.word	0x2000617c
  800cc84:	08015360 	.word	0x08015360
- 800cc88:	20005db4 	.word	0x20005db4
+ 800cc88:	200061b4 	.word	0x200061b4
  800cc8c:	40012000 	.word	0x40012000
  800cc90:	00022c16 	.word	0x00022c16
  800cc94:	40012100 	.word	0x40012100
@@ -20186,9 +20186,9 @@ Disassembly of section .text:
  800cd7e:	e7c7      	b.n	800cd10 <adc_lld_start+0x60>
  800cd80:	f7f4 fa9e 	bl	80012c0 <__stack_chk_fail>
  800cd84:	20000800 	.word	0x20000800
- 800cd88:	20005d44 	.word	0x20005d44
- 800cd8c:	20005d7c 	.word	0x20005d7c
- 800cd90:	20005db4 	.word	0x20005db4
+ 800cd88:	20006144 	.word	0x20006144
+ 800cd8c:	2000617c 	.word	0x2000617c
+ 800cd90:	200061b4 	.word	0x200061b4
  800cd94:	40012300 	.word	0x40012300
  800cd98:	0800d051 	.word	0x0800d051
  800cd9c:	40023800 	.word	0x40023800
@@ -20465,14 +20465,14 @@ Disassembly of section .text:
  800d01e:	bf00      	nop
  800d020:	20000800 	.word	0x20000800
  800d024:	40012000 	.word	0x40012000
- 800d028:	20005d44 	.word	0x20005d44
+ 800d028:	20006144 	.word	0x20006144
  800d02c:	40012100 	.word	0x40012100
- 800d030:	20005d7c 	.word	0x20005d7c
+ 800d030:	2000617c 	.word	0x2000617c
  800d034:	40012200 	.word	0x40012200
- 800d038:	20005db4 	.word	0x20005db4
- 800d03c:	20005dc8 	.word	0x20005dc8
- 800d040:	20005d90 	.word	0x20005d90
- 800d044:	20005d58 	.word	0x20005d58
+ 800d038:	200061b4 	.word	0x200061b4
+ 800d03c:	200061c8 	.word	0x200061c8
+ 800d040:	20006190 	.word	0x20006190
+ 800d044:	20006158 	.word	0x20006158
 	...
 
 0800d050 <adc_lld_serve_rx_interrupt>:
@@ -20623,7 +20623,7 @@ Disassembly of section .text:
  800d1b4:	f7fc bbd4 	b.w	8009960 <_port_irq_epilogue>
  800d1b8:	f7f4 f882 	bl	80012c0 <__stack_chk_fail>
  800d1bc:	20000800 	.word	0x20000800
- 800d1c0:	20005e1c 	.word	0x20005e1c
+ 800d1c0:	2000621c 	.word	0x2000621c
  800d1c4:	40013c00 	.word	0x40013c00
 	...
 
@@ -20653,7 +20653,7 @@ Disassembly of section .text:
  800d204:	f7fc bbac 	b.w	8009960 <_port_irq_epilogue>
  800d208:	f7f4 f85a 	bl	80012c0 <__stack_chk_fail>
  800d20c:	20000800 	.word	0x20000800
- 800d210:	20005e1c 	.word	0x20005e1c
+ 800d210:	2000621c 	.word	0x2000621c
  800d214:	40013c00 	.word	0x40013c00
 	...
 
@@ -20683,7 +20683,7 @@ Disassembly of section .text:
  800d254:	f7fc bb84 	b.w	8009960 <_port_irq_epilogue>
  800d258:	f7f4 f832 	bl	80012c0 <__stack_chk_fail>
  800d25c:	20000800 	.word	0x20000800
- 800d260:	20005e1c 	.word	0x20005e1c
+ 800d260:	2000621c 	.word	0x2000621c
  800d264:	40013c00 	.word	0x40013c00
 	...
 
@@ -20713,7 +20713,7 @@ Disassembly of section .text:
  800d2a4:	f7fc bb5c 	b.w	8009960 <_port_irq_epilogue>
  800d2a8:	f7f4 f80a 	bl	80012c0 <__stack_chk_fail>
  800d2ac:	20000800 	.word	0x20000800
- 800d2b0:	20005e1c 	.word	0x20005e1c
+ 800d2b0:	2000621c 	.word	0x2000621c
  800d2b4:	40013c00 	.word	0x40013c00
 	...
 
@@ -20743,7 +20743,7 @@ Disassembly of section .text:
  800d2f4:	f7fc bb34 	b.w	8009960 <_port_irq_epilogue>
  800d2f8:	f7f3 ffe2 	bl	80012c0 <__stack_chk_fail>
  800d2fc:	20000800 	.word	0x20000800
- 800d300:	20005e1c 	.word	0x20005e1c
+ 800d300:	2000621c 	.word	0x2000621c
  800d304:	40013c00 	.word	0x40013c00
 	...
 
@@ -20805,7 +20805,7 @@ Disassembly of section .text:
  800d388:	f7f3 ff9a 	bl	80012c0 <__stack_chk_fail>
  800d38c:	20000800 	.word	0x20000800
  800d390:	40013c00 	.word	0x40013c00
- 800d394:	20005e1c 	.word	0x20005e1c
+ 800d394:	2000621c 	.word	0x2000621c
 	...
 
 0800d3a0 <VectorE0>:
@@ -20874,7 +20874,7 @@ Disassembly of section .text:
  800d42a:	bf00      	nop
  800d42c:	20000800 	.word	0x20000800
  800d430:	40013c00 	.word	0x40013c00
- 800d434:	20005e1c 	.word	0x20005e1c
+ 800d434:	2000621c 	.word	0x2000621c
 	...
 
 0800d440 <Vector44>:
@@ -20903,7 +20903,7 @@ Disassembly of section .text:
  800d478:	f7fc ba72 	b.w	8009960 <_port_irq_epilogue>
  800d47c:	f7f3 ff20 	bl	80012c0 <__stack_chk_fail>
  800d480:	20000800 	.word	0x20000800
- 800d484:	20005e1c 	.word	0x20005e1c
+ 800d484:	2000621c 	.word	0x2000621c
  800d488:	40013c00 	.word	0x40013c00
  800d48c:	00000000 	.word	0x00000000
 
@@ -20933,7 +20933,7 @@ Disassembly of section .text:
  800d4c8:	f7fc ba4a 	b.w	8009960 <_port_irq_epilogue>
  800d4cc:	f7f3 fef8 	bl	80012c0 <__stack_chk_fail>
  800d4d0:	20000800 	.word	0x20000800
- 800d4d4:	20005e1c 	.word	0x20005e1c
+ 800d4d4:	2000621c 	.word	0x2000621c
  800d4d8:	40013c00 	.word	0x40013c00
  800d4dc:	00000000 	.word	0x00000000
 
@@ -20963,7 +20963,7 @@ Disassembly of section .text:
  800d518:	f7fc ba22 	b.w	8009960 <_port_irq_epilogue>
  800d51c:	f7f3 fed0 	bl	80012c0 <__stack_chk_fail>
  800d520:	20000800 	.word	0x20000800
- 800d524:	20005e1c 	.word	0x20005e1c
+ 800d524:	2000621c 	.word	0x2000621c
  800d528:	40013c00 	.word	0x40013c00
  800d52c:	00000000 	.word	0x00000000
 
@@ -20993,7 +20993,7 @@ Disassembly of section .text:
  800d568:	f7fc b9fa 	b.w	8009960 <_port_irq_epilogue>
  800d56c:	f7f3 fea8 	bl	80012c0 <__stack_chk_fail>
  800d570:	20000800 	.word	0x20000800
- 800d574:	20005e1c 	.word	0x20005e1c
+ 800d574:	2000621c 	.word	0x2000621c
  800d578:	40013c00 	.word	0x40013c00
  800d57c:	00000000 	.word	0x00000000
 
@@ -21023,7 +21023,7 @@ Disassembly of section .text:
  800d5b8:	f7fc b9d2 	b.w	8009960 <_port_irq_epilogue>
  800d5bc:	f7f3 fe80 	bl	80012c0 <__stack_chk_fail>
  800d5c0:	20000800 	.word	0x20000800
- 800d5c4:	20005e1c 	.word	0x20005e1c
+ 800d5c4:	2000621c 	.word	0x2000621c
  800d5c8:	40013c00 	.word	0x40013c00
  800d5cc:	00000000 	.word	0x00000000
 
@@ -21053,7 +21053,7 @@ Disassembly of section .text:
  800d608:	f7fc b9aa 	b.w	8009960 <_port_irq_epilogue>
  800d60c:	f7f3 fe58 	bl	80012c0 <__stack_chk_fail>
  800d610:	20000800 	.word	0x20000800
- 800d614:	20005e1c 	.word	0x20005e1c
+ 800d614:	2000621c 	.word	0x2000621c
  800d618:	40013c00 	.word	0x40013c00
  800d61c:	00000000 	.word	0x00000000
 
@@ -21083,7 +21083,7 @@ Disassembly of section .text:
  800d658:	f7fc b982 	b.w	8009960 <_port_irq_epilogue>
  800d65c:	f7f3 fe30 	bl	80012c0 <__stack_chk_fail>
  800d660:	20000800 	.word	0x20000800
- 800d664:	20005e1c 	.word	0x20005e1c
+ 800d664:	2000621c 	.word	0x2000621c
  800d668:	40013c00 	.word	0x40013c00
  800d66c:	00000000 	.word	0x00000000
 
@@ -21234,7 +21234,7 @@ Disassembly of section .text:
  800d81c:	f7fc b8a0 	b.w	8009960 <_port_irq_epilogue>
  800d820:	f7f3 fd4e 	bl	80012c0 <__stack_chk_fail>
  800d824:	20000800 	.word	0x20000800
- 800d828:	20005dec 	.word	0x20005dec
+ 800d828:	200061ec 	.word	0x200061ec
  800d82c:	00010101 	.word	0x00010101
 
 0800d830 <Vector90>:
@@ -21295,8 +21295,8 @@ Disassembly of section .text:
  800d8ca:	f7f3 fcf9 	bl	80012c0 <__stack_chk_fail>
  800d8ce:	bf00      	nop
  800d8d0:	20000800 	.word	0x20000800
- 800d8d4:	20005dec 	.word	0x20005dec
- 800d8d8:	20005e0c 	.word	0x20005e0c
+ 800d8d4:	200061ec 	.word	0x200061ec
+ 800d8d8:	2000620c 	.word	0x2000620c
  800d8dc:	00000000 	.word	0x00000000
 
 0800d8e0 <Vector94>:
@@ -21357,8 +21357,8 @@ Disassembly of section .text:
  800d97a:	f7f3 fca1 	bl	80012c0 <__stack_chk_fail>
  800d97e:	bf00      	nop
  800d980:	20000800 	.word	0x20000800
- 800d984:	20005dec 	.word	0x20005dec
- 800d988:	20005e0c 	.word	0x20005e0c
+ 800d984:	200061ec 	.word	0x200061ec
+ 800d988:	2000620c 	.word	0x2000620c
  800d98c:	00000000 	.word	0x00000000
 
 0800d990 <Vector98>:
@@ -21426,8 +21426,8 @@ Disassembly of section .text:
  800da3e:	e7b7      	b.n	800d9b0 <Vector98+0x20>
  800da40:	f7f3 fc3e 	bl	80012c0 <__stack_chk_fail>
  800da44:	20000800 	.word	0x20000800
- 800da48:	20005dec 	.word	0x20005dec
- 800da4c:	20005e0c 	.word	0x20005e0c
+ 800da48:	200061ec 	.word	0x200061ec
+ 800da4c:	2000620c 	.word	0x2000620c
 
 0800da50 <can_lld_init>:
  800da50:	b530      	push	{r4, r5, lr}
@@ -21453,7 +21453,7 @@ Disassembly of section .text:
  800da7e:	f7f3 fc1f 	bl	80012c0 <__stack_chk_fail>
  800da82:	bf00      	nop
  800da84:	20000800 	.word	0x20000800
- 800da88:	20005dec 	.word	0x20005dec
+ 800da88:	200061ec 	.word	0x200061ec
  800da8c:	40006400 	.word	0x40006400
 
 0800da90 <ext_lld_init>:
@@ -21473,7 +21473,7 @@ Disassembly of section .text:
  800daae:	f7f3 fc07 	bl	80012c0 <__stack_chk_fail>
  800dab2:	bf00      	nop
  800dab4:	20000800 	.word	0x20000800
- 800dab8:	20005e1c 	.word	0x20005e1c
+ 800dab8:	2000621c 	.word	0x2000621c
  800dabc:	00000000 	.word	0x00000000
 
 0800dac0 <sdc_lld_collect_errors.isra.0>:
@@ -21546,7 +21546,7 @@ Disassembly of section .text:
  800db70:	f7f3 fba6 	bl	80012c0 <__stack_chk_fail>
  800db74:	20000800 	.word	0x20000800
  800db78:	40012c00 	.word	0x40012c00
- 800db7c:	20005e60 	.word	0x20005e60
+ 800db7c:	20006260 	.word	0x20006260
 
 0800db80 <sdc_lld_init>:
  800db80:	b530      	push	{r4, r5, lr}
@@ -21570,7 +21570,7 @@ Disassembly of section .text:
  800dba8:	b003      	add	sp, #12
  800dbaa:	bd30      	pop	{r4, r5, pc}
  800dbac:	f7f3 fb88 	bl	80012c0 <__stack_chk_fail>
- 800dbb0:	20005e24 	.word	0x20005e24
+ 800dbb0:	20006224 	.word	0x20006224
  800dbb4:	20000800 	.word	0x20000800
  800dbb8:	08015354 	.word	0x08015354
  800dbbc:	40012c00 	.word	0x40012c00
@@ -21878,7 +21878,7 @@ Disassembly of section .text:
  800de78:	f7f3 fa22 	bl	80012c0 <__stack_chk_fail>
  800de7c:	20000800 	.word	0x20000800
  800de80:	00c007ff 	.word	0x00c007ff
- 800de84:	20005620 	.word	0x20005620
+ 800de84:	20005a20 	.word	0x20005a20
  800de88:	08015400 	.word	0x08015400
  800de8c:	00000000 	.word	0x00000000
 
@@ -22325,7 +22325,7 @@ Disassembly of section .text:
  800e2be:	f7ff bed7 	b.w	800e070 <sdc_lld_read_aligned>
  800e2c2:	f7f2 fffd 	bl	80012c0 <__stack_chk_fail>
  800e2c6:	bf00      	nop
- 800e2c8:	20005e70 	.word	0x20005e70
+ 800e2c8:	20006270 	.word	0x20006270
  800e2cc:	20000800 	.word	0x20000800
 
 0800e2d0 <sdc_lld_write>:
@@ -22376,7 +22376,7 @@ Disassembly of section .text:
  800e33e:	f7ff bf0f 	b.w	800e160 <sdc_lld_write_aligned>
  800e342:	f7f2 ffbd 	bl	80012c0 <__stack_chk_fail>
  800e346:	bf00      	nop
- 800e348:	20005e70 	.word	0x20005e70
+ 800e348:	20006270 	.word	0x20006270
  800e34c:	20000800 	.word	0x20000800
 
 0800e350 <sdc_lld_sync>:
@@ -22417,7 +22417,7 @@ Disassembly of section .text:
  800e3a2:	f7f2 ff8d 	bl	80012c0 <__stack_chk_fail>
  800e3a6:	bf00      	nop
  800e3a8:	20000800 	.word	0x20000800
- 800e3ac:	20006070 	.word	0x20006070
+ 800e3ac:	20006470 	.word	0x20006470
  800e3b0:	08015410 	.word	0x08015410
 	...
 
@@ -22862,7 +22862,7 @@ Disassembly of section .text:
  800e86e:	f7f2 fd27 	bl	80012c0 <__stack_chk_fail>
  800e872:	bf00      	nop
  800e874:	20000800 	.word	0x20000800
- 800e878:	200060a0 	.word	0x200060a0
+ 800e878:	200064a0 	.word	0x200064a0
  800e87c:	00030008 	.word	0x00030008
  800e880:	00070082 	.word	0x00070082
 	...
@@ -22980,9 +22980,9 @@ Disassembly of section .text:
  800e99c:	60a3      	str	r3, [r4, #8]
  800e99e:	e7c9      	b.n	800e934 <VectorC0+0xa4>
  800e9a0:	f7f2 fc8e 	bl	80012c0 <__stack_chk_fail>
- 800e9a4:	200060a0 	.word	0x200060a0
+ 800e9a4:	200064a0 	.word	0x200064a0
  800e9a8:	20000800 	.word	0x20000800
- 800e9ac:	200060c0 	.word	0x200060c0
+ 800e9ac:	200064c0 	.word	0x200064c0
 
 0800e9b0 <i2c_lld_init>:
  800e9b0:	b530      	push	{r4, r5, lr}
@@ -23007,7 +23007,7 @@ Disassembly of section .text:
  800e9dc:	b003      	add	sp, #12
  800e9de:	bd30      	pop	{r4, r5, pc}
  800e9e0:	f7f2 fc6e 	bl	80012c0 <__stack_chk_fail>
- 800e9e4:	200060a0 	.word	0x200060a0
+ 800e9e4:	200064a0 	.word	0x200064a0
  800e9e8:	20000800 	.word	0x20000800
  800e9ec:	080152d0 	.word	0x080152d0
  800e9f0:	40005400 	.word	0x40005400
@@ -23231,7 +23231,7 @@ Disassembly of section .text:
  800ec54:	000186a0 	.word	0x000186a0
  800ec58:	0280de80 	.word	0x0280de80
  800ec5c:	00061a80 	.word	0x00061a80
- 800ec60:	200060a0 	.word	0x200060a0
+ 800ec60:	200064a0 	.word	0x200064a0
  800ec64:	40023800 	.word	0x40023800
  800ec68:	0800e6b1 	.word	0x0800e6b1
  800ec6c:	0800e651 	.word	0x0800e651
@@ -23310,7 +23310,7 @@ Disassembly of section .text:
  800ed16:	e7ed      	b.n	800ecf4 <i2c_lld_stop+0x74>
  800ed18:	f7f2 fad2 	bl	80012c0 <__stack_chk_fail>
  800ed1c:	20000800 	.word	0x20000800
- 800ed20:	200060a0 	.word	0x200060a0
+ 800ed20:	200064a0 	.word	0x200064a0
  800ed24:	40023800 	.word	0x40023800
 	...
 
@@ -23424,7 +23424,7 @@ Disassembly of section .text:
  800ee3e:	f7f9 bbbf 	b.w	80085c0 <chThdSuspendTimeoutS>
  800ee42:	f7f2 fa3d 	bl	80012c0 <__stack_chk_fail>
  800ee46:	bf00      	nop
- 800ee48:	20005620 	.word	0x20005620
+ 800ee48:	20005a20 	.word	0x20005a20
  800ee4c:	08015430 	.word	0x08015430
  800ee50:	20000800 	.word	0x20000800
 	...
@@ -23692,7 +23692,7 @@ Disassembly of section .text:
  800f130:	f383 8811 	msr	BASEPRI, r3
  800f134:	e780      	b.n	800f038 <usb_lld_pump+0x138>
  800f136:	bf00      	nop
- 800f138:	20005620 	.word	0x20005620
+ 800f138:	20005a20 	.word	0x20005a20
  800f13c:	20000800 	.word	0x20000800
  800f140:	080154f0 	.word	0x080154f0
  800f144:	08015490 	.word	0x08015490
@@ -23953,7 +23953,7 @@ Disassembly of section .text:
  800f404:	e8bd 4030 	ldmia.w	sp!, {r4, r5, lr}
  800f408:	f7f8 bf22 	b.w	8008250 <_thread_memfill>
  800f40c:	f7f1 ff58 	bl	80012c0 <__stack_chk_fail>
- 800f410:	200060e0 	.word	0x200060e0
+ 800f410:	200064e0 	.word	0x200064e0
  800f414:	20000800 	.word	0x20000800
  800f418:	080154e0 	.word	0x080154e0
  800f41c:	00000000 	.word	0x00000000
@@ -24057,7 +24057,7 @@ Disassembly of section .text:
  800f50e:	f7f1 fed7 	bl	80012c0 <__stack_chk_fail>
  800f512:	bf00      	nop
  800f514:	20000800 	.word	0x20000800
- 800f518:	200060e0 	.word	0x200060e0
+ 800f518:	200064e0 	.word	0x200064e0
  800f51c:	40001440 	.word	0x40001440
  800f520:	02200003 	.word	0x02200003
  800f524:	40023800 	.word	0x40023800
@@ -24504,7 +24504,7 @@ Disassembly of section .text:
  800f9d2:	b002      	add	sp, #8
  800f9d4:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
  800f9d8:	f7f1 fc72 	bl	80012c0 <__stack_chk_fail>
- 800f9dc:	200060e0 	.word	0x200060e0
+ 800f9dc:	200064e0 	.word	0x200064e0
  800f9e0:	20000800 	.word	0x20000800
 	...
 
@@ -24641,8 +24641,8 @@ Disassembly of section .text:
  800fb58:	e7ab      	b.n	800fab2 <otg_epin_handler.constprop.8+0x52>
  800fb5a:	f7f1 fbb1 	bl	80012c0 <__stack_chk_fail>
  800fb5e:	bf00      	nop
- 800fb60:	200060e0 	.word	0x200060e0
- 800fb64:	20006140 	.word	0x20006140
+ 800fb60:	200064e0 	.word	0x200064e0
+ 800fb64:	20006540 	.word	0x20006540
  800fb68:	20000800 	.word	0x20000800
  800fb6c:	00000000 	.word	0x00000000
 
@@ -24763,8 +24763,8 @@ Disassembly of section .text:
  800fc82:	f7f1 fb1d 	bl	80012c0 <__stack_chk_fail>
  800fc86:	bf00      	nop
  800fc88:	20000800 	.word	0x20000800
- 800fc8c:	200060e0 	.word	0x200060e0
- 800fc90:	20006140 	.word	0x20006140
+ 800fc8c:	200064e0 	.word	0x200064e0
+ 800fc90:	20006540 	.word	0x20006540
 	...
 
 0800fca0 <usb_lld_start_out>:
@@ -24931,7 +24931,7 @@ Disassembly of section .text:
  800fe64:	b003      	add	sp, #12
  800fe66:	bd30      	pop	{r4, r5, pc}
  800fe68:	f7f1 fa2a 	bl	80012c0 <__stack_chk_fail>
- 800fe6c:	2000635c 	.word	0x2000635c
+ 800fe6c:	2000675c 	.word	0x2000675c
  800fe70:	20000800 	.word	0x20000800
  800fe74:	40003800 	.word	0x40003800
  800fe78:	00012d1e 	.word	0x00012d1e
@@ -25070,8 +25070,8 @@ Disassembly of section .text:
  800ffba:	bd30      	pop	{r4, r5, pc}
  800ffbc:	f7f1 f980 	bl	80012c0 <__stack_chk_fail>
  800ffc0:	20000800 	.word	0x20000800
- 800ffc4:	2000637c 	.word	0x2000637c
- 800ffc8:	200063b0 	.word	0x200063b0
+ 800ffc4:	2000677c 	.word	0x2000677c
+ 800ffc8:	200067b0 	.word	0x200067b0
  800ffcc:	08015330 	.word	0x08015330
  800ffd0:	06010016 	.word	0x06010016
  800ffd4:	40013000 	.word	0x40013000
@@ -25158,7 +25158,7 @@ Disassembly of section .text:
  8010092:	e7ea      	b.n	801006a <spi_lld_start+0x8a>
  8010094:	f7f1 f914 	bl	80012c0 <__stack_chk_fail>
  8010098:	20000800 	.word	0x20000800
- 801009c:	2000637c 	.word	0x2000637c
+ 801009c:	2000677c 	.word	0x2000677c
  80100a0:	0800fec1 	.word	0x0800fec1
  80100a4:	0800fe81 	.word	0x0800fe81
  80100a8:	40023800 	.word	0x40023800
@@ -25315,7 +25315,7 @@ Disassembly of section .text:
  80101fe:	f7f1 f85f 	bl	80012c0 <__stack_chk_fail>
  8010202:	bf00      	nop
  8010204:	20000800 	.word	0x20000800
- 8010208:	200063c4 	.word	0x200063c4
+ 8010208:	200067c4 	.word	0x200067c4
  801020c:	00000000 	.word	0x00000000
 
 08010210 <VectorA8>:
@@ -25339,7 +25339,7 @@ Disassembly of section .text:
  801023e:	f7f1 f83f 	bl	80012c0 <__stack_chk_fail>
  8010242:	bf00      	nop
  8010244:	20000800 	.word	0x20000800
- 8010248:	200063b4 	.word	0x200063b4
+ 8010248:	200067b4 	.word	0x200067b4
  801024c:	00000000 	.word	0x00000000
 
 08010250 <gpt_lld_init>:
@@ -25365,10 +25365,10 @@ Disassembly of section .text:
  801027a:	f7f9 be69 	b.w	8009f50 <gptObjectInit>
  801027e:	f7f1 f81f 	bl	80012c0 <__stack_chk_fail>
  8010282:	bf00      	nop
- 8010284:	200063c4 	.word	0x200063c4
+ 8010284:	200067c4 	.word	0x200067c4
  8010288:	20000800 	.word	0x20000800
  801028c:	40001000 	.word	0x40001000
- 8010290:	200063b4 	.word	0x200063b4
+ 8010290:	200067b4 	.word	0x200067b4
  8010294:	40014800 	.word	0x40014800
 	...
 
@@ -25456,7 +25456,7 @@ Disassembly of section .text:
  801034e:	f7f0 ffb7 	bl	80012c0 <__stack_chk_fail>
  8010352:	bf00      	nop
  8010354:	20000800 	.word	0x20000800
- 8010358:	200063d4 	.word	0x200063d4
+ 8010358:	200067d4 	.word	0x200067d4
  801035c:	00000000 	.word	0x00000000
 
 08010360 <VectorB4>:
@@ -25480,7 +25480,7 @@ Disassembly of section .text:
  801038e:	f7f0 ff97 	bl	80012c0 <__stack_chk_fail>
  8010392:	bf00      	nop
  8010394:	20000800 	.word	0x20000800
- 8010398:	200063f0 	.word	0x200063f0
+ 8010398:	200067f0 	.word	0x200067f0
  801039c:	00000000 	.word	0x00000000
 
 080103a0 <VectorB8>:
@@ -25504,7 +25504,7 @@ Disassembly of section .text:
  80103ce:	f7f0 ff77 	bl	80012c0 <__stack_chk_fail>
  80103d2:	bf00      	nop
  80103d4:	20000800 	.word	0x20000800
- 80103d8:	2000640c 	.word	0x2000640c
+ 80103d8:	2000680c 	.word	0x2000680c
  80103dc:	00000000 	.word	0x00000000
 
 080103e0 <Vector108>:
@@ -25528,7 +25528,7 @@ Disassembly of section .text:
  801040e:	f7f0 ff57 	bl	80012c0 <__stack_chk_fail>
  8010412:	bf00      	nop
  8010414:	20000800 	.word	0x20000800
- 8010418:	20006428 	.word	0x20006428
+ 8010418:	20006828 	.word	0x20006828
  801041c:	00000000 	.word	0x00000000
 
 08010420 <pwm_lld_init>:
@@ -25569,10 +25569,10 @@ Disassembly of section .text:
  8010476:	b002      	add	sp, #8
  8010478:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
  801047c:	f7f0 ff20 	bl	80012c0 <__stack_chk_fail>
- 8010480:	200063d4 	.word	0x200063d4
- 8010484:	200063f0 	.word	0x200063f0
- 8010488:	2000640c 	.word	0x2000640c
- 801048c:	20006428 	.word	0x20006428
+ 8010480:	200067d4 	.word	0x200067d4
+ 8010484:	200067f0 	.word	0x200067f0
+ 8010488:	2000680c 	.word	0x2000680c
+ 801048c:	20006828 	.word	0x20006828
  8010490:	40000400 	.word	0x40000400
  8010494:	40000800 	.word	0x40000800
  8010498:	40000c00 	.word	0x40000c00
@@ -25766,10 +25766,10 @@ Disassembly of section .text:
  801064c:	f7f0 fe38 	bl	80012c0 <__stack_chk_fail>
  8010650:	20000800 	.word	0x20000800
  8010654:	08015510 	.word	0x08015510
- 8010658:	200063d4 	.word	0x200063d4
- 801065c:	200063f0 	.word	0x200063f0
- 8010660:	2000640c 	.word	0x2000640c
- 8010664:	20006428 	.word	0x20006428
+ 8010658:	200067d4 	.word	0x200067d4
+ 801065c:	200067f0 	.word	0x200067f0
+ 8010660:	2000680c 	.word	0x2000680c
+ 8010664:	20006828 	.word	0x20006828
  8010668:	40023800 	.word	0x40023800
  801066c:	0501bd00 	.word	0x0501bd00
 
@@ -26092,9 +26092,9 @@ Disassembly of section .text:
  80109a4:	e7e3      	b.n	801096e <VectorDC+0x14e>
  80109a6:	f7f0 fc8b 	bl	80012c0 <__stack_chk_fail>
  80109aa:	bf00      	nop
- 80109ac:	20006444 	.word	0x20006444
- 80109b0:	20006448 	.word	0x20006448
- 80109b4:	20006474 	.word	0x20006474
+ 80109ac:	20006844 	.word	0x20006844
+ 80109b0:	20006848 	.word	0x20006848
+ 80109b4:	20006874 	.word	0x20006874
  80109b8:	20000800 	.word	0x20000800
  80109bc:	00000000 	.word	0x00000000
 
@@ -26120,7 +26120,7 @@ Disassembly of section .text:
  80109e6:	f7f0 fc6b 	bl	80012c0 <__stack_chk_fail>
  80109ea:	bf00      	nop
  80109ec:	20000800 	.word	0x20000800
- 80109f0:	20006444 	.word	0x20006444
+ 80109f0:	20006844 	.word	0x20006844
  80109f4:	080107f1 	.word	0x080107f1
  80109f8:	40004800 	.word	0x40004800
  80109fc:	00000000 	.word	0x00000000
@@ -26193,7 +26193,7 @@ Disassembly of section .text:
  8010a98:	40011400 	.word	0x40011400
  8010a9c:	0280de80 	.word	0x0280de80
  8010aa0:	0501bd00 	.word	0x0501bd00
- 8010aa4:	20006444 	.word	0x20006444
+ 8010aa4:	20006844 	.word	0x20006844
  8010aa8:	40023800 	.word	0x40023800
  8010aac:	00000000 	.word	0x00000000
 
@@ -26585,10 +26585,10 @@ Disassembly of section .text:
  8010eb4:	e68c      	b.n	8010bd0 <_malloc_r+0x50>
  8010eb6:	bf00      	nop
  8010eb8:	200010d4 	.word	0x200010d4
- 8010ebc:	200064ec 	.word	0x200064ec
- 8010ec0:	200064bc 	.word	0x200064bc
- 8010ec4:	200064e4 	.word	0x200064e4
- 8010ec8:	200064e8 	.word	0x200064e8
+ 8010ebc:	200068ec 	.word	0x200068ec
+ 8010ec0:	200068bc 	.word	0x200068bc
+ 8010ec4:	200068e4 	.word	0x200068e4
+ 8010ec8:	200068e8 	.word	0x200068e8
  8010ecc:	200010dc 	.word	0x200010dc
  8010ed0:	200014dc 	.word	0x200014dc
  8010ed4:	1961      	adds	r1, r4, r5
@@ -26777,7 +26777,7 @@ Disassembly of section .text:
  80110be:	687b      	ldr	r3, [r7, #4]
  80110c0:	e785      	b.n	8010fce <_malloc_r+0x44e>
  80110c2:	bf00      	nop
- 80110c4:	200064bc 	.word	0x200064bc
+ 80110c4:	200068bc 	.word	0x200068bc
 	...
 
 080110d0 <__ascii_mbtowc>:
@@ -30477,7 +30477,7 @@ Disassembly of section .text:
  80137c0:	e7d5      	b.n	801376e <_malloc_trim_r+0x3e>
  80137c2:	bf00      	nop
  80137c4:	200010d4 	.word	0x200010d4
- 80137c8:	200064bc 	.word	0x200064bc
+ 80137c8:	200068bc 	.word	0x200068bc
  80137cc:	200014dc 	.word	0x200014dc
 
 080137d0 <_free_r>:
@@ -30666,7 +30666,7 @@ Disassembly of section .text:
  80139a8:	200010d4 	.word	0x200010d4
  80139ac:	200010dc 	.word	0x200010dc
  80139b0:	200014e0 	.word	0x200014e0
- 80139b4:	200064ec 	.word	0x200064ec
+ 80139b4:	200068ec 	.word	0x200068ec
 	...
 
 080139c0 <_localeconv_r>:
@@ -31965,16 +31965,16 @@ Disassembly of section .text:
 
 08014910 <ep1config>:
  8014910:	00000002 00000000 0800b631 0800b6f1     ........1.......
- 8014920:	00400040 2000509c 200050b0 00000002     @.@..P. .P. ....
+ 8014920:	00400040 2000549c 200054b0 00000002     @.@..T. .T. ....
 	...
 
 08014940 <ep2config>:
  8014940:	00000003 00000000 0800b7a1 00000000     ................
- 8014950:	00000010 200050c4 00000000 00000001     .....P. ........
+ 8014950:	00000010 200054c4 00000000 00000001     .....T. ........
 	...
 
 08014970 <serusbcfg>:
- 8014970:	200060e0 00020101 00000000 00000000     .`. ............
+ 8014970:	200064e0 00020101 00000000 00000000     .d. ............
 
 08014980 <usbcfg>:
  8014980:	08003a61 08003a11 0800b5d1 00000000     a:...:..........
@@ -32373,8 +32373,8 @@ Disassembly of section .text:
 
 080154b0 <ep0config>:
  80154b0:	00000000 0800bdc1 0800c111 0800c231     ............1...
- 80154c0:	00400040 20006340 20006340 00000001     @.@.@c. @c. ....
- 80154d0:	20006354 00000000 00000000 00000000     Tc. ............
+ 80154c0:	00400040 20006740 20006740 00000001     @.@.@g. @g. ....
+ 80154d0:	20006754 00000000 00000000 00000000     Tg. ............
 
 080154e0 <fsparams>:
  80154e0:	00000080 00000140 00000003 00000000     ....@...........
