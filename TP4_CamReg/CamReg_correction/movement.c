@@ -41,12 +41,13 @@
 #define MIN_DIST_FRONT 50		//TOF detection distance [mm] for the frontal obstacles
 #define DIST_DETECTION 30		//TOF threshold distance [mm] to prepare for passing trough the "color wall"
 #define MIN_MAUVAISE_COULEUR 60 //TOF detection distance [mm] to turn if the detected color is different as the selected one
-
+#define MIN_DIST_END 50			//TOF detection distance [mm] to stop in FINISH mode
 //steps number for turns
 #define STEPS_NINETY 270		//number of steps to turn for a 90° turn
 #define STEPS_RED 480			//number of steps for the red start turn
 #define STEPS_BLUE 400			//number of steps for the blue start turn
-#define STEPS_GREEN 550			//number of steps for the green start turn
+#define STEPS_GREEN 560 		//number of steps for the green start turn
+#define STEPS_END 320			//number of steps for the end turns
 
 //speeds
 #define SPEED_TURN 700			//turning speed for 90° turns
@@ -127,7 +128,7 @@ static THD_FUNCTION(movement, arg) {
     		next_mode();											//pass to MOVEMENT mode to move and avoid obstacles
     	}
     	else if(get_mode() == FINISH){								//trajectory control for FINISH mode
-    		if(VL53L0X_get_dist_mm() > MIN_DIST_FRONT && find_the_end == 0){
+    		if(VL53L0X_get_dist_mm() > MIN_DIST_END && find_the_end == 0){
     			proximity();										//avoid side obstacle if not in the end zone
     		}
     		else{
@@ -144,7 +145,7 @@ static THD_FUNCTION(movement, arg) {
     				left_motor_set_pos(0);
     				left_motor_set_speed(-SPEED_END);
     				right_motor_set_speed(SPEED_END);
-    				while(right_motor_get_pos() != STEPS_NINETY){}
+    				while(right_motor_get_pos() != STEPS_END){}
     			}
     		}
     	}

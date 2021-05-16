@@ -61,7 +61,7 @@ static THD_FUNCTION(CaptureImage, arg) {
 
 //Thread to process the image and extract the color of the image, adapted from TP4
 
-static THD_WORKING_AREA(waProcessImage, 4096); //3072
+static THD_WORKING_AREA(waProcessImage, 2048);
 static THD_FUNCTION(ProcessImage, arg) {
 
     chRegSetThreadName(__FUNCTION__);
@@ -107,14 +107,15 @@ static THD_FUNCTION(ProcessImage, arg) {
 
 
 //Detection of the colors with thresholds on the average for every color
+
+     if(get_mode() != WAIT_NEXT_ATTEMPT){
      	if(!get_no_more_color_needed()){				//checking if we want a color detection or not
      		if(VL53L0X_get_dist_mm() > SECURITY_TH){	//no detection over 10cm to avoid false detections
      			color_detected = WHITE;					//white as default color when no detection
-     			if(get_mode() != FINISH){				//set leds to detected color unless in FINISH mode
-     				set_all_leds(WHITE_LED);
-     			}
-     			else
+     			if(get_mode() == FINISH )				//set leds to detected color unless in FINISH mode
      				clear_leds();
+     			else
+     				set_all_leds(WHITE_LED);
      		}
      		else{
      			color_detection(mean_r, mean_b);		//color detection
@@ -128,11 +129,13 @@ static THD_FUNCTION(ProcessImage, arg) {
      				if(color_detected == WHITE)
      					set_all_leds(WHITE_LED);
      			}
+     			else
+     				clear_leds();
      		}
      	}
-
-		//sends to the computer the image
-		//SendUint8ToComputer(image_r, IMAGE_BUFFER_SIZE);
+     }
+     else
+    	 clear_leds();
     }
 }
 
