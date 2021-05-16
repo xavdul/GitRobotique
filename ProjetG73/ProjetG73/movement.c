@@ -37,7 +37,7 @@
 #define FRONT_RIGHT_IR 0
 
 //thresholds and distances for the obstacle detection
-#define TH_PROX 500				//proximity threshold for the lateral obstacles
+#define TH_PROX 480				//proximity threshold for the lateral obstacles
 #define MIN_DIST_FRONT 50		//TOF detection distance [mm] for the frontal obstacles
 #define DIST_DETECTION 30		//TOF threshold distance [mm] to prepare for passing trough the "color wall"
 #define MIN_MAUVAISE_COULEUR 60 //TOF detection distance [mm] to turn if the detected color is different as the selected one

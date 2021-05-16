@@ -1862,11 +1862,11 @@ Disassembly of section .text:
  8001678:	9301      	str	r3, [sp, #4]
  800167a:	2006      	movs	r0, #6
  800167c:	f002 f940 	bl	8003900 <get_prox>
- 8001680:	f5b0 7ffa 	cmp.w	r0, #500	; 0x1f4
+ 8001680:	f5b0 7ff0 	cmp.w	r0, #480	; 0x1e0
  8001684:	dc05      	bgt.n	8001692 <proximity+0x22>
  8001686:	2007      	movs	r0, #7
  8001688:	f002 f93a 	bl	8003900 <get_prox>
- 800168c:	f5b0 7ffa 	cmp.w	r0, #500	; 0x1f4
+ 800168c:	f5b0 7ff0 	cmp.w	r0, #480	; 0x1e0
  8001690:	dd0e      	ble.n	80016b0 <proximity+0x40>
  8001692:	f44f 7048 	mov.w	r0, #800	; 0x320
  8001696:	f001 fe2b 	bl	80032f0 <left_motor_set_speed>
@@ -1881,11 +1881,11 @@ Disassembly of section .text:
  80016ac:	f001 be38 	b.w	8003320 <right_motor_set_speed>
  80016b0:	2001      	movs	r0, #1
  80016b2:	f002 f925 	bl	8003900 <get_prox>
- 80016b6:	f5b0 7ffa 	cmp.w	r0, #500	; 0x1f4
+ 80016b6:	f5b0 7ff0 	cmp.w	r0, #480	; 0x1e0
  80016ba:	dc05      	bgt.n	80016c8 <proximity+0x58>
  80016bc:	2000      	movs	r0, #0
  80016be:	f002 f91f 	bl	8003900 <get_prox>
- 80016c2:	f5b0 7ffa 	cmp.w	r0, #500	; 0x1f4
+ 80016c2:	f5b0 7ff0 	cmp.w	r0, #480	; 0x1e0
  80016c6:	dd0b      	ble.n	80016e0 <proximity+0x70>
  80016c8:	20c8      	movs	r0, #200	; 0xc8
  80016ca:	f001 fe11 	bl	80032f0 <left_motor_set_speed>
